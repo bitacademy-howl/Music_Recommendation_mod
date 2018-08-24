@@ -34,7 +34,9 @@ user_similarities = [[cosine_similarity(interest_vector_i, interest_vector_j)
                       for interest_vector_j in user_interest_matrix]
                      for interest_vector_i in user_interest_matrix]
 
-# print(user_similarities)
+
+# for i in user_similarities:
+#     print(i)
 # print(user_similarities[13][0])
 
 

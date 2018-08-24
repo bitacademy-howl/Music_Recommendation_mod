@@ -5,6 +5,11 @@ import pandas
 import os
 
 # user data 는 비정형일 수 밖에 없다.
+# user data를 정해진 size 로 고정하지 않는다면, 이 말은 Nosql 사용은 필연적이라는 것!
+# fix 할 경우 데이터에 상관없이 null 을 허용할 수도... size 범위를 벗어나면 FIFO,
+# 혹은 적게 열람한 순서로 빼내는 방법들을 적용할 수도 있겠다..
+
+#
 
 # users_interests = [["Hadoop", "Big Data", "HBase", "Java", "Spark", "Storm", "Cassandra"],
 #                    ["NoSQL", "MongoDB", "Cassandra", "HBase", "Postgres"],
@@ -30,9 +35,6 @@ list = numpy.array(list).tolist()
 print(list, len(list))
 
 users_interests = []
-
-# print(music_list)
-# print(randint(0, 244))
 
 for user in range(50):
     songs = []
