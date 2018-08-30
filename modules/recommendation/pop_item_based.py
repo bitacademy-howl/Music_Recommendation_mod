@@ -12,7 +12,7 @@ popular_interests = Counter(interest
 
 print(popular_interests)
 
-# 이런 형태를 가질 시 객체를 하나하나 뽑아내서 순차적으로 view 단에 append 하면 됨
+# 이런 형태를 가질 시 객체를 하나하나 뽑아내서 순차적으로 UI 단에 append 하면 됨
 # 자동으로 정렬까지 되어있다.
 
 # for pop_item in popular_interests:

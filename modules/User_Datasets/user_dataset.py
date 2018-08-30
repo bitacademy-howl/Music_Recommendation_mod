@@ -27,8 +27,6 @@ import os
 #                    ["databases", "HBase", "postgres", "MySQL", "MongoDB"],
 #                    ["libsvm", "regression", "support vector machines"]]
 
-# os.chdir(r"D:\1. stark\BIT_PROJ\1. Music_Recommendation\__result__")
-
 music_list = pandas.read_csv("__result__/mnet_weeks_100.csv")
 list = music_list["title"]
 list = numpy.array(list).tolist()
@@ -41,7 +39,6 @@ for user in range(50):
     for music_index in range(50):
         songs.append(list[randint(0, len(list)-1)])
     users_interests.append(songs)
-
 
 for user_interests in users_interests:
     print(user_interests)
