@@ -1,0 +1,1726 @@
+@charset "utf-8";
+
+/* --- Reset --- */
+html, body {width:100%; height:100%; background:#F7F7F8 !important;}
+* {margin:0; padding:0; }
+body, div, h1, h2, h3, h4, h5, h6, th, td, input, textarea, select, button {font-family:'돋움',Dotum,sans-serif; font-size:12px; color:#444; background:transparent;}
+img, fieldset, button, iframe {border:0;}
+menu,ul,ol,li {list-style:none;}
+em,address,cite,code,var {font-style:normal; font-weight:normal;}
+table {border-collapse:collapse; border-spacing:0; width:100%;}
+button {cursor:pointer; overflow:hidden;}
+button span {display:block; text-indent:-9999px;}
+hr {display:none;}
+legend,caption {display:none;}
+a {text-decoration:none; color:#333;}
+a:hover, a:active, a:focus {text-decoration:underline; color:#000;}
+del {text-decoration:line-through;}
+
+/* skipnavigation */
+#skipnavigation li {display:inline;float:left;}
+#skipnavigation li a {position:absolute;top:-9999px;left:-9999px;white-space:nowrap;}
+#skipnavigation li a:focus, #skipnavigation li a:active, #skipnavigation li a:hover {top:0;left:0;z-index:15;width:auto;height:16px;border:1px solid #fff;padding:5px 10px;line-height:16px;color:#fff!important;text-decoration:none;background-color:#333;}
+
+/* --- common --- */
+/* alt text */
+img {color:#999;font-size:11px;line-height:normal;}
+.blind {position:absolute; top:-5000px; left:0; display:block; overflow:hidden; height:0;}
+.hide {display:none;}
+.show {display:block;}
+.fl, .floatL {float:left;}
+.fr, .floatR {float:right;}
+.alignC { text-align:center !important; padding:0 !important;}
+.cb {clear:both;}
+.valm {vertical-align:middle;}
+.ellipsis {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; letter-spacing:0;}
+.ellipsis:-moz-any-link, .ellipsis:default{white-space:nowrap;word-wrap:break-word;}
+*+html .ellipsis {white-space:nowrap;}
+.thumover:hover {text-decoration:none;}
+.nonef {float:none !important;}
+
+.break {word-wrap:break-word; word-break:break-all;}
+.pic_b {display:block;position:absolute; top:0; left:0; border:1px solid #000; opacity:.1; filter:alpha(opacity=10);}
+a:hover .pic_b {opacity:.4; filter:alpha(opacity=40);}
+.pic_p {position:absolute; bottom:0; left:0; border:1px solid #000; opacity:.1; filter:alpha(opacity=10);}
+a:hover .pic_p {opacity:.4; filter:alpha(opacity=40);}
+
+/* margin */
+.mt5 { margin-top:5px !important; }
+.mt10 { margin-top:10px; }
+.mt30 { margin-top:30px; }
+.ml5 { margin-left:5px; }
+
+/* padding */
+.pt20 { margin-top:20px; }
+.pb20 { margin-bottom:20px; }
+
+/* btn */
+.btn_play {background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') 0 0 no-repeat; display:inline-block; vertical-align:top; width:15px; height:16px; overflow:hidden; margin-right:5px;}
+.btn_play_album {position:absolute; background:url('http://mnetimg.mnet.com/images/common/btn_play.png') 0 0 no-repeat; top:67px; left:67px; width:25px; height:25px; }
+
+.btn_follow {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 0 ; width:69px; height:17px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.btn_following {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -17px ; width:69px; height:17px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.btn_following:hover {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -34px ;}
+
+.btn_follow_2 {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -51px ; width:69px; height:23px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.btn_following_2 {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -74px ; width:69px; height:23px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.btn_following_2:hover {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -97px ;}
+
+.btn_follow_3 {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -190px ; width:69px; height:17px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.btn_following_3 {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -207px ; width:69px; height:17px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.btn_following_3:hover {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -224px ;}
+
+.btn_follow_4 {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -245px ; width:69px; height:21px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.btn_following_4 {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -266px ; width:69px; height:21px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.btn_following_4:hover {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -287px;}
+
+/* clear fix */
+.fix:after {visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
+.fix {display:inline-block;}
+* html .fix {height:1%;}
+html[xmlns] .fix {display:block;}
+
+/* disabled button */
+button:disabled, button.disabled {cursor:default; opacity:.5;filter:alpha(opacity = 50);}
+.disabled {cursor:default; opacity:.5; filter:alpha(opacity = 50);}
+.disabled:hover {text-decoration:none;}
+
+/* font set */
+.fnt12b {font-weight:bold; font-size:12px; letter-spacing:-1px;}
+.fnt11b {font-weight:bold; font-size:11px; letter-spacing:-1px;}
+.fnt11 {font-size:11px;}
+
+#aside_lnb {float:left;}
+#content {float:left; position:relative;}
+#aside_rnb {float:right;}
+#aside_rnb .rnb_ad {border:1px solid #d7d7d7; margin-top:-1px;}
+#aside_rnb .rnb_ad img {display:block;}
+
+/* top banner slide */
+#slides {position:absolute;	top:0; left:0; z-index:10;height:207px;overflow:hidden;}
+#slides .slides_container {width:710px;height:207px;overflow:hidden;position:relative;}
+#slides .slides_container a {width:710px;height:207px;display:block;}
+#slides .slides_container a img {display:block;}
+#slides a.next {position:absolute; top:38px; right:0;display:block; z-index:101; background:url('http://mnetimg.mnet.com/images/common/blank.png') no-repeat; width:90px; height:168px;text-indent:-9999px;overlfow:hidden;}
+#slides a.prev {position:absolute; top:38px; left: 0px;display:block; z-index:101; background:url('http://mnetimg.mnet.com/images/common/blank.png') no-repeat; width:90px; height:168px;text-indent:-9999px;overlfow:hidden;}
+#slides a:hover.next {position:absolute; top:38px; right:0; display:block; z-index:101;background:url('http://mnetimg.mnet.com/images/common/arr_next.png') -10px 0 no-repeat; width:90px; height:168px;}
+#slides a:hover.prev {position:absolute; top:38px; left:0px; display:block; z-index:101;background:url('http://mnetimg.mnet.com/images/common/arr_prev.png') 10px 0 no-repeat; width:90px; height:168px;}
+#slides .pagin {position:absolute; top:25px; right:17px; z-index:999;}
+#slides .pagin a {display:block;width:7px;height:7px;background:url('http://mnetimg.mnet.com/images/common/icon_spec_ad_off.png') no-repeat 0 0; _background:url('http://mnetimg.mnet.com/images/common/icon_spec_ad_off.gif') no-repeat 0 0; float:left; text-indent:-9999px;margin-left:6px;overflow:hidden;}
+#slides .pagin a.cur {background:url('http://mnetimg.mnet.com/images/common/icon_spec_ad_on.png') no-repeat 0 0; _background:url('http://mnetimg.mnet.com/images/common/icon_spec_ad_on.gif') no-repeat 0 0}
+
+/*layout*/
+#wrap {min-width:1000px !important; text-align:center; background:#fff;}
+#header {position:relative; height:138px; background:url('http://mnetimg.mnet.com/images/common/bg_header.gif') 0 0 repeat-x; z-index:200;}
+.header_type2 {height:94px !important;}
+.header_type3 {height:37px !important; background:url('http://mnetimg.mnet.com/images/common/bg_header_tv.gif') 0 0 repeat-x !important; margin:0 auto; text-align:center;}
+#container, #container2, #container3, #container4 {margin:0 auto; width:980px; text-align:left; min-height:743px;}
+#footer {background:#3d3e41 url('http://mnetimg.mnet.com/images/common/bg_footer.gif') repeat-x; position:relative; width:100%; z-index:1;}
+.inner_wrap {margin:0 auto; width:1010px; text-align:left; position:relative;}
+.inner_wrap:after {visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
+.inner_wrap_tv {width:965px; margin:0 auto; height:37px;}
+.gnb_tv {position:absolute;}
+
+/*Header*/
+.hdset {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat; display:block;}
+#gnb {position:absolute; width:980px; height:28px; top:0; z-index:20; left:15px;}
+#gnb .quickMenu {float:left; margin-top:7px;}
+#gnb .shortcutMenu {float:right; text-align:right; width:500px; margin-top:2px;}
+#gnb .quickMenu li, .shortcutMenu li {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat 0 -139px; float:left; color:#9194a0; font-size:11px; letter-spacing:-1px; padding:0 7px 0 8px; line-height:13px;}
+#gnb .quickMenu li a, .shortcutMenu li a {color:#9194a0; font-size:11px; letter-spacing:-1px;}
+#gnb .quickMenu li a:hover, .shortcutMenu li a:hover {color:#cfd2d7; text-decoration:none;}
+#gnb .quickMenu li a.onair {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat 0 -80px; display:block; width:47px; height:13px; float:left;}
+#gnb .quickMenu li a.onair:hover {background-position:-50px -80px; display:block;}
+#gnb .quickMenu li a.mobile {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat -120px -101px; display:block; padding:0 0 0 13px;}
+#gnb .quickMenu li a.mobile:hover {background-position:-120px -121px; display:block;}
+
+#gnb .shortcutMenu_on {float:right; text-align:right; width:500px; margin-top:2px;}
+#gnb .shortcutMenu_on li {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat 0 -139px; float:left; color:#9194a0; font-size:11px; letter-spacing:-1px; padding:0 7px 0 8px; line-height:13px;}
+#gnb .shortcutMenu_on li a {color:#cfd2d7; font-size:11px; letter-spacing:-1px;}
+#gnb .shortcutMenu_on .myinfo dd a.myfeed {background-position:-46px -100px; width:15px; height:12px;}
+#gnb .shortcutMenu_on .myinfo dd a.memo {background-position:-46px -120px; width:18px; height:13px;}
+#gnb .shortcutMenu_on .myinfo dt a {color:#cfd2d7;}
+#gnb .shortcutMenu_on .myinfo dt a:hover, #gnb .shortcutMenu_on li a:hover {color:#cfd2d7; text-decoration:none;}
+#gnb .shortcutMenu_on .myinfo dt a span {color:#cfd2d7;}
+#gnb .my_new {background-position:-100px -100px; display:block; width:8px; height:8px; position:abolute; margin:-2px 0 0 7px; float:right;}
+
+#gnb .utility {float:right; margin-top:7px;}
+#gnb .myinfo {float:right; text-align:right; padding-right:8px;}
+#gnb .myinfo dt img {display:block; border:1px solid #111;}
+#gnb .myinfo dt {color:#9194a0; float:left; font-size:11px; letter-spacing:-1px; margin-right:11px; }
+#gnb .myinfo dt a span {color:#b2b6c8;}
+#gnb .myinfo dt a {float:left;display:inline; margin-right:4px;color:#9194a0;font-size:11px; letter-spacing:-1px;}
+#gnb .myinfo dt a:hover {color:#b2b6c8; text-decoration:none;}
+#gnb .myinfo dt span a {margin-top:7px;}
+#gnb .myinfo dd {float:left; display:inline;margin:6px 6px 0 0;}
+#gnb .myinfo dd a {float:left;}
+#gnb .myinfo dd a.myfeed {background-position:0 -100px; width:15px; height:12px;}
+#gnb .myinfo dd a.myfeed:hover {background-position:-46px -100px; width:15px; height:12px;}
+#gnb .myinfo dd a.memo {background-position:0 -120px; width:18px; height:13px;}
+#gnb .myinfo dd a.memo:hover {background-position:-46px -120px; width:18px; height:13px;}
+
+#header h1 { left:0; top:0;position:absolute;}
+#header h1 a {background-position:0 0;margin-top:17px;width:90px; height:33px; display:block;}
+#header h1.newyear {left:-55px;}
+#header h1.newyear a {margin-left:55px;}
+
+#lnb {position:absolute; width:990px; height:65px; top:28px; left:15px;}
+#lnb .search {position:absolute; left:103px; top:14px;  background:#393a3d url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat -210px 0; width:306px; height:38px; z-index:20;}
+#lnb .search input {float:left; width:239px; height:24px;color:#fff; font-weight:bold; font-size:14px; padding:4px 5px 0 5px; margin:5px 0 0 4px; border:none; disply:inline; line-height:20px;}
+:root #lnb .search input {float:left; width:239px; height:23px;color:#fff; font-weight:bold; font-size:14px; padding:3px 5px 0 5px; margin:5px 0 0 4px; border:none; disply:inline; line-height:20px;}
+#lnb .search a.btn_suggest_up {background-position:-17px -41px; width:17px; height:28px; float:left; margin-top:5px; text-indent:-9999px; overflow:hidden;}
+#lnb .search a.btn_suggest_dw {background-position:0 -41px; width:17px; height:28px; float:left; margin-top:5px; text-indent:-9999px; overflow:hidden;}
+#lnb .search a.btn_search {background-position:-34px -41px; width:31px; height:28px; float:left; margin-top:5px; text-indent:-9999px; overflow:hidden;}
+#lnb .search a.btn_sclose {background:url('http://mnetimg.mnet.com/images/common/lay_eventxt.gif') no-repeat 0 0; display:block; width:265px; height:28px; position:absolute; z-index:100; left:6px; top:5px;}
+#lnb .search a {cursor:pointer;}
+
+.suggestwrap {position:absolute; width:303px; border:1px solid #282830; top:37px; left:0; background:#fff; z-index:99; overflow:hidden;}
+.suggestwrap h3 {font-size:11px; background:#f5f5f5; color:#2e2e2e; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; height:16px; padding:5px 0 0 11px;}
+.suggestwrap ul {padding:4px 0;}
+.suggestwrap li {padding:0; *zoom:1; display:block; overflow:hidden;}
+.suggestwrap li a {display:inline-block; width:100%; cursor:pointer;}
+.suggestwrap li a:hover {background:#f5f5f5; text-decoration:none;}
+.suggestwrap li.hover {background:#f5f5f5;}
+.suggestwrap li .img {position:relative; float:left; margin-right:8px; background:#efefef; font-size:0; display:block;}
+.suggestwrap li .img img {display:block;}
+.suggestwrap dl {padding:4px 8px; display:block; overflow:hidden; height:30px;}
+:root .suggestwrap dl {padding:4px 8px 5px 8px; display:block; height:30px;}
+.suggestwrap dt {color:#2e2e2e; padding:2px 0 2px 0;}
+.suggestwrap dt.ellipsis {width:220px; height:14px; line-height:15px; }
+.suggestwrap dt span, .suggestwrap dd span {color:#dc0273}
+.suggestwrap dd.ellipsis {color:#909090; font-size:11px; width:220px; height:15px; line-height:15px;}
+.suggestwrap dd em {color:#dedede; font-size:10px; padding:0 4px 0 3px;}
+.suggestwrap .w32 {width:30px; height:30px;}
+.suggestwrap .w55 {width:53px; height:28px;}
+.suggestwrap_none {position:absolute; width:287px; border:1px solid #282830; top:37px; left:0; background:#f5f5f5; z-index:99; overflow:hidden; padding:12px 0 10px 16px; color:#666;}
+.suggestwrap .song { padding-top:6px !important; width:auto;height: auto;}
+.suggestwrap .song p { padding:5px 8px;  }
+.suggestwrap .song li { height:25px; }
+.suggestwrap .song dl .icon_info2 {background: url("http://mnetimg.mnet.com/images/common/btn_s_info.gif") no-repeat -17px 0; display:inline-block; height:13px; margin:0 6px 0 0; vertical-align:middle; width:15px; float:left;}
+.suggestwrap .song dl .iconPps1  { display:block; width:22px; height:15px; margin-right:4px; float:left; vertical-align:middle; background:url('http://mnetimg.mnet.com/images/common/icon_pps.png') no-repeat 0 0; }
+.suggestwrap .song dl .iconPps2  { display:block; width:22px; height:15px; margin-right:4px; float:left; vertical-align:middle; background:url('http://mnetimg.mnet.com/images/common/icon_pps.png') no-repeat 0 -50px; }
+.suggestwrap .song dl .iconPps3  { display:block; width:22px; height:15px; margin-right:4px; float:left; vertical-align:middle; background:url('http://mnetimg.mnet.com/images/common/icon_pps.png') no-repeat 0 -100px; }
+.suggestwrap .song dl em {color:#c3c6cb; font-size:11px; padding:0 4px 0 3px;}
+.suggestwrap .song dt {padding:0; float:left; font-size:12px;}
+.suggestwrap .song dd.tit_song {display:block; width:250px; float:left;}
+.suggestwrap .song dd.tit_song dl {padding:0;}
+.suggestwrap .song dd.tit_song dl dd {* display:inline-block; * width:auto;}
+.suggestwrap .song dd.artist {color:#909090; font-size:11px;letter-spacing:-1px; height:15px; overflow:hidden;}
+.suggestwrap .song dd.tit span, .suggestwrap .song dd.artist span {color:#dc0273}
+
+/*1depth menu nav*/
+.serviceMenu {float:left; display:inline; margin:21px 0 0 444px;}
+.serviceMenu ul {float:left;}
+.serviceMenu li {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat right -154px; float:left; padding-right:2px; }
+.serviceMenu li a {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat; display:block; float:left; padding:5px 14px 5px 14px; *display:inline;}
+.serviceMenu li a span {display:none;}
+.serviceMenu li a.music {background-position:-10px -195px; width:30px; height:16px;}
+.serviceMenu li a.music:hover, .serviceMenu li a.music_on {background-position:-10px -221px; width:30px; height:16px;}
+.serviceMenu li a.tv {background-position:-87px -195px; width:20px; height:16px;}
+.serviceMenu li a.tv:hover, .serviceMenu li a.tv_on {background-position:-87px -221px; width:20px; height:16px;}
+.serviceMenu li a.show  {background-position:-158px -195px; width:28px; height:16px;}
+.serviceMenu li a.show:hover, .serviceMenu li a.show_on {background-position:-158px -221px; width:28px; height:16px}
+.serviceMenu li a.special  {background-position:-234px -195px; width:42px; height:16px;}
+.serviceMenu li a.special:hover, .serviceMenu li a.special_on {background-position:-234px -221px; width:42px; height:16px;}
+.serviceMenu li a.mymnet  {background-position:-326px -195px; width:55px; height:16px;}
+.serviceMenu li a.mymnet:hover, .serviceMenu li a.mymnet_on {background-position:-326px -221px; width:55px; height:16px;}
+.serviceMenu .banR {float:left; margin-top:-21px; position:relative;}
+.serviceMenu .btn_mama {float:left; margin-top:-21px; position:relative; margin-left:-2px;}
+
+/*2depth menu nav*/
+.serviceMenu ul li ul {position:absolute; }
+.serviceMenu ul li ul li {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat 0 -174px; padding-left:1px; display:inline-block;}
+.serviceMenu ul li ul li a {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat; padding:0; float:left; padding:0 11px 0 10px; display:inline;}
+.serviceMenu ul li ul li a span {display:none;}
+
+.serviceMenu li div {width:975px; position:absolute; top:77px; left:0; z-index:10;}
+.serviceMenu li div dl {float:left;}
+.serviceMenu li div dt, .serviceMenu li div h2, .serviceMenu li div dd {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat; display:block; float:left;}
+.serviceMenu li div dt {background-position:right -255px; padding:0 17px 0 0; margin:0 11px 0 5px; float:left;}
+.serviceMenu li div dt h2, .serviceMenu li div dd {text-indent:-9999px;}
+
+/*2depth music*/
+.serviceMenu .service_music h2.nav_tit {background-position:0 -260px; width:28px; height:20px;}
+.serviceMenu .service_music dd.nav_01 {background-position:-56px -260px; width:45px; height:20px;}
+.serviceMenu .service_music dd.nav_02 {background-position:-111px -260px; width:45px; height:20px;}
+.serviceMenu .service_music dd.nav_03 {background-position:-168px -260px; width:45px; height:20px;}
+.serviceMenu .service_music dd.nav_04 {background-position:-224px -260px; width:45px; height:20px;}
+.serviceMenu .service_music dd.nav_05 {background-position:-177px -290px; width:56px; height:20px;}
+.serviceMenu .service_music span.arr_top {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat -102px -140px; width:11px; height:6px; position:absolute; top:-17px; left:470px;}
+
+.serviceMenu .service_music ul {left:448px;}
+.serviceMenu .service_music ul li a {padding:0 10px 0 8px !important;}
+.serviceMenu .service_music ul li a.chart {background-position:0px -380px; width:45px; height:22px;}
+.serviceMenu .service_music ul li a.chart:hover, .serviceMenu .service_music ul li a.chart_on {background-position:0px -406px;  width:45px; height:22px;}
+.serviceMenu .service_music ul li a.new {background-position:-67px -380px; width:45px; height:22px;}
+.serviceMenu .service_music ul li a.new:hover, .serviceMenu .service_music ul li a.new_on {background-position:-67px -406px; width:45px; height:22px;}
+.serviceMenu .service_music ul li a.genre {background-position:-134px -380px; width:45px; height:22px;}
+.serviceMenu .service_music ul li a.genre:hover, .serviceMenu .service_music ul li a.genre_on{background-position:-134px -406px; width:45px; height:22px;}
+.serviceMenu .service_music ul li a.open {background-position:-201px -380px; width:45px; height:22px;}
+.serviceMenu .service_music ul li a.open:hover, .serviceMenu .service_music ul li a.open_on {background-position:-201px -406px; width:45px; height:22px;}
+.serviceMenu .service_music ul li a.mv {background-position:-155px -430px; width:52px; height:22px;}
+.serviceMenu .service_music ul li a.mv:hover, .serviceMenu .service_music ul li a.mv_on {background-position:-155px -456px; width:52px; height:22px;}
+
+/*2depth tv*/
+.serviceMenu .service_tv h2.nav_tit {background-position:0 -290px; width:21px; height:20px;}
+.serviceMenu .service_tv dd.nav_01 {background-position:-69px -290px; width:47px; height:20px;}
+.serviceMenu .service_tv dd.nav_02 {background-position:-123px -290px; width:44px; height:20px;}
+.serviceMenu .service_tv dd.nav_03 {background-position:-177px -290px; width:56px; height:20px;}
+.serviceMenu .service_tv dd.nav_04 {background-position:-243px -290px; width:44px; height:20px;}
+.serviceMenu .service_tv dd.nav_05 {background-position:-297px -290px; width:43px; height:20px;}
+.serviceMenu .service_tv dd.nav_06 {background-position:-350px -290px; width:34px; height:20px;}
+.serviceMenu .service_tv dd.nav_07 {background-position:-392px -290px; width:45px; height:20px;}
+.serviceMenu .service_tv span.arr_top {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=2') no-repeat -102px -140px; width:11px; height:6px; position:absolute; top:-17px; left:523px;}
+
+.serviceMenu .service_tv ul {left:380px;}
+.serviceMenu .service_tv ul li a.review {background-position:-21px -430px; width:41px; height:22px; display:block;}
+.serviceMenu .service_tv ul li a.review:hover, .serviceMenu .service_tv ul li a.review_on {background-position:-21px -456px; width:41px; height:22px;}
+.serviceMenu .service_tv ul li a.program {background-position:-87px -430px; width:41px; height:22px;}
+.serviceMenu .service_tv ul li a.program:hover, .serviceMenu .service_tv ul li a.program_on {background-position:-87px -456px; width:41px; height:22px;}
+.serviceMenu .service_tv ul li a.mv {background-position:-155px -430px; width:52px; height:22px;}
+.serviceMenu .service_tv ul li a.mv:hover, .serviceMenu .service_tv ul li a.mv_on {background-position:-155px -456px; width:52px; height:22px;}
+.serviceMenu .service_tv ul li a.down {background-position:-233px -430px; width:41px; height:22px;}
+.serviceMenu .service_tv ul li a.down:hover, .serviceMenu .service_tv ul li a.down_on {background-position:-233px -456px; width:41px; height:22px;}
+.serviceMenu .service_tv ul li a.onair {background-position:-300px -430px; width:37px; height:22px;}
+.serviceMenu .service_tv ul li a.onair:hover, .serviceMenu .service_tv ul li a.onair_on {background-position:-300px -456px; width:37px; height:22px;}
+.serviceMenu .service_tv ul li a.tvtheme {background-position:-429px -430px; width:41px; height:22px;}
+.serviceMenu .service_tv ul li a.tvtheme:hover, .serviceMenu .service_tv ul li a.tvtheme_on {background-position:-429px -456px; width:41px; height:22px;}
+.serviceMenu .service_tv ul li a.tvchart {background-position:-365px -430px; width:33px; height:22px;}
+.serviceMenu .service_tv ul li a.tvchart:hover, .serviceMenu .service_tv ul li a.tvchart_on {background-position:-365px -456px; width:33px; height:22px;}
+
+/*2depth show*/
+.serviceMenu .service_show h2.nav_tit {background-position:0 -350px; width:27px; height:20px;}
+.serviceMenu .service_show dd.nav_01 {background-position:-56px -350px; width:88px; height:20px;}
+.serviceMenu .service_show dd.nav_02 {background-position:-154px -350px; width:34px; height:20px;}
+.serviceMenu .service_show dd.nav_03 {background-position:-198px -350px; width:33px; height:20px;}
+.serviceMenu .service_show dd.nav_04 {background-position:-241px -350px; width:78px; height:20px;}
+.serviceMenu .service_show span.arr_top {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=10') no-repeat -102px -140px; width:11px; height:6px; position:absolute; top:-17px; left:578px;}
+
+.serviceMenu .service_show ul {left:448px;}
+.serviceMenu .service_show ul li a.today {background-position:0px -530px; width:84px; height:22px;}
+.serviceMenu .service_show ul li a.today:hover, .serviceMenu .service_show ul li a.today_on  {background-position:0px -554px; width:84px; height:22px;}
+.serviceMenu .service_show ul li a.concert {background-position:-110px -530px; width:31px; height:22px;}
+.serviceMenu .service_show ul li a.concert:hover, .serviceMenu .service_show ul li a.concert_on {background-position:-110px -554px; width:31px; height:22px;}
+.serviceMenu .service_show ul li a.musical {background-position:-166px -530px; width:30px; height:22px;}
+.serviceMenu .service_show ul li a.musical:hover, .serviceMenu .service_show ul li a.musical_on {background-position:-166px -554px; width:30px; height:22px;}
+.serviceMenu .service_show ul li a.season {background-position:-222px -530px; width:79px; height:22px;}
+.serviceMenu .service_show ul li a.season:hover, .serviceMenu .service_show ul li a.season_on {background-position:-222px -554px; width:79px; height:22px;}
+
+/*2depth special*/
+.serviceMenu .service_special h2.nav_tit {background-position:0 -320px; width:41px; height:20px;}
+.serviceMenu .service_special dd.nav_01 {background-position:-71px -320px; width:70px; height:20px;}
+.serviceMenu .service_special dd.nav_02 {background-position:-150px -320px; width:55px; height:20px;}
+.serviceMenu .service_special dd.nav_03 {background-position:-366px -320px; width:56px; height:20px;}
+.serviceMenu .service_special dd.nav_04 {background-position:-226px -320px; width:23px; height:20px;}
+.serviceMenu .service_special dd.nav_05 {background-position:-259px -320px; width:44px; height:20px;}
+.serviceMenu .service_special dd.nav_06 {background-position:-313px -320px; width:44px; height:20px;}
+.serviceMenu .service_special dd.nav_07 {background-position:-367px -320px; width:70px; height:20px;}
+.serviceMenu .service_special dd.nav_08 {background-position:-450px -320px; width:45px; height:20px;}
+.serviceMenu .service_special span.arr_top {background:url('http://mnetimg.mnet.com/images/common/hdsub_imgset.gif?v=4') no-repeat -102px -140px; width:11px; height:6px; position:absolute; top:-17px; left:643px;}
+
+.serviceMenu .service_special ul {/*right:0px; left:auto !important; width:447px;*/ left:448px;}
+.serviceMenu .service_special ul li a.special {background-position:0px -480px; width:66px; height:22px;}
+.serviceMenu .service_special ul li a.special:hover, .serviceMenu .service_special ul li a.special_on {background-position:0px -504px; width:66px; height:22px;}
+.serviceMenu .service_special ul li a.people {background-position:-91px -480px; width:53px; height:22px;}
+.serviceMenu .service_special ul li a.people:hover, .serviceMenu .service_special ul li a.people_on {background-position:-91px -504px; width:53px; height:22px;}
+.serviceMenu .service_special ul li a.story {background-position:-364px -480px; width:50px; height:22px;}
+.serviceMenu .service_special ul li a.story:hover, .serviceMenu .service_special ul li a.story_on {background-position:-364px -504px;width:50px; height:22px;}
+.serviceMenu .service_special ul li a.news {background-position:-190px -480px; width:20px; height:22px;}
+.serviceMenu .service_special ul li a.news:hover, .serviceMenu .service_special ul li a.news_on {background-position:-190px -504px; width:20px; height:22px;}
+.serviceMenu .service_special ul li a.stage {background-position:-235px -480px; width:40px; height:22px;}
+.serviceMenu .service_special ul li a.stage:hover, .serviceMenu .service_special ul li a.stage_on {background-position:-235px -504px; width:40px; height:22px;}
+.serviceMenu .service_special ul li a.photo {background-position:-300px -480px; width:19px; height:22px;}
+.serviceMenu .service_special ul li a.photo:hover, .serviceMenu .service_special ul li a.photo_on {background-position:-300px -504px; width:19px; height:22px;}
+.serviceMenu .service_special ul li a.project {background-position:-366px -480px; width:70px; height:22px; padding:0 0 0 12px !important;}
+.serviceMenu .service_special ul li a.project:hover, .serviceMenu .service_special ul li a.project_on {background-position:-366px -504px; width:70px; height:22px; padding:0 0 0 12px !important;}
+.serviceMenu .service_special ul li a.mstyle {background-position:-459px -480px; width:40px; height:22px;}
+.serviceMenu .service_special ul li a.mstyle:hover, .serviceMenu .service_special ul li a.mstyle_on {background-position:-459px -504px; width:40px; height:22px;}
+
+/* aside_lnb */
+#aside_lnb .title_header {height:24px; width:170px;}
+#aside_lnb .title_header h3 {float:left;}
+
+/* aside_rnb */
+#aside_rnb .section {background:url('http://mnetimg.mnet.com/images/common/bg_rnb_section.gif') 0 bottom repeat-x; padding:20px 0; margin:0 16px -1px; }
+#aside_rnb .section .title_header {height:26px;}
+#aside_rnb .section .title_header h3 {float:left; text-indent:-9999px;}
+#aside_rnb .btn_play {background-position:-15px 0;}
+#aside_rnb a.more, #aside_lnb a.more {background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') right -27px no-repeat; float:right; font-size:11px; color:#727272; line-height:14px; padding-right:6px; margin-top:1px; letter-spacing:-1px;}
+#aside_rnb .no_list li {background:url('http://mnetimg.mnet.com/images/common/icon_common_no.gif') 0 0 no-repeat; padding-left:24px; }
+#aside_rnb .no_list .no1 {background-position:0 2px;}
+#aside_rnb .no_list .no2 {background-position:0 -51px;}
+#aside_rnb .no_list .no3 {background-position:0 -111px;}
+#aside_rnb .no_list .no4 {background-position:0 -171px;}
+#aside_rnb .no_list .no5 {background-position:0 -231px;}
+
+/* table type */
+.table_type01 {background:url('http://mnetimg.mnet.com/images/common/th_type01.gif') 0 -28px repeat-x;}
+.table_type01 th {background:url('http://mnetimg.mnet.com/images/common/th_type01.gif') 0 0 no-repeat; font-size:11px; height:28px; color:#666; text-align:left;}
+.table_type01 th span {display: block; padding: 2px 0 0 7px;}
+.table_type01 td {border-bottom:1px solid #eee;}
+.table_type01 .check {text-align:center; background:none; padding:0;}
+
+/*paging type01*/
+.paging_type_no {clear:both;text-align:center; padding:40px 0 30px; width:auto; position:relative; z-index:1;}
+.paging_type_no a {display:inline-block; _display:inline; border:1px solid #d7d7d7; line-height:15px; padding:5px 6px; min-width:14px; margin:0 2px; font-family:Verdana; vertical-align:middle;}
+.paging_type_no a:hover {text-decoration:none; background:#ededed;}
+.paging_type_no a.selected {font-weight:bold; border:2px solid #767676;padding:4px 5px; }
+.paging_type_no a.prev {background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') 8px -182px no-repeat; width:13px; height:15px; display:inline-block;}
+.paging_type_no a.prev:hover {background:#ededed url('http://mnetimg.mnet.com/images/common/icon_common.gif') 8px -182px no-repeat;}
+.paging_type_no a.next {background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') -20px -182px no-repeat; width:13px; height:15px; display:inline-block;}
+.paging_type_no a.next:hover {background:#ededed url('http://mnetimg.mnet.com/images/common/icon_common.gif') -20px -182px no-repeat;}
+.paging_type_no a.prev_first {background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') 6px -207px no-repeat; width:13px; height:15px; display:inline-block;}
+.paging_type_no a.prev_first:hover {background:#ededed url('http://mnetimg.mnet.com/images/common/icon_common.gif') 6px -207px no-repeat;}
+.paging_type_no a.next_end {background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') -20px -207px no-repeat; width:13px; height:15px; display:inline-block;}
+.paging_type_no a.next_end:hover {background:#ededed url('http://mnetimg.mnet.com/images/common/icon_common.gif') -20px -207px no-repeat;}
+.paging_type_no a span {display:block; overflow:hidden; text-indent:-9999px; }
+
+/* Footer */
+#footer .ftset {background:url('http://mnetimg.mnet.com/images/common/foot_imgset.gif') no-repeat;}
+#footer .logo {float:left; margin-top:31px; width:192px; height:59px;}
+#footer .cj {background-position:0 0; float:left; width:122px; height:57px; margin-left:15px;}
+#footer .footMenu {float:left;}
+#footer .footMenu ul {margin-top:32px; display:block; height:10px;}
+#footer .footMenu li {background:url('http://mnetimg.mnet.com/images/common/foot_imgset.gif') no-repeat 0 -109px; float:left; height:11px; color:#82848b; font-size:11px; letter-spacing:-1px; padding:0 7px 0 8px; text-align:left;}
+#footer .footMenu li a {float:left; color:#82848b; font-size:11px; letter-spacing:-1px;}
+#footer .footMenu li a:hover {color:#cfd2d7;}
+#footer .footMenu li strong {color:#989aa0;}
+#footer .footMenu address {background-position:1px -58px; width:585px; height:42px; display:block; margin-top:18px;}
+/* Footer 20111118 */
+#footer .footMenu address a.btn_infomore {position:absolute; background:url('http://mnetimg.mnet.com/images/common/foot_imgset.gif') no-repeat -45px -130px; width:69px; height:17px; display:block; top:89px;}
+#footer .footMenu address a.btn_infomore span {display:none;}
+#footer .family_site {top:53px;right:15px; position:absolute;}
+#footer .family_site p {width:152px; border:1px solid #000; position:relative; color:#bebebe; background:#2a2b2d; font-weight:bold; display:block; height:23px; overflow:hidden;}
+#footer .family_site p a.site {display:block; color:#bebebe; font-weight:bold; padding:5px 10px; }
+#footer .family_site p .btn_on {position:absolute; background:url('http://mnetimg.mnet.com/images/common/foot_imgset.gif') no-repeat 0 -130px; width:20px; height:22px; display:block; top:0px; right:1px;}
+#footer .family_site p .btn_off {position:absolute; background:url('http://mnetimg.mnet.com/images/common/foot_imgset.gif') no-repeat -20px -130px; width:20px; height:22px; display:block; top:0px; right:1px;}
+#footer .family_site div.family_list {position:relative;}
+#footer .family_site div.family_list ul {width:152px; height:auto !important; margin:0; position:absolute; bottom:25px; _bottom:50px;}
+#footer .family_site div.family_list li {width:152px; height:23px; border:1px solid #000; border-bottom:none; background:#3f4042; padding:0; overflow:hidden;}
+
+#footer .family_site div.family_list li a {color:#9b9b9b; font-size:11px; padding:7px 10px; width:132px; height:8px; display:block;}
+#footer .family_site div.family_list li a:hover, #footer .family_site p a:hover.site {text-decoration:none;}
+
+/* 2018-03-07 Delete
+.jumpingMenu { top:32px;right:15px; position:absolute;}
+.jumpingMenuInner { position:relative; }
+.jumpingMenu .jumpingTi { margin:0; padding:0; font-size:12px; color:#8B9097; line-height:14px; border:1px solid #a0a0a7; background:#f9f9fa url('http://mnetimg.mnet.com/images/common/arr_jumping.gif') no-repeat right 11px; }
+.jumpingMenu .jumpingTi a { text-decoration:none; padding:5px 21px 4px 10px; font-size:12px; color:#8B9097; font-weight:bold; line-height:14px; text-transform:uppercase; display:block; }
+.jumpingMenu .jumpingCo { position:absolute; width:100%; bottom:24px; }
+.jumpingMenu .jumpingCo ul { border:1px solid #a0a0a7; border-bottom:0 none; background-color:#ffffff; }
+.jumpingMenu .jumpingCo ul li { line-height:14px; border-bottom:1px solid #f1f1f2; }
+.jumpingMenu .jumpingCo ul li a { text-decoration:none; padding:7px 10px 5px 10px; font-size:12px; color:#272A34; line-height:14px; display:block;}
+
+.jumpingMenuOn .jumpingTi { background-position:right -30px; }
+*/
+
+/*jquery_selector*/
+.hd_first {background:none !important; padding-left:0 !important;}
+
+/* plugin */
+.widgetlist_type01 li {float:left; display:inline; margin:5px;}
+
+.btn_action {font-size:11px; color:#ddd; letter-spacing:-1px;}
+.btn_action a {margin:0 2px; font-size:11px; color:#666;}
+.btn_action a:hover {color:#333;}
+.btn_action .count {font-weight:bold;}
+
+.btn_action_reply {font-size:11px; color:#ddd; letter-spacing:-1px;}
+.btn_action_reply a {margin:0 2px; font-size:11px; color:#777;}
+.btn_action_reply .count {font-weight:bold;}
+
+.actionbox {color:#dcdcdc; border:1px solid #dcdcdc; padding:6px 10px; height:15px; margin-top:-1px;}
+.actionbox a {color:#666;}
+.actionbox a:hover {text-decoration:none;}
+.action_like {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 3px no-repeat; padding-left:12px; color:#ed6ca2;}
+.action_reply {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 -19px no-repeat; padding-left:14px; color:#3db9e2;}
+
+.widgetbox a:hover {text-decoration:none;}
+.likebox_vertical {display:block; width:59px; height:63px; position:relative;}
+.likebox_vertical a {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 0 no-repeat;}
+.likebox_vertical .liked_list {display:none;}
+.likebox_vertical a.btn_like_active {background-position:0 -49px; width:59px; height:21px; text-indent:-9999px; display:block; position:absolute; bottom:0; left:0;}
+.likebox_vertical a.btn_liked {background-position:0 -70px; width:59px; height:21px; text-indent:-9999px; display:block; position:absolute; bottom:0; left:0;}
+.likebox_vertical a.btn_liked:hover {background-position:0 -91px;}
+.likebox_vertical a.count {background-position:-73px -154px; display:block; font-size:9px; font-family:Tahoma; font-weight:bold; color:#5e5873; text-align:center; height:28px; padding-top:12px; cursor:default;}
+
+.likebox_vertical_wide {display:block; width:150px; height:63px; position:relative;}
+.likebox_vertical_wide a {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 0 no-repeat;}
+.likebox_vertical_wide .liked_list {position:absolute; bottom:1px; left:63px;}
+.likebox_vertical_wide .liked_list li {position:relative; width:25px; height:23px; float:left; display:inline; margin:0 0 0 2px; padding:0 !important;}
+.likebox_vertical_wide .liked_list li img {display:block;}
+.likebox_vertical_wide .liked_list li .pic_b {width:22px; height:22px;}
+.likebox_vertical_wide a.btn_like_active {background-position:0 -49px; width:59px; height:21px; text-indent:-9999px; display:block; position:absolute; bottom:0; left:0;}
+.likebox_vertical_wide a.btn_liked {background-position:0 -70px; width:59px; height:21px; text-indent:-9999px; display:block; position:absolute; bottom:0; left:0;}
+.likebox_vertical_wide a.btn_liked:hover {background-position:0 -91px;}
+.likebox_vertical_wide a.count {background-position:-73px -154px; display:block; font-size:9px; font-family:Tahoma; font-weight:bold; color:#5e5873; text-align:center; width:60px; height:28px; padding-top:12px; cursor:default;}
+
+.likebox_basic {display:block; width:102px; height:21px;}
+.likebox_basic a {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 0 no-repeat;}
+.likebox_basic .liked_list {display:none;}
+.likebox_basic a.btn_like_active {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 -49px; width:59px; height:21px; text-indent:-9999px; display:block; float:left;}
+.likebox_basic a.btn_liked {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 -70px; width:59px; height:21px; text-indent:-9999px; display:block; float:left;}
+.likebox_basic a.btn_liked:hover {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 -91px;}
+.likebox_basic a.count {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 2px -196px; display:block; float:left; font-size:9px; font-family:Tahoma; line-height:12px; font-weight:bold; color:#5e5873; text-align:center; width:36px; height:16px; padding-top:4px; padding-left:7px; vertical-align:top;cursor:default;}
+
+.likebox_wide {display:block; width:191px; height:24px; margin-top:-2px;}
+.likebox_wide a {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 0 no-repeat;}
+.likebox_wide .liked_list {padding-left:6px; float:left;}
+.likebox_wide .liked_list li {position:relative; width:25px; height:23px; float:left; display:inline; margin:0 0 0 2px; padding:0 !important; background:none !important;}
+.likebox_wide .liked_list li img {display:block;}
+.likebox_wide .liked_list li .pic_b {width:22px; height:22px;}
+.likebox_wide a.btn_like_active {background-position:0 -49px; width:59px; height:21px; text-indent:-9999px; display:block; float:left; margin-top:2px; overflow:hidden;}
+.likebox_wide a.btn_liked {background-position:0 -70px; width:59px; height:21px; text-indent:-9999px; display:block; float:left; margin-top:2px;}
+.likebox_wide a.btn_liked:hover {background-position:0 -91px;}
+.likebox_wide a.count {pointer-events:none;background-position:2px -196px; display:block; float:left; font-size:9px; font-family:Tahoma; font-weight:bold; color:#5e5873; text-align:center; width:36px; height:16px; padding-top:4px; padding-left:7px; vertical-align:top; margin-top:2px;line-height:13px;cursor:default;}
+
+.sharebox_vertical {display:block; width:67px; height:63px; position:relative;}
+.sharebox_vertical a {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 0 no-repeat;}
+.sharebox_vertical .liked_list {display:none;}
+.sharebox_vertical a.btn_share_active {background-position:0 -112px; width:67px; height:21px; text-indent:-9999px; display:block; position:absolute; bottom:0; left:0;}
+.sharebox_vertical a.count {background-position:0 -154px; display:block; font-size:9px; font-family:Tahoma; font-weight:bold; color:#5e5873; text-align:center; height:28px; padding-top:12px;line-height:13px;cursor:default;}
+
+.sharebox_vertical2 {display:block; width:52px; height:63px; position:relative;}
+.sharebox_vertical2 a {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 0 no-repeat;}
+.sharebox_vertical2 .liked_list {display:none;}
+.sharebox_vertical2 a.btn_share_active {background-position:-108px -280px; width:52px; height:21px; text-indent:-9999px; display:block; position:absolute; bottom:0; left:0; overflow:hidden;}
+.sharebox_vertical2 a.count {background-position:-108px -238px; display:block; font-size:9px; font-family:Tahoma; font-weight:bold; color:#5e5873; text-align:center; height:28px; padding-top:12px;line-height:13px;cursor:default;}
+
+.sharebox_basic {display:block; width:109px; height:21px;}
+.sharebox_basic a {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 0 no-repeat;}
+.sharebox_basic a.btn_share_active {background-position:0 -112px; width:67px; height:21px; text-indent:-9999px; display:block; float:left;}
+.sharebox_basic a.count {background-position:1px -196px; display:block; float:left; font-size:9px; font-family:Tahoma; font-weight:bold; color:#5e5873; text-align:center; width:36px; height:16px; padding-top:4px; padding-left:6px; vertical-align:top;line-height:13px;cursor:default;}
+
+.sharebox_smart {display:block; width:91px; height:21px;}
+.sharebox_smart_s {width:49px !important;}
+.sharebox_smart a {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 0 no-repeat;}
+.sharebox_smart a.btn_share_active {background-position:0 -133px; width:49px; height:21px; text-indent:-9999px; display:block; float:left;}
+.sharebox_smart a.count {background-position:1px -196px; display:block; float:left; font-size:9px; font-family:Tahoma; font-weight:bold; color:#5e5873; text-align:center; width:36px; height:16px; padding-top:4px; padding-left:6px; vertical-align:top;line-height:13px;cursor:default;}
+
+.supportbox {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 -238px no-repeat; width:84px; padding-right:5px; padding-top:5px; text-align:center;}
+.supportbox .support_list li {position:relative; width:50px; height:50px; margin:10px 17px 6px 17px; float:none; display:block;}
+.supportbox .support_list li img {display:block; border:1px solid #b7b7b7;}
+.supportbox .support_list li span {background:url('http://mnetimg.mnet.com/images/plugin/bg_widget_name.png') 0 0 no-repeat; width:21px; height:21px; position:absolute; top:-7px; left:-10px; text-indent:-9999px;}
+.supportbox .support_list li span.top01 {background-position: 0 0;}
+.supportbox .support_list li span.top02 {background-position: 0 -42px;}
+.supportbox .support_list li span.topnew {background-position: 0 -80px;}
+.supportbox a.btn_support_active {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 -220px no-repeat; padding-left:12px; font-size:11px; display:inline-block; height:14px; margin-bottom:3px; line-height:16px;}
+.supportbox .time {font-size:11px; display:inline-block; margin-bottom:3px; height:14px; line-height:16px;}
+.supportbox a.count {margin-bottom:10px; display:block; font-size:14px; font-family:Tahoma; font-weight:bold; color:#47415e; height:19px; padding-top:6px; line-height:15px;cursor:default;}
+.supportbox .supportbox_bottom {background:url('http://mnetimg.mnet.com/images/plugin/icon_plugin.gif') 0 bottom no-repeat; height:6px; overflow:hidden; font-size:0;}
+
+/* layer */
+.lay_wrap {overflow:visible; position:absolute; z-index:500; text-align:left;background:#fff;}
+.lay_wrap .btn {background:url('http://mnetimg.mnet.com/images/common/btn_layer.gif?v=2') no-repeat; display:inline-block; }
+.lay_wrap .btn_lock {width:9px;height:14px;margin-left:5px;background:url('http://mnetimg.mnet.com/images/common/btn_layer.gif?v=3') 0 -408px no-repeat;text-indent:-9999px;display:inline-block;}
+.lay_wrap .btn span {display:block; text-indent:-9999px; text-align:left; overflow:hidden;}
+.lay_wrap .lay_conts { border:1px solid #333; background:#fff; position:relative; z-index:100; }
+.lay_wrap .lay_head { position:relative; height:44px; background:url('http://mnetimg.mnet.com/images/common/bg_lay_head.gif') repeat-x left top; }
+.lay_wrap .lay_close {position:absolute; background-position:-85px 0; top:17px; right:15px; width:15px; height:15px; }
+.lay_wrap .lay_head h3 {margin-left:15px; padding-top:16px; text-indent:0 !important; font-weight:bold; color:#333;}
+.lay_wrap .lay_head2{position:relative; height:44px; background:url('http://mnetimg.mnet.com/images/common/bg_lay_head_pink.gif') repeat-x left top; }
+.lay_wrap .lay_head2 .lay_top_target{position:absolute; top:-9px; left:135px; width:17px; height:10px;}
+.lay_wrap .lay_head2 .lay_close {position:absolute; background-position:-85px 0; top:17px; right:15px; width:15px; height:15px; }
+.lay_wrap .lay_cont { border-bottom:1px solid #dcdcdc; }
+.lay_wrap .lay_cont p.text {padding-top:5px; line-height:17px;}
+.lay_wrap .lay_foot { height:43px; padding-top:20px; text-align:center; border-top:1px solid #dcdcdc;}
+.lay_wrap .lay_foot * {vertical-align:top;}
+.lay_wrap .btn_mb_area {text-align:center;}
+.lay_wrap .shadow {position:absolute; z-index:10; width:100%; height:100%;_display:none;}
+.lay_wrap .shadow2 {background:#000; opacity:.2; filter:alpha(opacity=20); top:5px; left:5px;}
+.lay_wrap .btn_lay_comfirm {background:url('http://mnetimg.mnet.com/images/common/btn_layer.gif?v=2') no-repeat -36px -46px !important; width:36px; height:23px;}
+.lay_wrap .btn_lay_comfirm2 {background:url('http://mnetimg.mnet.com/images/common/btn_layer.gif?v=2') no-repeat -68px -377px !important; width:36px; height:23px;}
+.lay_wrap .btn_lay_cancel {background:url('http://mnetimg.mnet.com/images/common/btn_layer.gif?v=2') no-repeat 0 -46px !important; width:36px; height:23px;}
+.lay_wrap .btn_lay_follow {background:url('http://mnetimg.mnet.com/images/common/btn_follow.gif') no-repeat 0 -51px !important; width:69px; height:23px;}
+.lay_wrap .btn_lay_share {background:url('http://mnetimg.mnet.com/images/common/btn_layer.gif?v=2') no-repeat 0 -23px !important; width:54px; height:23px;}
+.lay_wrap .btn_addlist {background-position:0 -174px; width:47px; height:23px;}
+.lay_wrap .btn_lay_close {background:url('http://mnetimg.mnet.com/images/common/btn_layer.gif?v=2') no-repeat -57px -283px !important; width:36px; height:23px;}
+.lay_wrap .btn_lay_report {background:url('http://mnetimg.mnet.com/images/common/btn_layer.gif?v=2') no-repeat 0 -283px !important; width:57px; height:23px;}
+.lay_wrap .btn_send {background-position:0 0; width:47px; height:23px;}
+.lay_add {display:none;margin-top:-12px;}
+:root .lay_add {margin-top:0;}
+.lay_add .lay_conts {top:0; left:0; width:300px;}
+.lay_add .lay_head {background-position: 0 bottom; height:34px; border-top:1px solid #fff;}
+.lay_add .lay_head h4 {font-size:12px; font-weight:bold; padding:8px; float:left; color:#666;}
+.lay_add .lay_head .lay_close {right:9px; top:9px; width:15px; height:11px; background-position:-87px -2px;}
+.lay_add .lay_foot {text-align:center; padding-top:12px; height:24px;}
+/*20141104*/ .lay_add .btn_addalbum { background:#fff url('http://mnetimg.mnet.com/images/common/btn_layer.gif?v=2') no-repeat 0 -318px !important; padding-left:12px; color:#666; line-height:15px; #line-height:17px; display:inline-block; width:auto !important;}
+.lay_wrap ul.add_myalbum {height:230px !important; position:relative; overflow-y:auto; clear:both;}
+.lay_wrap ul.add_myalbum > li {padding:5px 5px 0 10px; height:20px; margin:0; clear:left; }
+.lay_wrap ul.add_myalbum > li > a { display:block; width:250px; white-space:nowrap; overflow:hidden; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; text-overflow:ellipsis; }
+.lay_wrap ul.add_myalbum li.selected {width:285px;height:34px;background:#727a95;}
+.lay_wrap ul.add_myalbum li.selected a {color:#fff;}
+.lay_wrap ul.add_myalbum li.selected input {border:1px solid #333; color:#333; background:#f1f1f4; width:220px; padding:1px 3px 0; margin:3px 2px 3px 0; height:20px; line-height:18px; vertical-align: middle;}
+.lay_wrap ul.add_myalbum li .btn_sub {display:inline-block; margin-right:-5px; margin-left:3px; vertical-align:middle;}
+.lay_wrap ul.add_myalbum li .btn_sub a {font-size:11px; color:#dcdcdc; letter-spacing:-1px; margin:0;}
+.lay_wrap ul.add_myalbum li em {color:#8b93ac; margin:0 3px; padding:0;}
+.lay_wrap ul.add_myalbum li span {float:none !important;}
+/* 추가 */
+.lay_wrap .lay_form {width:285px;height:34px;background:#727a95;padding:5px 5px 0 10px;}
+.lay_wrap .lay_form a {color:#fff;}
+.lay_wrap .lay_form input {border:1px solid #333; color:#333; background:#f1f1f4; width:220px; padding:1px 3px 0; margin:3px 2px 3px 0; height:20px; line-height:18px; vertical-align: middle;}
+.lay_wrap .lay_form .btn_sub {display:inline-block; margin-right:-5px; margin-left:3px; vertical-align:middle;}
+.lay_wrap .lay_form .btn_sub a {font-size:11px; color:#dcdcdc; letter-spacing:-1px; margin:0;}
+.lay_wrap .lay_form  em {color:#8b93ac; margin:0 3px; padding:0 !important;}
+.lay_wrap .lay_form  span {float:none !important;}
+
+.lay_wrap .lay_head h2, .lay_head2 h2, .lay_wrap .lay_head  .title_set  {left: 16px; padding: 0; position: absolute; top:13px; z-index: 1000; font-size:14px; font-weight:bold; font-family:'맑은 고딕', Malgun Gothic, '돋움', Dotum; color:#333; letter-spacing:-1px;}
+.lay_wrap .tit_new_pw { background: url("http://mnetimg.mnet.com/images/common/h2_layer.gif") no-repeat 0 -1px; display: block; overflow: hidden; text-indent: -9999px; height: 15px; width: 130px;}
+.lay_wrap .tit_notice { background: url("http://mnetimg.mnet.com/images/common/h2_layer.gif") no-repeat 0 -21px; display: block; overflow: hidden; text-indent: -9999px; height: 15px; width: 41px;}
+.lay_wrap.pop_new_pass {top:45px; left:520px; width:498px; display:block;}
+.lay_wrap.pop_notice {top:45px; left:520px; width:498px; display:block;}
+.pop_notice .lay_cont {border:none;}
+.pop_notice .lay_head2 .lay_top_target {left:183px;}
+.lay_wrap .chg_new_pw p{padding-top:20px; color:#333; text-align:center; margin-bottom:20px; line-height:20px;}
+.lay_wrap .btn_pwchg_now{background:url('http://mnetimg.mnet.com/images/common/mb_btn.gif') 0 -88px no-repeat; width:78px; height:23px;}
+.lay_wrap .btn_pwchg_next{background:url('http://mnetimg.mnet.com/images/common/mb_btn.gif') -79px -88px no-repeat; width:88px; height:23px;}
+.lay_wrap .btn_all_view { background:#eee; border: 1px solid #C1C8CC; letter-spacing: -1px; line-height: 13px; margin-top: -1px; text-align: center; margin:15px 15px 0;}
+.lay_wrap .btn_all_view a {color:#666;display: block; font-size: 11px; font-weight: bold; height: 25px; padding-top: 12px;}
+.lay_wrap .notice_list li { border-bottom: 1px solid #eee; height: 50px; padding: 10px 0 10px;color: #333; line-height:15px;}
+.lay_wrap .notice_list li .thumb {display: inline; float: left; margin: 0 10px; position: relative;}
+.lay_wrap .notice_list li .thumb img {display:block; width:50px; height:50px;}
+.lay_wrap .notice_list li .thumb .pic_b {width:48px; height:48px;}
+.lay_wrap .notice_list li dt {line-height: 14px; height:16px;}
+.lay_wrap .notice_list li dt a {font-weight: bold;}
+.lay_wrap .notice_list li .history {color:#CBCBCB; font-size: 11px; height: 14px; letter-spacing: -1px; padding-top:5px;}
+.lay_wrap .notice_list li .history .time {color:#9BA6B4; padding-right:2px;}
+.lay_wrap .notice_list li .history .place {color:#999; padding-left:2px;}
+
+/* layer_share */
+.lay_share { padding:15px; }
+.lay_share .sahre_writer {border:1px solid #999; height:64px;}
+.lay_share .sahre_writer p { float:left; padding:7px; background:#eee; width:50px; height:50px;}
+.lay_share .sahre_writer p img {width:48px; height:48px; border:1px solid #b7b7b7; display:block;}
+.lay_share .sahre_writer textarea {width:370px;height:44px;color:#333;line-height:14px;margin:10px;border:0;overflow-x:visible;overflow-y:auto;background:#fff url('http://mnetimg.mnet.com/images/social/textar_share_txt.gif') no-repeat left top;}
+.lay_share .album_list { padding-top:15px; width:468px; line-height:16px;}
+.lay_share .album_list .type_album dt {float:left; display:inline; width:95px; height:95px; position:relative; margin-right:10px;}
+.lay_share .album_list .type_album img {width:95px; height:95px; display:block;}
+.lay_share .album_list .type_album dd {float:left; display:block; width:320px; padding-bottom:2px; height:16px;}
+.lay_share .album_list .type_album dd.musician {padding-left:20px; width:300px;}
+.lay_share .album_list .type_album dd.musician a {color:#666;}
+.lay_share .album_list .type_album dd.meta {font-size:11px; color:#999; padding-left:20px; width:300px; padding-top:3px;}
+.lay_share .album_list .type_album dd.meta a {color:#999;}
+span.quote {color:#9BA6B4; float:left; clear:both; letter-spacing:0; padding-right:4px; margin-top:7px; font-size:11px; }
+.lay_share .album_list .playlist {border:1px solid #eee; position:relative; padding:10px 10px 5px 10px;}
+.lay_share .album_list .playlist h4 {font-weight:normal; height:20px; color:#333;}
+.lay_share .album_list .playlist li {border:none; padding:0; height:22px; color:#999;}
+.lay_share .album_list .playlist li .musician {color:#999;}
+.lay_share .album_list .playlist li em {font-size:11px; font-family:Tahoma;}
+.lay_share .album_list .playlist a.btn_playall {position:absolute; background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') 0 -47px no-repeat; color:#444; font-size:11px; letter-spacing:-1px; right:10px; top:10px; padding-left:7px;}
+.lay_share .album_list .type_album dt .pic_b {width:93px; height:93px;}
+.lay_share .album_list .type_album2 dt {float:left; display:inline; width:95px; height:95px; position:relative; margin-right:10px;}
+.lay_share .album_list .type_album2 img {width:95px; height:95px; display:block;}
+.lay_share .album_list .type_album2 dd {float:left; display:block; width:320px; padding-bottom:2px; height:16px;}
+.lay_share .album_list .type_album2 dd.musician {width:300px;}
+.lay_share .album_list .type_album2 dd.musician a {color:#666;}
+.lay_share .album_list .type_album2 dd.meta {font-size:11px; color:#999; width:300px; padding-top:3px;}
+.lay_share .album_list .type_album2 dd.meta a {color:#999;}
+.lay_share .album_list .type_album2 dd.meta span {color:#9ba6b4;}
+.lay_share .album_list .type_album2 dt .pic_b {width:93px; height:93px;}
+.lay_share .album_list .type_video dt {float:left; display:inline; width:150px; height:84px; position:relative;}
+.lay_share .album_list .type_video dt .pic_b {height: 82px; width: 148px;}
+.lay_share .album_list .type_video dd {padding-left:160px;display:block; padding-bottom:6px;}
+.lay_share .album_list .type_video dd.date {font-family: Tahoma; font-size:11px; color:#999; }
+.lay_share .album_list .type_video dd.meta {font-size:11px; color:#999; }
+.lay_share .album_list .type_video dd.meta a {color:#999;}
+.lay_share .album_list .type_video dd.musician a {font-size:11px; color:#999; letter-spacing:-1px;}
+.lay_share .album_list .type_video .btn_tvplay {background: url("http://mnetimg.mnet.com/images/common/btn_play_movie.png") no-repeat 0 bottom ; height: 14px; top:66px; position: absolute; right: 5px; width: 19px; z-index: 20;}
+.lay_share .album_list .type_video .time {color: #EAEBE3; font-family: tahoma; font-size: 10px; left: 6px; top:66px; position: absolute; z-index: 20; line-height:14px;}
+.lay_share .album_list .type_video .shadow {position:absolute; background:#000; bottom:0; left:0; width:150px; height:22px; opacity:.3; filter:alpha(opacity=30); z-index:10; display:block;}
+.lay_share .album_list .type_video a:hover .shadow {opacity:.6; filter:alpha(opacity=60);}
+.lay_share .album_list .type_photo dt {float:left; display:inline; margin-right:10px;}
+.lay_share .album_list .type_photo .photo {height: auto;position: relative; display:block;}
+.lay_share .album_list .type_photo dt.photo img {border:1px solid #ccc;}
+.lay_share .album_list .type_photo dt.photo .pic_b {display:none;}
+.lay_share .album_list .type_photo dt.chart img {border:1px solid #ccc;}
+.lay_share .album_list .type_photo dt.chart .pic_b {display:none;}
+.lay_share .album_list .type_photo dt.concert .pic_b {width:203px; height:114px;}
+.lay_share .album_list .type_photo dt.event .pic_b {width:151px; height:91px;}
+.lay_share .album_list .type_photo dt.special .pic_b {width:146px; height:80px;}
+.lay_share .album_list .type_photo dt.program .pic_b {width:151px; height:91px;}
+.lay_share .album_list .type_photo dd {display:block; padding-bottom:6px;}
+.lay_share .album_list .type_photo dd.date {font-family: Tahoma; font-size:11px; color:#999; }
+.lay_share .album_list .type_photo dd.meta {font-size:11px; color:#999; letter-spacing:-1px; }
+.lay_share .album_list .type_photo dd.meta a {color:#999;}
+
+
+/* login layer */
+.lay_login {left:50%;top:50%;width:290px; margin-left:-145px; margin-top:-80px;}
+.lay_login .lay_head {border-top:4px solid #dc0273; background:none; }
+.lay_login .lay_head .h2_login {background: url("http://mnetimg.mnet.com/images/common/h2_login.gif") no-repeat 0 0; width:75px; height:16px; text-indent:-9999px; top:21px;}
+.lay_login .lay_head .lay_close {background: url("http://mnetimg.mnet.com/images/common/btn_layer_close.gif") no-repeat 0 0; width:9px; height:10px;}
+.lay_login .lay_loginbox {padding:10px 20px 20px;}
+.lay_login .lay_loginbox p.input_login {height:59px;}
+.lay_login .lay_loginbox p.input_login span.input {float:left; width:188px;}
+.lay_login .lay_loginbox p.error_msg {background: url("http://mnetimg.mnet.com/images/common/bg_input.gif") no-repeat -2px -65px; padding-left:15px; color:#dc0273; font-size:11px; line-height: 15px; margin-top:20px;}
+.lay_login .lay_loginbox p.user {font-size:11px; padding-top:15px; }
+.lay_login .lay_loginbox p.user em {color:#dcdadc;}
+.lay_login .lay_loginbox p.user input {vertical-align:top; width:12px; height:12px; margin-right:3px;}
+.lay_login .input_id {margin-bottom:4px;float:left;background: url("http://mnetimg.mnet.com/images/common/bg_input.gif") no-repeat 8px 5px; border-left:1px solid #a6a6a6; border-top:1px solid #a6a6a6; border-right:1px solid #c0c0c0; border-bottom:1px solid #c0c0c0; width:170px; padding:6px 8px; height:13px;}
+.lay_login .input_id:focus, .lay_login .input_pw:focus {border:1px solid #dc0273;}
+.lay_login .input_pw {float:left;background: url("http://mnetimg.mnet.com/images/common/bg_input.gif") no-repeat 8px -25px; border-left:1px solid #a6a6a6; border-top:1px solid #a6a6a6; border-right:1px solid #c0c0c0; border-bottom:1px solid #c0c0c0; width:170px; padding:6px 8px; height:13px;}
+.lay_login .btn_login {float:right;background: url("http://mnetimg.mnet.com/images/common/btn_layer_login.gif") no-repeat 0 0;width:56px; height:59px;}
+
+/* login layer en */
+.lay_login_en {left:50%;top:50%;width:310px; margin-left:-155px; margin-top:-80px;}
+.lay_login_en .lay_head {border-top:4px solid #dc0273; background:none; }
+.lay_login_en .lay_head .h2_login {background: url("http://mnetimg.mnet.com/images/common/h2_login_en.gif") no-repeat 0 0; width:143px; height:17px; text-indent:-9999px; top:21px;}
+.lay_login_en .lay_head .lay_close {background: url("http://mnetimg.mnet.com/images/common/btn_layer_close.gif") no-repeat 0 0; width:9px; height:10px;}
+.lay_login_en .lay_loginbox {padding:10px 20px 20px;}
+.lay_login_en .lay_loginbox p.input_login {height:59px;}
+.lay_login_en .lay_loginbox p.input_login span.input {float:left; width:188px;}
+.lay_login_en .lay_loginbox p.error_msg {background: url("http://mnetimg.mnet.com/images/common/bg_input.gif") no-repeat -2px -64px; padding-left:15px; color:#dc0273; font-size:11px; line-height: 15px; margin-top:20px;}
+.lay_login_en .lay_loginbox p.user {font-size:11px; padding-top:15px; letter-spacing:-1px;}
+.lay_login_en .lay_loginbox p.user em {color:#dcdadc; padding:0 3px;}
+.lay_login_en .lay_loginbox p.user input {vertical-align:top; width:12px; height:12px; margin-right:3px;}
+.lay_login_en .input_id {margin-bottom:4px;float:left;background: url("http://mnetimg.mnet.com/images/common/bg_input.gif") no-repeat 8px -106px; border-left:1px solid #a6a6a6; border-top:1px solid #a6a6a6; border-right:1px solid #c0c0c0; border-bottom:1px solid #c0c0c0; width:190px; padding:6px 8px; height:13px;}
+.lay_login_en .input_id:focus{border:1px solid #dc0273;}
+.lay_login_en .input_pw:focus {border:1px solid #dc0273;}
+.lay_login_en .input_pw {float:left;background: url("http://mnetimg.mnet.com/images/common/bg_input.gif") no-repeat 8px -137px; border-left:1px solid #a6a6a6; border-top:1px solid #a6a6a6; border-right:1px solid #c0c0c0; border-bottom:1px solid #c0c0c0; width:190px; padding:6px 8px; height:13px;}
+.lay_login_en .btn_login {float:right;background: url("http://mnetimg.mnet.com/images/common/btn_layer_login.gif") no-repeat 0 -61px;width:56px; height:59px;}
+
+/* popup */
+.popup .lay_conts {border:none;}
+.popup .lay_wrap {position: static; margin:0;}
+.popup .lay_close {display:none;}
+.popup .lay_conts {left:0; top:0;}
+.popup .lay_login, .popup .lay_login_en {border:8px solid #dcdada; padding:8px;}
+.popup .lay_login .lay_head, .popup .lay_login_en .lay_head {border:none;}
+.popup .shadow2 {display:none;}
+
+/*contents h3 */
+#content .title_header {height:30px; display:block;}
+#content .title_header .btn_boardrule {float:right; color:#999;}
+#content h3 {float:left; display:inline;text-indent:-9999px; height:15px; font-weight: bold;}
+#content .title_header .txt {float:left; color:#999; font-size:11px; padding:2px 4px; line-height:13px;}
+#content .title_header .txt em {color:#333; font-weight:bold;}
+#content a.more {background: url("http://mnetimg.mnet.com/images/common/icon_common.gif") no-repeat right -237px; color: #767676; float: right; font-size: 11px; letter-spacing: -1px; line-height: 14px; margin-top: 1px; padding-right: 6px; display:block;}
+
+/* select search */
+.select { float:left; position:relative; _zoom:1; text-align:left; z-index:20;}
+.select .linkbox { position:absolute; left:0; top:24px; border:1px solid #e0e0e0; background:#fff; z-index:300; }
+.select .title { display:block; float:left; cursor:pointer; height:23px; line-height:23px; padding:0 0 0 10px !important; color:#666; border:1px solid #e0e0e0; background:#fff url('http://mnetimg.mnet.com/images/common/bg_select.gif') no-repeat right top; letter-spacing:0 !important;}
+.select .linkbox ul { overflow:hidden; width:auto !important; padding:0; margin:0 !important;}
+.select .linkbox li { width:100%; clear:both; display:block; float:left; color:#666; height:24px; line-height:24px; padding:0 !important; letter-spacing:0 !important; border-bottom:1px solid #dcdcdc; margin-bottom:-1px; }
+.select .linkbox li:hover { color:#000; background:#f0f0f0; }
+.select .linkbox label { display:block; cursor:pointer; margin-left:10px; padding-top:0;}
+.select .linkbox input { position:absolute; left:-999em; }
+
+/* board */
+.board_list,
+.board_view { clear:both; }
+.board { clear:both; }
+.board .article { /*overflow:hidden;*/ height:33px; margin-bottom:30px; border-bottom:1px solid #d7d7d7;}
+.board .article h3.viewer_board { width:80px; background-position:0 -610px !important; }
+.board .article .slash { float:left; color:#d2d2d2; line-height:13px; margin:2px 10px 0; }
+.board .article .desc { float:left; color:#666; line-height:15px; margin-top:2px; }
+.board .btnw_area {margin:10px 0 20px 0; float:right; width:710px;}
+.board_list .btn_write {background:url('http://mnetimg.mnet.com/images/common/btn_board.gif') no-repeat 0 -328px; width:41px; height:23px; float:right; overflow:hidden; text-indent:-9999px; margin-top:10px; position:relative; z-index:10;}
+
+.board_search { width:350px; margin:0 auto; }
+.board_search .select { float:left; }
+.board_search .input { float:left; width:203px; height:23px; padding:0 5px; margin:0 4px; line-height:23px; border:1px solid #e0e0e0; }
+.board_search .btn_search { float:left; width:38px; height:25px; background:url('http://mnetimg.mnet.com/images/common/btn_board.gif') no-repeat left -250px; text-indent:-9999px;}
+
+.board_list { background:url('http://mnetimg.mnet.com/images/common/bg_board_list.gif') repeat-x left top; }
+.board_list table { width:100%; }
+.board_list th { height:28px; color:#666; font-size:11px; vertical-align:middle; text-align:center; background:url('http://mnetimg.mnet.com/images/common/bg_board_list_th.gif') no-repeat right top;line-height: 19px;}
+.board_list th.last {background:none;}
+.board_list tbody td { height:29px; color:#999; font-size:11px; border-bottom:1px solid #ebebeb; text-align:center; vertical-align:middle; line-height:17px;}
+.board_list tbody td a {font-size:12px;}
+.board_list tbody .top td { background-color:#fdfdfd; }
+.board_list tbody .over { background-color:#f5f5f5; }
+.board_list .left15 { text-align:left; padding-left:15px; }
+.board_list .tit { color:#333; font-size:12px; display:inline-block; margin-top:2px;}
+/*20160307 yahao eidtor 수정*/
+.board_write .option { color:#999; font-size: 11px; letter-spacing: -1px; height:20px; clear: both;}
+.board_write .option .check {float:right;}
+.board_write .option em {color:#ddd; margin:0 5px;}
+.board_write .option input {vertical-align:middle; width:13px; height:13px; margin-right:3px;}
+.board_write .writer {float:left;}
+.board_write .subject {height:35px;}
+.board_write .input { float:left; width:582px; height:23px; padding:0 5px; margin:0 0 0 4px; line-height:23px; border:1px solid #e0e0e0; }
+.board_write .board_btn {text-align:center; padding:20px 0;}
+.board_write .board_btn .btn_ok {background:url('http://mnetimg.mnet.com/images/common/btn_board.gif') no-repeat 0 -355px; width:74px; height:31px; display:inline-block; overflow:hidden;}
+.board_write .board_btn .btn_cancel {background:url('http://mnetimg.mnet.com/images/common/btn_board.gif') no-repeat 0 -388px; width:74px; height:31px; display:inline-block; overflow:hidden; float:none;}
+.board_write .board_btn a span {display:block; text-indent:-9999px;}
+
+.board_view .board_view_head { overflow:hidden; width:100%; height:24px; background:url('http://mnetimg.mnet.com/images/common/bg_dotline.gif') repeat-x left 23px; }
+.board_view .board_view_head .title { float:left; font:bold 14px/16px dotum; }
+.board_view .board_view_head .by { float:left; margin:3px 0 0 10px; font:11px/13px dotum; color:#999; }
+.board_view .board_view_head .by span { text-decoration:underline; }
+.board_view .board_view_head .etc { float:right; margin-top:4px; font:11px/13px dotum; color:#999; }
+.board_view .board_view_head .etc em { margin:0 5px; color:#dedede; }
+.board_view .board_view_body { line-height:18px; color:#666; padding:15px 0; border-bottom:1px solid #efefef; }
+.board_view .board_view_body .thumb { text-align:center; margin-bottom:25px; }
+.board_view .board_view_fot { overflow:hidden; width:100%; padding-top:15px; }
+.board_view .board_view_fot a { float:left; overflow:hidden; text-indent:-10000em; display:block; height:23px; margin-right:3px; background-repeat:no-repeat; background-image:url('http://mnetimg.mnet.com/images/common/btn_board.gif'); }
+.board_view .board_view_fot a.last { margin-right:0; }
+.board_view .board_view_fot .btn_prev { width:42px; background-position:0 0; }
+.board_view .board_view_fot .btn_next { width:42px; background-position:0 -50px; }
+.board_view .board_view_fot .btn_mod { width:31px; background-position:0 -100px; }
+.board_view .board_view_fot .btn_del { width:31px; background-position:0 -150px; }
+.board_view .board_view_fot .btn_list { width:49px; background-position:0 -200px; }
+
+/*댓글*/
+.reply_area {width:710px;overflow:hidden;}
+.reply_area .title_header h3{width:26px;background:url('http://mnetimg.mnet.com/images/music/album_view_title_05.gif') no-repeat !important;}
+.reply_area .reply_write{border:1px solid #DCDCDC;background:#EEE;width:708px;height:86px;}
+.reply_area .reply_write ul{padding:10px 0px 0 10px;position:relative;width:698px;height:86px;}
+.reply_area .reply_write ul li{float:left;}
+.reply_area .reply_write ul li.s_img{width:55px;position:relative;}
+.reply_area .reply_write ul li.s_img .pic_b {width:46px; height:46px;}
+.reply_area .reply_write ul li.s_img img{width:48px; height:48px; display:block;}
+.reply_area .reply_write ul li.s_img{width:55px;}
+.reply_area .reply_write ul li.btn_reply {}
+.reply_area .reply_write ul li.btn_reply a {float:left;background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') 0 -591px no-repeat; display:inline-block; width:83px; height:51px;text-indent:-9999px; overflow:hidden; }
+.reply_area .reply_write ul li.btn_reply textarea {background:#fff url('http://mnetimg.mnet.com/images/common/bg_comment.gif') 4px 4px no-repeat; width:538px; height:43px;padding:5px 0 0 5px ;border:1px solid #bfbfbf; float:left;  margin-right:5px; overflow:hidden; color:#333;}
+.reply_area .reply_write ul li.btn_reply textarea.before {background:#fff url('http://mnetimg.mnet.com/images/common/bg_comment_before.gif') 4px 4px no-repeat;}
+.reply_area .reply_write ul li.max_txt{position:absolute;right:99px;top:68px;color:#8D8F91;font-size:11px;font-family:tahoma;}
+.reply_area .reply_write ul li.max_txt span{color:#333;}
+.reply_area .pic {position:relative;}
+
+.reply_list{padding:0 10px 0 10px}
+.reply_list li {border-bottom:1px solid #eee; padding:20px 0;}
+.reply_list .pic {float:left; width:50px; height:50px; position:relative;}
+.reply_list .pic img {width:50px; height:50px; display:block;}
+.reply_list .pic .pic_b {width:48px; height:48px;}
+.reply_list .reply_content {float:right; width:631px;}
+.reply_list .reply_content .name {padding-bottom:4px; color:#666; line-height:18px;}
+.reply_list .reply_content .name a {font-weight:bold;}
+.reply_list .reply_content .name .btn_report {float:right; color:#dcdcdc; font-size:11px; letter-spacing:-1px;}
+.reply_list .reply_content .name .btn_report a {font-weight:normal; color:#bfbfbf;}
+.reply_list  li .btn_report {visibility:hidden;}
+.reply_list  li:hover .btn_report {visibility: visible;}
+.reply_list .reply_content .view_action li .btn_report {display:none;}
+.reply_list .reply_content .view_action li:hover .btn_report {display:block;}
+.reply_list .reply_content .message {line-height:18px; padding-bottom:10px;word-wrap: break-word; width:100%;}
+.reply_list .reply_content .message a {text-decoration:underline;}
+.reply_list .reply_content .history {font-size:11px; color:#cbcbcb; letter-spacing:-1px;overflow:hidden;height:14px;}
+.reply_list .reply_content .history a {margin:0 2px;}
+.reply_list .reply_content .history .btn_action {float:right;}
+.reply_list .reply_content .history .btn_action_reply {float:right;}
+.reply_list .reply_content .history .time {float:left;color:#9ba6b4; letter-spacing:0; padding-right:4px;}
+.reply_list .reply_content .history .place {color:#999; margin-left:4px;}
+.reply_list .reply_content .view_action {margin-top:10px;}
+.reply_list .reply_content .view_action .name {padding-bottom:3px;}
+.reply_list .reply_content .view_action li {border-bottom:1px solid #dcdcdc; border-left:1px solid #dcdcdc; border-right:1px solid #dcdcdc; padding:15px 10px; background:#fafafa; border-bottom:1px solid #dcdcdc;vertical-align:top}
+.reply_list .reply_content .view_action li .pic {float:left; width:32px; height:32px;}
+.reply_list .reply_content .view_action li .pic .pic_b {width:30px; height:30px;}
+.reply_list .reply_content .view_action li .pic img {width:32px; height:32px; display:block;}
+.reply_list .reply_content .view_action li .reply_content {float:right; width:568px; color:#666;}
+.reply_list .reply_content .view_action li .btn_action a {color:#777;}
+.reply_list .reply_content .view_action .btn_reply {border:1px solid #dcdcdc;background:#eee; padding:10px;}
+.reply_list .reply_content .view_action .btn_reply a {background:url('http://mnetimg.mnet.com/images/common/btn_reply.gif') 0 0 no-repeat; display:inline-block; width:74px; height:52px;text-indent:-9999px; overflow:hidden; }
+.reply_list .reply_content .view_action .btn_reply textarea {padding:5px 0 0 5px;width:523px;_width:520px;height:45px; border:1px solid #bfbfbf; float:left;  margin-right:5px; background:#fff url('http://mnetimg.mnet.com/images/common/bg_comment.gif') 4px 4px no-repeat; overflow:auto;}
+.reply_list .reply_content .view_action .btn_reply textarea.before {background:#fff url('http://mnetimg.mnet.com/images/common/bg_comment_before.gif') 4px 4px no-repeat;}
+
+
+body, .scrollstyle {scrollbar-3dlight-color:#e7e8e2;scrollbar-arrow-color:#ddd;scrollbar-track-color:#e8e8e8;scrollbar-darkshadow-color:#f6f6f6;scrollbar-face-color:#fff;scrollbar-highlight-color:#fff;scrollbar-shadow-color:#cdcdc5;}
+
+#mask {position:absolute; width:100%; height:100%;background:#000; opacity:.3; filter:alpha(opacity=30); z-index:400; top:0; left:0;}
+
+/*--- photo view ---*/
+.lay_photo_view { position:absolute; left:0; top:93px; left:50%; width:980px; border:1px solid #000000; margin-left:-490px; background:#fff; z-index:500; text-align:left;}
+
+	.photo_view_info { overflow:hidden; width:950px; padding:0 15px 13px; border-bottom:1px solid #eee; }
+	.photo_view_info .left { float:left; overflow:hidden; }
+	.photo_view_info .left .info { float:left; padding-top:19px; color:#999;}
+	.photo_view_info .left .info a {color:#999;}
+	.photo_view_info .left .info .title {color:#333;}
+	.photo_view_info .left .info em { margin:0 4px; color:#dcdcdc; }
+	.photo_view_info .left .btn { float:left; padding:15px 0 0 2px; }
+	.photo_view_info .left .btn_picset { width:77px; display:block; float:left; height:21px;background:url('http://mnetimg.mnet.com/images/common/btn_photo_view.gif') 0 0 no-repeat; margin-right:5px;}
+	.photo_view_info .left .btn_like { width:59px; display:block; float:left; height:21px;background:url('http://mnetimg.mnet.com/images/common/btn_photo_view.gif') -80px 0 no-repeat; margin-right:5px;}
+	.photo_view_info .left .btn_del { width:30px; display:block; float:left; height:21px;background:url('http://mnetimg.mnet.com/images/common/btn_photo_view.gif') -142px 0 no-repeat; margin-right:5px;}
+	.photo_view_info .left .widgetbox {margin:0 5px 0 0;}
+	.photo_view_info .right { float:right; padding-top:15px; }
+	.photo_view_info .right li { float:left; margin-left:5px;}
+	.photo_view_info .right li.twt {margin-right:4px;}
+	.photo_view_info .right li.first { margin-top:1px; }
+	.photo_view_info .right li.slash { margin:4px 3px 0 7px; color:#eee; line-height:14px; }
+
+.lay_photo_view .reply_list { width:444px; margin:15px auto 50px; padding:0; }
+.lay_photo_view .reply_list .reply_content { float:none; width:444px; }
+.lay_photo_view .reply_list .reply_content .view_action li .reply_content { width:380px; }
+.lay_photo_view .reply_list .reply_content .view_action .btn_reply textarea { width:333px; }
+
+.photo_view {width:978px;border:1px solid #D8D8D6;background:#F2F2F2;}
+.photo_view a.btn_close{display:block;position:absolute;right:20px;top:20px;background:url('http://mnetimg.mnet.com/images/common/btn_x.gif') no-repeat; width:21px; height:21px;text-indent:-9999px;}
+.photo_view .btn, .nav_photo .btn {background:url('http://mnetimg.mnet.com/images/common/btn_set.gif') no-repeat; display:block; }
+.nav_photo {height:90px; overflow:hidden;width:710px;margin:20px auto 25px;position:relative;}
+.nav_photo a.pre_photoview {background-position:0 -630px; width:28px; height:90px; float:left;}
+.nav_photo a.next_photoview {background-position:-28px -630px; width:28px; height:90px; float:right;}
+.nav_photo .con_slider_list {float:left;width:654px;overflow:hidden;position:relative;height:90px;}
+.nav_photo ul {position:absolute;left:0;top:0;width:100000px !important; background:url('http://mnetimg.mnet.com/images/common/blank_slide.gif') repeat-x;}
+.nav_photo li {float:left; overflow:hidden;height:90px;}
+.nav_photo li a{display:inline;float:left; position:relative; width:90px; height:90px; margin-right:4px;background:#222;}
+.nav_photo li span{width:90px; height:90px; position:absolute; text-indent:-9999px}
+.nav_photo li a:hover span{width:82px; height:82px;border:4px solid #25b8e9; background:none; position:absolute; z-index:3;}
+.nav_photo li span.selected {width:82px !important; height:82px !important;border:4px solid #25b8e9 !important;background:none;  position:absolute; z-index:3; opacity:1.0; filter:alpha(opacity=100);}
+
+.nav_photo2 {height:71px; margin:0 0 4px 32px;}
+.nav_photo2 ul {float:left; width:650px; overflow:hidden;}
+.nav_photo2 li {float:left; position:relative; margin-right:4px; width:125px;}
+.nav_photo2 li a {display:block;}
+.nav_photo2 li a:hover {text-decoration:none;}
+.nav_photo2 li.first {margin-right:3px;}
+.nav_photo2 li .shdw_pic {width:125px; height:71px; top:0; left:0;  background:#000; position:absolute; z-index:3; opacity:0.5; filter:alpha(opacity=50); cursor:pointer;}
+.nav_photo2 li.selected .shdw_pic {width:117px; height:63px; border:4px solid #25b8e9;  position:absolute; z-index:3; cursor:pointer; opacity:1; filter:alpha(opacity=100); background:none;}
+.nav_photo2 li.selected .thum_txt {display:none;}
+.nav_photo2 li.selected a.btn_mplay {top:47px; right:9px;}
+.nav_photo2 a.btn_mplay {position:absolute; background:url('http://mnetimg.mnet.com/images/common/btn_play_movie.png') 0 bottom no-repeat; width:18px; height:16px; top:51px; right:5px; z-index:5;}
+.nav_photo2 .thum_txtbg {position:absolute; background:#000;opacity:0.3; filter:alpha(opacity=30); left:0; top:48px; height:23px; width:125px; z-index:4;}
+.nav_photo2 .thum_txt {position:absolute; top:52px; left:3px; color:#eee; z-index:5; font-size:11px; width:87px; line-height:15px;}
+.nav_photo2 li a:hover .thum_txt, .nav_photo2 li a:hover .thum_txtbg {display:block;}
+.nav_photo2 li.selected a:hover .thum_txt, .nav_photo2 li.selected a:hover .thum_txtbg {display:none;}
+
+.view_pic {margin:0 auto;width:710px;padding:0px 0 19px 0;position:relative;}
+.view_pic a.pre_photoview {background:url('http://mnetimg.mnet.com/images/common/sorting_btn.gif') no-repeat 0px -137px; width:16px; height:27px;position:absolute;left:10px;top:287px; _display:inline;}
+.view_pic a.pre_photoview:hover {background:url('http://mnetimg.mnet.com/images/common/sorting_btn.gif') no-repeat 0px -165px; width:16px; height:27px;}
+.view_pic a.pre_photoview_off {background:url('http://mnetimg.mnet.com/images/common/sorting_btn.gif') no-repeat 0px -193px !important; width:16px; height:27px;position:absolute;left:20px;top:287px; _display:inline;}
+.view_pic a.next_photoview {background:url('http://mnetimg.mnet.com/images/common/sorting_btn.gif') no-repeat -18px -137px; width:16px; height:27px;position:absolute;right:10px;top:287px; _display:inline;}
+.view_pic a.next_photoview:hover {background:url('http://mnetimg.mnet.com/images/common/sorting_btn.gif') no-repeat -18px -165px; width:16px; height:27px;}
+.view_pic a.next_photoview_off {background:url('http://mnetimg.mnet.com/images/common/sorting_btn.gif') no-repeat -18px -193px !important; width:16px; height:27px;position:absolute;right:20px;top:287px; _display:inline;}
+.view_pic div.photo {margin:auto; width:610px;text-align:center;height:600px;}
+.view_pic div.photo table{width:610px !important;height:600px;text-align:center; }
+.view_pic div.photo table td{text-align:center; padding:0;}
+.view_pic div.photo img { border:1px solid #d8d8d6; }
+.view_pic div.photo a {}
+.view_pic dl {clear:both; zoom:1;position:relative;}
+.view_pic dt {height:25px; font-size:14px; font-weight:bold;}
+.view_pic dt span {color:#767676; font-size:11px; font-weight:normal; font-family:tahoma;}
+.view_pic dd {color:#666; line-height:18px;font-size:11px;}
+.view_pic dd.btn{position:absolute;right:0px;top:0px;}
+.view_pic dd.btn a.btn_go{display:block;background:url('http://mnetimg.mnet.com/images/common/sorting_btn.gif') no-repeat 0 -38px;width:87px;height:21px;text-indent:-9999px;}
+.view_pic div.photo .big_img {max-width:600px; max-height:600px;}
+.btn_realsize {display:none !important;background:url('http://mnetimg.mnet.com/images/common/btn_viewreal.png') no-repeat 0 0; width:110px; height:70px; position:absolute; left:50%;top:50%; z-index:100; margin-left:-55px !important; margin-top:-35px !important;}
+.photo:hover .btn_realsize {display:block !important;}
+
+.message_music {padding:20px 150px 40px; line-height:18px; }
+.left .widgetbox {float:left; margin-top: 15px; margin-left:10px; text-indent:0;}
+.view_pic .photo{position:relative;}
+.view_pic .photo a.btn_big_size{display:block;position:absolute;left:250px;top:-250px;}
+
+/* song list table */
+.music_list_table{background:url('http://mnetimg.mnet.com/images/common/table_bg.gif') repeat-x;width:710px;table-layout:fixed;}
+.music_list_table th{background:url('http://mnetimg.mnet.com/images/common/th_blank.gif') no-repeat right top;color:#666666;font-weight:bold;letter-spacing:-1px;font-size:11px;text-align:left;height:29px;}
+.music_list_table th span{display:block;padding:2px 0 0 7px;}
+.music_list_table th.last{background:none;letter-spacing:-2px;}
+.music_list_table th.check{background:none;}
+.music_list_table th.check span{padding:0 0 0 8px;}
+.music_list_table th.num span{padding:2px 0 0 0px;}
+*html .music_list_table th.check span{padding:0 0 0 4px;}
+.music_list_table td{border-bottom:1px solid #E5E5E5;text-align:left; line-height:17px; color:#bbb;}
+.music_list_table td.check{padding:0 0 0 8px;}
+*html .music_list_table tr td.check{padding:0 0 0 4px;}
+.music_list_table tr.bg td{background:#f8f8f8;}
+.music_list_table tbody tr:hover {background:#f8f8f8;}
+.music_list_table tr.cd_01 td, .music_list_table tr.cd_02 td {background:#fff;}
+.music_list_table td.num{text-align:center;padding-right:4px;font-family:Tahoma;font-size:11px;color:#666;}
+.music_list_table p.music_icon {  padding:7px 7px 7px 0; display:block;  overflow:hidden; height:17px; position:relative; line-height:17px;white-space: nowrap; }
+		.article_music_box .music_list_table span { margin:0 5px; }
+/* pps */
+.pps { float:left; padding-top:7px; width:24px; height:1px; position:relative; display:inline-block; z-index:100; }
+		.search_result_line .pps { padding-top:0; }
+		.article_music_box .music_list_table .music_icon .pps { width:auto; }
+		.article_music_box .music_list_table .music_icon .pps .layPps .arrow { left:-4px; }
+.pps a { float:left; position:absolute; display:inline-block; width:22px; height:15px; background-image:url('http://mnetimg.mnet.com/images/common/icon_pps.png'); background-repeat:no-repeat; }
+.pps a.icoList { background-position:0 0; }
+.pps a.icoDown { background-position:0 -50px; }
+.pps a.icoAll { background-position:0 -100px; }
+.pps .layPps { position:absolute; left:32px; top:7px; display:none; width:230px; }
+.pps .layPps span { display:block; }
+.pps .layPps .laycont { position:relative; z-index:100; left:0; top:0; width:100%; color:#666; font-size:11px; line-height:17px; border:1px solid #97a0a9; background-color:#f8fcff;  }
+.pps .layPps .laycont em { color:#e8629a; font-weight:bold; }
+.pps .layPps .shadow { display:inline; position:absolute; z-index:10; width:96%; height:100%;_display:none; background:#000; opacity:.2; filter:alpha(opacity=20); top:5px; left:16px;}
+.pps .layPps .cont { margin:0; position:relative; left:0; top:0; z-index:200; padding:10px; background-color:#f8fcff; }
+.pps .layPps .arrow { position:absolute; z-index:100; left:-10px; top:-1px; width:15px; height:15px; display:block; background:url('http://mnetimg.mnet.com/images/common/icon_ppsArrow.gif') no-repeat 0 0; }
+.music_list_type04 tr td .pps { padding-top:0; }
+
+.music_list_table a.music {margin-right:5px;display:inline-block;color:#111;line-height:18px; vertical-align:top;}
+.music_list_table td a {color:#333;}
+.info .icon {display:inline-block;background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -60px -248px;width:22px;height:13px; vertical-align:top; margin-right:1px; margin-top:1px; text-indent:-9999px;}
+.info .icon_hot{display:inline-block;background:url('http://mnetimg.mnet.com/images/music/icon_music.gif') 0 0 no-repeat;width:26px;height:16px;text-indent:-9999px; overflow:hidden;margin-right:8px; vertical-align:top;}
+.info .icon_star{display:inline-block;background:url('http://mnetimg.mnet.com/images/music/icon_star.gif') no-repeat;width:61px;height:16px;text-indent:-9999px; overflow:hidden;margin-right:8px; vertical-align:top;}
+.info .icon_19{display:inline-block;background:url('http://mnetimg.mnet.com/images/music/icon_music.gif') 0 -59px no-repeat;width:15px;height:15px;text-indent:-9999px; overflow:hidden;margin-right:8px; vertical-align:top;}
+.info .icon_title{display:inline-block;background:url('http://mnetimg.mnet.com/images/music/icon_music.gif') 0 -19px no-repeat;width:34px;height:15px;text-indent:-9999px; overflow:hidden;margin-right:8px; vertical-align:top;}
+.info .icon_free{display:inline-block;background:url('http://mnetimg.mnet.com/images/music/icon_music.gif') 0 -37px no-repeat;width:34px;height:15px;text-indent:-9999px; overflow:hidden;margin-right:8px; vertical-align:top;}
+.info .hart_icon{display:inline-block;background:url('http://mnetimg.mnet.com/images/music/hart_icon.gif') no-repeat 0 -1px;padding:0 0 0 11px;overflow:hidden;font-family:Tahoma;font-size:9px;color:#999; vertical-align:top;line-height: 15px;}
+.info .icon_origin {display:inline-block;background:url('http://mnetimg.mnet.com/images/music/icon_music.gif') -78px -19px no-repeat;width:26px;height:16px;text-indent:-9999px; overflow:hidden;margin-right:8px; vertical-align:top;}
+
+.music_icon .btn_over {display:none;position:absolute; float:left;right:0; top:50%; margin-top:-7px; background:#f8f8f8; z-index:50; }
+.music_icon:hover .btn_over {display:block; }
+.music_icon .btn_over span {background:url('http://mnetimg.mnet.com/images/music/icon_music.gif') no-repeat right -105px; display:block; float:left; height:12px;padding-right:5px;}
+.music_icon .btn_over .over_add {display:block; float:left;background:url('http://mnetimg.mnet.com/images/music/icon_music.gif') no-repeat 0 -83px;text-indent:-9999px; overflow:hidden;width:50px; height:16px;}
+.music_icon .btn_over .over_like {display:block; float:left;background:url('http://mnetimg.mnet.com/images/music/icon_music.gif') no-repeat -48px -85px;text-indent:-9999px; overflow:hidden;width:51px; height:12px;}
+.music_icon .btn_over .over_like_cancel {display:block; float:left;background:url('http://mnetimg.mnet.com/images/music/icon_music.gif') no-repeat -48px -64px;text-indent:-9999px; overflow:hidden;width:51px; height:12px;}
+.music_list_table td.artist p{margin-left:7px;width:113px;white-space:nowrap; overflow:hidden; -o-text-overflow:ellipsis; /*Opera 9*/ -ms-text-overflow:ellipsis; /* IE 8 above */  text-overflow:ellipsis;}
+.music_list_table td.artist p a{color:#666;}
+
+td.artist a.over_1 {background:url('http://mnetimg.mnet.com/images/music/icon_music.gif') no-repeat right -128px; padding-right:10px;}
+td.artist ul.over_1 {position:absolute; margin-left:5px;margin-top:2px; border:1px solid #bababa; background:#fff;overflow:hidden; width:120px; visibility: hidden;; z-index:10;}
+td.artist:hover ul.over_1{visibility: visible;}
+td.artist ul.over_1 li {border-top:1px solid #dadada; margin-top:-1px; height:22px; width:100%; overflow:hidden;}
+td.artist ul.over_1 a {display:block; padding:3px 6px; white-space: nowrap; width:108px; color:#666; overflow:hidden; -o-text-overflow:ellipsis; /*Opera 9*/ -ms-text-overflow:ellipsis; /* IE 8 above */  text-overflow:ellipsis;}
+td.artist ul.over_1 a:hover {background:#f3f3f3; text-decoration:none;}
+
+td.down ul.over_phone {display:none;position:absolute; margin-left:41px; #right:-2px; margin-top:16px; border-left:1px solid #bababa; border-right:1px solid #bababa; border-bottom:1px solid #bababa; background:#fff;overflow:hidden; width:62px; }
+td.down ul.over_phone li {border-top:1px solid #dadada; height:20px; width:100%; overflow:hidden;display:block;}
+td.down ul.over_phone a {display:block; padding:3px 6px; white-space: nowrap; height:14px; line-height:16px;color:#666; font-size:11px; letter-spacing:-1px;}
+td.down ul.over_phone a:hover {background:#f3f3f3; text-decoration:none;}
+.music_list_table td.album p{margin-left:7px;width:100px; white-space:nowrap; overflow:hidden; -o-text-overflow:ellipsis; /*Opera 9*/ -ms-text-overflow:ellipsis; /* IE 8 above */  text-overflow:ellipsis;color:#999;}
+.music_list_table td.album p a{color:#666;}
+td.down {padding-left:9px; }
+
+.music_list_table tr.cd_01 td{height:30px;border-bottom:1px solid #D0D0D0;padding-left:7px}
+.music_list_table tr.cd_02 td{vertical-align:top;padding:14px 0 5px 7px;height:23px;border-bottom:1px solid #D0D0D0}
+.music_list_table .cd_icon{background:url('http://mnetimg.mnet.com/images/music/cd_icon.gif') no-repeat;padding:2px 0 0 27px;color:#333;height:16px}
+.b{font-weight:bold}
+
+.btn_cal{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -138px ; width:14px; height:15px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.btn_all_hear{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px 0px ; width:59px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.btn_hear{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -23px ; width:30px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.btn_playmovie{background:url('http://mnetimg.mnet.com/images/social/btn_social.gif') no-repeat 0px -91px ; width:58px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.btn_down{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -46px ; width:51px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.btn_my_add{background:url('http://mnetimg.mnet.com/images/music/music_btn_2014.gif') no-repeat 0px -69px ; width:31px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.btn_play_add{background:url('http://mnetimg.mnet.com/images/common/music_btn_2014.gif?v=4') no-repeat 0px -796px ; width:100px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.btn_del_list {background:url('http://mnetimg.mnet.com/images/social/btn_social.gif') 0 -68px no-repeat; width:31px; height:23px;}
+.btn_add {background:url('http://mnetimg.mnet.com/images/common/music_btn.gif?v=2') no-repeat -66px -23px; width:30px; height:23px;}
+.btn_view{background:url('http://mnetimg.mnet.com/images/music/music_btn_2014.gif?v=2') no-repeat -66px -23px ; width:30px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+
+.btn_all_down{background:url('http://mnetimg.mnet.com/images/common/music_btn_2014.gif?v=5') no-repeat 0px -839px ; width:74px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.btn_select_down{background:url('http://mnetimg.mnet.com/images/common/music_btn_2014.gif?v=5') no-repeat 0px -882px ; width:74px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+
+
+td .btn_recom{ background:url('http://mnetimg.mnet.com/images/common/music_btn.gif?v=1') no-repeat -57px -154px; width:24px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left; }
+td .btn_recom:hover { background:url('http://mnetimg.mnet.com/images/common/music_btn.gif?v=1') no-repeat -57px -171px; width:24px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left; }
+td .btn_recom_off { background:url('http://mnetimg.mnet.com/images/common/music_btn.gif?v=1') no-repeat -57px -188px; width:24px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left; }
+
+td .btn_add{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -154px ; width:16px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+td .btn_add:hover{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -171px ;}
+td .btn_add_off{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -188px ; width:16px; height:16px;cursor:default;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+
+td .btn_avi{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -19px -154px ; width:16px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+td .btn_avi:hover{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -19px -171px ;}
+td .btn_avi_off{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -19px -188px ; width:16px; height:16px;cursor:default;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+
+td .btn_phone{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -38px -154px ; width:16px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+td .btn_phone:hover{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -38px -171px ;}
+td .btn_phone_off{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -38px -188px ; width:16px; height:16px;cursor:default;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+
+td .btn_mp3{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -209px ; width:32px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+td .btn_mp3:hover{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -35px -209px ;}
+td .btn_mp3_off{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -70px -209px ; width:32px; height:15px;cursor:default;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+
+td .btn_drm{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -228px ; width:32px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+td .btn_drm:hover{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -35px -228px ;}
+td .btn_drm_off{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -70px -228px ; width:32px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;cursor:default;}
+
+.btn_chat_q{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -115px ; width:114px; height:21px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.btn_chat_q:hover{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -115px ;}
+.btn_chat_q{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat 0px -115px ; width:114px; height:21px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+
+td .btn_down{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -417px -710px ; width:39px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+td .btn_down:hover{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -461px -710px ;}
+td .btn_down_off{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -373px -710px ; width:39px; height:15px;cursor:default;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+
+
+.music_list_type04{background:url('http://mnetimg.mnet.com/images/music/music_table_bg.gif') repeat-x;width:780px;table-layout:fixed; }
+.music_list_type04 th{background:url('http://mnetimg.mnet.com/images/music/music_blank.gif') no-repeat right top;color:#666;font-weight:bold;letter-spacing:-1px;font-size:11px;text-align:left;height:29px;}
+.music_list_type04 th span{display:block;padding:2px 0 0 7px;}
+.music_list_type04 th.last{background:none;letter-spacing:-2px}
+.music_list_type04 th.check{background:none;}
+.music_list_type04 th.check span{padding:0 0 0 8px;}
+.music_list_type04 th.num span{padding:0px;}
+*html .music_list_type04 th.check span{padding:0 0 0 4px;}
+.music_list_type04 tr td{padding:8px 0 6px 0;border-bottom:1px solid #E5E5E5;text-align:left; line-height:16px; color:#bbb;}
+.music_list_type04 tr.last td{border-bottom:1px solid #CECECE;}
+.music_list_type04 tr td.check{padding:0 0 0 8px;}
+*html .music_list_type04 tr td.check{padding:0 0 0 4px;}
+.music_list_type04 tr.bg td{background:#f8f8f8;}
+.music_list_type04 td.num{text-align:center;padding-right:4px;font-family:Tahoma;font-size:11px;color:#666;}
+.music_list_type04 td.info p.music_icon{padding:0 7px 0 0; position:relative;  height:16px;}
+.music_list_type04 td.info p.music_icon a.music{margin-right:5px;display:inline;color:#111;}
+.music_list_type04 td.info p.music_icon a{color:#333;}
+.music_list_type04 td.info p.music_icon a.none{color:#C1C1C1;text-decoration:none;}
+.music_list_type04 td.artist p{margin-left:7px;width:113px;}
+.music_list_type04 td.artist p.musition{font-size:11px;letter-spacing:-1px; white-space:nowrap; color:#333;}
+.music_list_type04 td.artist p.musition span{color:#999;}
+.music_list_type04 td.artist p a{color:#666;}
+.music_list_type04 td.album p{margin-left:7px;width:106px;}
+.music_list_type04 td.album p a{color:#666;}
+
+.music_list_type04 td.down{padding-left:9px;}
+.music_list_type04 tr.cd_01 td{height:30px;border-bottom:1px solid #D0D0D0;padding-left:7px;}
+.music_list_type04 tr.cd_02 td{vertical-align:top;padding:19px 0 0 7px;height:23px;border-bottom:1px solid #D0D0D0;}
+.music_list_type04 .cd_icon{background:url('http://mnetimg.mnet.com/images/music/cd_icon.gif') no-repeat;padding:2px 0 0 27px;color:#666;}
+
+
+/*레이어_header*/
+.lay_password {position:absolute; width:212px; height:65px; border:1px solid #272727; background:#edf6fe; top:27px; left:723px;}
+.lay_password p.lay_top {position:absolute; top:-5px; left:65px;background:url('http://mnetimg.mnet.com/images/common/lay_top1.gif') no-repeat 0 -5px; width:7px; height:5px; overflow:hidden;}
+.lay_password .name_area {border-bottom:1px solid #dcedfd; color:#333; height:24px;}
+.lay_password .name_area p {float:left; margin:8px 0 0 10px; *display:inline;}
+.lay_password .name_area a.btn_x1 {float:right; margin:8px 10px 0 0;background:url('http://mnetimg.mnet.com/images/common/btn_x1.gif') no-repeat; width:9px; height:10px;}
+.lay_password .notice_txt {color:#0d8bb5; font-size:11px; letter-spacing:-1px; text-align:left; margin:3px 10px 0 10px; line-height:16px;}
+.lay_password a.password_chg {float:right; text-decoration:underline; margin:-15px 10px 0 0; color:#333; font-size:11px; letter-spacing:-1px;}
+.lay_password a:hover.password_chg {color:#333;text-decoration:underline;}
+
+.lay_dateinfo {position:absolute; width:260px; border:1px solid #272727; background:#fff; text-align:left; top:27px; left:556px;}
+.lay_dateinfo p.lay_top {position:absolute; top:-5px; left:45px;background:url('http://mnetimg.mnet.com/images/common/lay_top1.gif') no-repeat; width:7px; height:5px; overflow:hidden;}
+.lay_dateinfo .my_date {width:250px;padding:12px 0 6px 10px; color:#333; line-height:17px; letter-spacing:normal}
+.lay_dateinfo .my_date p {background:url('http://mnetimg.mnet.com/images/common/dot.gif') no-repeat 0 7px; padding-left:8px;}
+.lay_dateinfo .my_date p span {font-size:11px;}
+.lay_dateinfo .foot_menu {border-top:1px solid #efefef; height:21px; background:#f8f8f8;}
+.lay_dateinfo .foot_menu .menu {margin:4px 0 0 10px; float:left; font-size:11px; letter-spacing:-1px;}
+.lay_dateinfo .foot_menu .menu a {color:#7a7979; float:left;}
+.lay_dateinfo .foot_menu .menu em {color:#ddd; padding:0 7px; float:left;}
+.lay_dateinfo .foot_menu a.btn_x2 {float:right; margin:6px 10px 0 0;background:url('http://mnetimg.mnet.com/images/common/btn_x2.gif') no-repeat; width:9px; height:10px;}
+
+.lay_memolist {position:absolute; width:275px; border:1px solid #272727; background:#fff; text-align:left; top:27px; left:592px; z-index:100;}
+.memo_position {left:621px !important;}
+.lay_memolist p.lay_top {position:absolute; top:-5px; left:43px;background:url('http://mnetimg.mnet.com/images/common/lay_top1.gif') no-repeat; width:7px; height:5px; overflow:hidden;}
+.lay_memolist .memolist {padding:13px 13px 6px;}
+.lay_memolist .memolist dl {margin-bottom:5px; height:38px; *zoom:1; overflow:hidden;}
+.lay_memolist .memolist dl:after {content:""; clear:both; display:block;}
+.lay_memolist .memolist dt {float:left; margin-right:10px; position:relative;}
+.lay_memolist .memolist dd {float:right; width:200px;}
+.lay_memolist .memolist dd.tit, .lay_memolist .memolist dd.tit2 {margin:4px 0 3px;}
+.lay_memolist .memolist dd.tit a {width:195px; line-height:17px;}
+.lay_memolist .memolist dd.tit2 a {width:195px; height:15px; line-height:15px; font-weight:bold;}
+.lay_memolist .memolist dd.tit span {color:#0d8bb5;}
+.lay_memolist .memolist dd.date {color:#666; font-size:11px;}
+.lay_memolist .memolist dd em.date2 {color:#999; font-size:11px; margin-left:10px;}
+.lay_memolist .memolist dd.date span {color:#999; font-family:Verdana; font-size:10px; letter-spacing:-1px;}
+.lay_memolist .memolist dd.date em {color:#dbdbdb; padding:0 4px 0 3px; font-size:10px;}
+.lay_memolist .foot_menu {border-top:1px solid #efefef; height:21px; background:#f8f8f8;}
+.lay_memolist .foot_menu .btn_more {float:left; font-size:11px; letter-spacing:-1px; color:#666; margin:5px 0 0 10px; padding-right:7px; background:url("http://mnetimg.mnet.com/images/common/icon_common.gif") no-repeat right -28px;}
+.lay_memolist .foot_menu a.btn_x2 {float:right; margin:6px 10px 0 0; background:url('http://mnetimg.mnet.com/images/common/btn_x2.gif') no-repeat; width:9px; height:10px;}
+.lay_memolist .w38 {width:36px; height:36px;}
+
+.lay_memolist .memolist_no {background:url('http://mnetimg.mnet.com/images/common/lay_bg_not.gif') no-repeat -0 0; width:275px; height:84px; text-align:center; margin:0 auto; padding-top:160px;}
+.lay_memolist .memolist_no p {color:#999; line-height:17px; font-size:11px; letter-spacing:-1px;}
+.lay_memolist .alertlist_no {background:url('http://mnetimg.mnet.com/images/common/lay_bg_not.gif') no-repeat -275px 0; width:275px; height:94px; text-align:center; margin:0 auto; padding-top:150px;}
+.lay_memolist .alertlist_no p {color:#999; line-height:17px; font-size:11px; letter-spacing:-1px;}
+
+.lay_follow .result_list { overflow-y:scroll; width:498px; height:298px; position:relative;}
+.lay_follow .result_list li {height:50px; padding:10px 0 10px 15px; border-top:1px solid #eee;  }
+.lay_follow .result_list li dl { height:50px; width:370px; float:left;}
+.lay_follow .result_list li dl .thumb { float:left; margin:0 10px; display:inline; position:relative;}
+.lay_follow .result_list li dl .thumb img { width:50px; height:50px; display:block; }
+.lay_follow .result_list li dl .thumb .pic_b {width:48px; height:48px;}
+.lay_follow .result_list li dl dt {line-height:14px; color:#333; font-weight:bold; padding-top:5px;}
+.lay_follow .result_list li .btn_follow_2, .lay_follow .result_list li .btn_following_2 {float:right; margin-right:20px; margin-top:12px;}
+
+.lay_follow .liked_list {width:398px;}
+.lay_follow .liked_list li dl .thumb {margin-left:0;}
+.lay_follow .liked_list li dl dt {padding-top:19px;}
+.lay_follow .liked_list li dl {width:270px; }
+
+.layer_report {right:0; margin-top:5px; width:350px;}
+.layer_report .report_list {padding:25px 20px; color:#666;}
+.layer_report .report_list li {border-bottom:0 !important; background:#fff !important; padding:4px 0 !important; border:0 !important; }
+.layer_report .report_list li label input {width:14px; height:14px; vertical-align:middle;}
+.layer_report .report_list p.report_text { font-size:11px; color:#999; letter-spacing:-1px; padding-top:10px; line-height:15px;}
+
+
+/* login */
+#login {background:#fff url('http://mnetimg.mnet.com/images/common/bg_login.gif') 0 0 repeat-x !important;}
+#login table.login {margin: 0 auto; text-align:left; width:558px;}
+
+#login .header {height:38px;background: url("http://mnetimg.mnet.com/images/common/btn_login.gif") no-repeat 0 33px;}
+#login .header h1 a {float:left;background: url("http://mnetimg.mnet.com/images/common/btn_login.gif") no-repeat 0 -11px; margin-left:5px; width:72px; height:26px; text-indent:-9999px;}
+#login .header .navi {float:right; margin-top:8px;}
+#login .header .navi li {float:left;}
+#login .header .navi li a {background: url("http://mnetimg.mnet.com/images/common/btn_login.gif") no-repeat 0 -11px; text-indent:-9999px; overflow:hidden; height:13px; display:block;}
+#login .header .navi li a.navi_01 {background-position: -334px -18px; width:41px;}
+#login .header .navi li a.navi_02 {background-position: -375px -18px; width:34px;}
+#login .header .navi li a.navi_03 {background-position: -409px -18px; width:40px;}
+#login .header .navi li a.navi_04 {background-position: -449px -18px; width:52px;}
+#login .header .navi li a.navi_05 {background-position: -501px -18px; width:57px;}
+
+#login .box {background:#f2f2f2; border-left:1px solid #e6e6e6; border-right:1px solid #e6e6e6; border-bottom:1px solid #c5c7c9; padding:46px 60px;}
+#login .box form {background:#fdfdfd; border:1px solid #eaeaea; padding:50px 0;}
+#login .loginbox {width:250px; position:relative; margin:0 auto;}
+#login .loginbox p.text {font-weight:bold; height:25px; line-height:14px;}
+#login .loginbox p.input_login {height:59px;}
+#login .loginbox p.error_msg {background: url("http://mnetimg.mnet.com/images/common/bg_input.gif") no-repeat -2px -65px; padding-left:15px; color:#dc0273; font-size:11px; line-height: 15px; margin-top:20px;}
+#login .loginbox p.user {font-size:11px; padding-top:15px; color:#999;}
+#login .loginbox p.user a {color:#999;}
+#login .loginbox p.user .b {color:#333;}
+#login .loginbox p.user em {color:#dcdadc;}
+#login .loginbox p.user input {vertical-align:top; width:12px; height:12px; margin-right:3px;}
+#login .loginbox p.btn {padding-top:20px;}
+#login .input_id {margin-bottom:4px;float:left;background: url("http://mnetimg.mnet.com/images/common/bg_input.gif") no-repeat 8px 5px; border-left:1px solid #a6a6a6; border-top:1px solid #a6a6a6; border-right:1px solid #c0c0c0; border-bottom:1px solid #c0c0c0; width:170px; padding:6px 8px; height:13px;}
+#login .input_id:focus, #login .input_pw:focus {border:1px solid #dc0273;}
+#login .input_pw {float:left;background: url("http://mnetimg.mnet.com/images/common/bg_input.gif") no-repeat 8px -25px; border-left:1px solid #a6a6a6; border-top:1px solid #a6a6a6; border-right:1px solid #c0c0c0; border-bottom:1px solid #c0c0c0; width:170px; padding:6px 8px; height:13px;}
+#login .btn_login {position:absolute; top:25px; right:0;background: url("http://mnetimg.mnet.com/images/common/btn_layer_login.gif") no-repeat 0 0;width:56px; height:59px;}
+#login .btn_prev {background: url("http://mnetimg.mnet.com/images/common/btn_login.gif") no-repeat 0 -43px;width:123px; height:22px; overflow:hidden; float:left; text-indent:-9999px; margin-right:4px;}
+#login .btn_mnet {background: url("http://mnetimg.mnet.com/images/common/btn_login.gif") no-repeat -127px -43px;width:123px; height:22px; overflow:hidden; float:left; text-indent:-9999px;}
+#login p.copyright {background: url("http://mnetimg.mnet.com/images/common/btn_login.gif") no-repeat 50% -85px; height:20px; text-indent:-9999px; overflow:hidden; margin-top:10px;}
+
+#login .login_en .input_id {background-position: 8px -106px;}
+#login .login_en .input_pw {background-position: 8px -137px;}
+#login .login_en .btn_login {background-position: 0 -61px;}
+#login .login_en .loginbox p.user {letter-spacing:-1px; white-space: nowrap;}
+#login .login_en .btn_prev {background-position: -254px -43px; width:133px;}
+#login .login_en .btn_mnet {background-position: -390px -43px; width:133px;}
+#login .login_en .loginbox p.btn {width:270px;}
+
+/* zip code */
+#zipcode .tit_zipcode_search {background:url('http://mnetimg.mnet.com/images/member/mb_title.gif') no-repeat 0 -190px; display:block; text-indent:-9999px; overflow:hidden; width:86px; height:15px;}
+#zipcode .zip_code_box{padding:20px;}
+#zipcode .zip_code_box strong{display:block; margin-bottom:10px;}
+#zipcode .zip_code_box ul li{float:left;}
+#zipcode .zip_code_box .itxt{border:1px solid #bfbfc0; padding:4px; width:281px; height:12px;}
+#zipcode .zip_code_box .btn_search{_margin-top:1px;}
+#zipcode .zip_code_box .zip_code_list{position:relative; margin-top:10px; padding:11px 15px; height:130px; overflow:auto; overflow-x:hidden; border:1px solid #cecece; background:#fafafa}
+#zipcode .zip_code_box .zip_code_list p.no_data{position:absolute; top:77px; left:60px; color:#999}
+#zipcode .zip_code_box .zip_code_list ul li{*zoom:1; width:100%;_width:auto; margin-bottom:4px; line-height:14px}
+#zipcode .zip_code_box .zip_code_list ul li:after{display:block; clear:both; content:""}
+#zipcode .zip_code_box .zip_code_list ul li span{display:block; float:left; padding-top:3px; color:#666}
+#zipcode .zip_code_box .zip_code_list ul li .addr{width:173px}
+#zipcode .zip_code_box .zip_code_list ul li .btn{float:right;padding:0}
+#zipcode .mb_btn_set{background:url('http://mnetimg.mnet.com/images/member/mb_btn.gif') no-repeat; display:block; float:left;text-indent:-9999px;overflow:hidden;}
+#zipcode .btn_search{background-position:-350px -60px; width:33px; height:23px;}
+#zipcode .btn_close{background-position:-168px -88px; width:36px; height:23px; margin:0 auto; float:none;}
+#zipcode .btn_choice{background-position:-350px -90px; width:33px; height:19px;}
+.lay_foot .lay_btn{margin:0 auto;}
+.ml4 {margin-left: 4px;}
+
+#noFlash {position:relative;width:100%;height:100%;background:#eee;}
+#noFlash img {position:absolute; left:50%; top:50%; border:0;margin:-25px 0 0 -100px;}
+
+/*btn_event*/
+.btn_eventview {background:url('http://mnetimg.mnet.com/images/common/btn_board.gif') no-repeat 0 -430px; width:103px; height:23px; display:inline-block; overflow:hidden;}
+
+/*meto button*/
+.social_facebook_h {width:59px;}
+.social_meto_h {position:relative; height:63px;width:51px;background:url('http://mnetimg.mnet.com/images/plugin/bg_meto.gif') no-repeat 0 3px; }
+.social_meto_h .social_meto {position:absolute; bottom:2px;}
+.w_twt {width:97px;}
+
+#l_banner {width:432px; position:absolute; background:#999; left:50%; margin-left:-228px; top:301px; z-index:200;}
+#l_banner .box {margin:1px; border:1px solid #fff;background:#f4f4f4; padding:5px;}
+#l_banner .bottom {height:16px; padding-top:4px;}
+#l_banner .bottom .btn_close {background:url('http://mnetimg.mnet.com/images/top/btn_close.gif') 50% 50% no-repeat; float:right; width:15px; height:15px;}
+#l_banner .bottom label {cursor:pointer; line-height: 15px;}
+#l_banner .bottom input {vertical-align:top; width:13px; height:13px;}
+#l_banner p {padding-bottom:4px;}
+#l_banner p img {display:block;}
+
+/* header_mnet */
+/*img_set*/
+#header_mnet .hdset {background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat; display:block; overflow:hidden; text-indent:-9999px;}
+#header_mnet .gnbset a {background:url('http://mnetimg.mnet.com/images/common/20140109/bg_gnb.png') no-repeat; display:block; overflow:hidden; text-indent:-9999px; width:96px; height:35px;}
+#header_mnet .gnbset2 a {background:url('http://mnetimg.mnet.com/images/common/header_png.png?v=1') no-repeat; display:block; overflow:hidden; text-indent:-9999px;}
+.suggestwrap {position:absolute; width:303px; border:1px solid #282830; top:55px; left:129px; background:#fff; z-index:200; overflow:hidden; text-align:left; }
+.suggestwrap_none {position:absolute; width:287px; border:1px solid #282830; top:55px; left:129px; background:#f5f5f5; z-index:99; overflow:hidden; padding:10px 0 8px 16px; color:#666; text-align:left;}
+
+/* header */
+#header_mnet {background:url('http://mnetimg.mnet.com/images/common/bg_header2.gif') repeat-x; display:block; width:100%; height:136px; z-index:100; position:relative; clear:both;}
+.htype_105 {height:105px !important;}
+#header_mnet #header_mnet_top .quick_menu li a:hover, #header_mnet #header_mnet_top .quick_menu li a:hover span {text-decoration:underline; color:#fff;}
+#header_mnet .inner_wrap {background:url('http://mnetimg.mnet.com/images/common/bg_header_in.gif') 50% 0 no-repeat; width:auto;}
+#header_mnet #header_top {height:70px; position:relative;width:981px; text-align:center; margin:0 auto; z-index:1100}
+#header_mnet #header_top .search_area .mnetlogo {background:url('http://mnetimg.mnet.com/images/common/header_png.png?v=1') no-repeat 0 0; display:block; width:100px; height:36px; margin:21px 16px 0 0; text-indent:-9999px; overflow:hidden; float:left;}
+#header_mnet #header_top .search_area form {background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat 0 23px; display:block; width:330px; height:53px; float:left; text-align:left; position:relative;}
+#header_mnet #header_top .search_area form .sip {width:250px; height:26px; line-height:26px; color:#fff; margin:25px 0 0 20px; border:0; float:left; font-size:14px;}
+#header_mnet #header_top .search_area form .sbtn {background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat 0 -38px; display:block;border:0; text-indent:-9999px; cursor:pointer;}
+#header_mnet #header_top .search_area form .bfind {background-position:1px -37px; position:absolute; width:15px; height:14px; right:7px; top:29px; padding:3px;}
+#header_mnet #header_top .search_area form .bdelete {background:url('http://mnetimg.mnet.com/images/common/search_delete.png') no-repeat; position:absolute; width:280px; height:28px; right:33px; top:24px; z-index:100;}
+#header_mnet #header_top .search_area form .barr {background-position:-64px -34px; position:absolute; width:9px; height:8px; right:38px; top:29px; padding:6px;}
+#header_mnet #header_top .search_area form .barr_off {background-position:-64px -54px; position:absolute; width:9px; height:8px; right:38px; top:29px; padding:6px;}
+#header_mnet #header_top .search_area form .sbar {background:#3b4155; width:1px; height:15px; position:absolute; top:31px; right:33px;}
+
+#header_mnet #header_top .quick_menu {position:absolute; top:6px; right:0;}
+#header_mnet #header_top .quick_menu li {float:left; color:#a8b0cb; font-size:11px;padding:0 8px 0 6px; background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat right -137px; line-height:18px; letter-spacing:-1px;}
+#header_mnet #header_top .quick_menu li a {color:#a8b0cb;}
+#header_mnet #header_top .login_on li a {color:#a8b0cb;}
+#header_mnet #header_top .quick_menu li.my {background:none; float:left; padding:0 2px 0;}
+#header_mnet #header_top .quick_menu li.my dl {float:left; background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat right -196px; padding:0 10px 0 0;}
+#header_mnet #header_top .quick_menu li.my dt {float:left; background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat right -137px; padding:0 7px 0 0; font-weight:bold; position:relative;}
+#header_mnet #header_top .quick_menu li.my dt .lay_menu {margin-right:7px;}
+#header_mnet #header_top .quick_menu li.my dd {float:left; background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat right -137px; padding:0 7px;}
+#header_mnet #header_top .quick_menu li.my dd.applicat {background:none; padding:0 0 0 8px; position:relative; display:none;}
+#header_mnet #header_top .quick_menu li dd.last {background:none; padding:0 0 0 7px; position:relative;}
+#header_mnet #header_top .quick_menu li.my dt em.i_new {background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat -35px -38px; display:block; float:left; width:10px; height:12px; margin:2px 0 0 1px; line-height:25px; vertical-align:middle;}
+#header_mnet #header_top .quick_menu li.my dt span, #header_mnet #header_top .quick_menu li.my a, #header_mnet #header_top .quick_menu li.my dd {float:left;}
+#header_mnet #header_top .quick_menu li a.btn_select { background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat right -37px; padding-right:15px; vertical-align:middle;}
+#header_mnet #header_top .quick_menu li a:hover.btn_select { background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat right -67px;}
+#header_mnet #header_top .quick_menu li a.btn_select_off {background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat right -167px; padding-right:15px; vertical-aligm:middle;}
+#header_mnet #header_top .quick_menu li.last {background:none; padding:0 0 0 8px}
+#header_mnet #header_top .quick_menu li.last a.btn_select {background-position:right -39px}
+#header_mnet #header_top .quick_menu li.last a:hover.btn_select {background-position:right -69px}
+#header #header_top .quick_menu li.last a.btn_select_off {background-position:right -168px}
+#header_mnet #header_top .quick_menu li .lay_menu {position:absolute; border:1px solid #1f2333; background:#fff; top:17px; right:0px; font-weight:normal; z-index:10;}
+#header_mnet #header_top .quick_menu li .lay_menu li {border-bottom:1px solid #edeeef; display:block; text-align:left; padding:0 7px 0 0; float:none; background:none;height:25px; }
+#header_mnet #header_top .quick_menu li .lay_menu li a {background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat right -89px; display:block; color:#3d424a; font-size:11px; width:85px; padding:0 0 0 7px; line-height:25px; letter-spacing:-1px;}
+#header_mnet #header_top .quick_menu li .lay_menu li em.i_new2 {background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat -85px -37px; display:inline-block; width:8px; height:11px; margin:1px 0 0 3px;}
+
+#header_mnet #gnb li.mama a {background-position:0 -250px; width:38px; height:35px; }
+#header_mnet #gnb li.mama { margin:0 0 0 10px; position:relative; right:0; float:right; width:38px; height:35px;}
+#header_mnet .special_menu {position:absolute; top:38px; right:0;}
+#header_mnet .special_menu li, .special_menu li a {float:left;}
+#header_mnet .special_menu em.sbar {background-position:-130px -120px; width:2px; height:9px; margin:2px 7px; float:left;}
+#header_mnet .special_menu .smobile {background-position:0 -140px; width:46px; height:13px;}
+#header_mnet .special_menu .swidget {background-position:-60px -140px; width:67px; height:13px;}
+#header_mnet #gnb .special_menu {position:absolute; top:11px; right:152px; background:url('http://mnetimg.mnet.com/images/common/header_set.gif') no-repeat right -198px; padding-right:12px;}
+#header_mnet .special_menu a.scash {background-position:0px -181px; width:70px; height:13px;}
+#header_mnet .special_menu a.scoupon {background-position:-80px -160px; width:68px; height:13px;}
+#header_mnet .special_menu a:hover.scash {background-position:0px -181px;}
+/*#header_mnet .special_menu a:hover.scoupon {background-position:-80px -181px;}*/
+
+#header_mnet .header_bot {width:980px; margin:0 auto; text-align:center; height:30px;}
+#header_mnet .header_bot .header_navi {float:right; margin-top:8px;}
+#header_mnet .header_bot .header_navi a {color:#8b9097; font-size:11px; float:left;}
+#header_mnet .header_bot .header_navi em {background-position:right -120px; display:block; width:4px; height:5px; float:left; margin:6px 7px;}
+#header_mnet .header_bot .header_navi span.bar {background:#cacdd3; display:block; float:left; width:1px; height:9px; margin:3px 12px;}
+#header_mnet .header_bot .header_lanselect select {float:right; width:100px; border:1px solid #999; margin-top:6px; background:#fff;}
+
+/*#header_mnet #gnb {height:35px; position:relative; left:0; width:981px; text-align:center; margin:0 auto; background:none; border:0;}*/
+#header_mnet #gnb {height:35px; position:relative; left:0; width:981px; min-width:981px; text-align:center; margin:0 auto; background:none; border:0;}
+#header_mnet #gnb li {float:left;}
+#header_mnet #gnb li.nhome a {background-position:0 0; display:none;}
+#header_mnet #gnb li.nmusic a {background-position:-96px 0;}
+#header_mnet #gnb li.ntv a {background-position:-192px 0;}
+#header_mnet #gnb li.nconcert a {background-position:-288px 0;}
+#header_mnet #gnb li.nspecial a {background-position:-384px 0;}
+#header_mnet #gnb li.nmymnet a {background-position:-480px 0; width:97px;}
+#header_mnet #gnb li.nmcount a {background-position:0 -60px; width:75px; height:40px;}
+#header_mnet #gnb li.niam a {background-position:0 -104px; width:58px; height:35px;}
+#header_mnet #gnb li.nmcount {position:relative; right:0; float:right;  margin:-7px 0 0 0; }
+#header_mnet #gnb li.niam {position:relative; right:0; float:right; margin-left:4px;margin:-5px 0 0 0;}
+#header_mnet #gnb li.jisan {position:relative; right:0; float:right; margin-left:4px;margin:-8px 15px 0;}
+#header_mnet #gnb li.jisan a {background-position:0 -150px; width:47px; height:39px;}
+#header_mnet #gnb li.nmc {position:relative; right:0; float:right; margin-left:4px;margin:-8px 6px 0;}
+#header_mnet #gnb li.nmc a {background-position:0 -200px; width:55px; height:42px;}
+#header_mnet #gnb li.nd9 {position:relative; right:0; float:right; margin-left:4px;margin:-8px 0 0;}
+#header_mnet #gnb li.nd9 a {background-position:0 -294px; width:77px; height:40px;}
+#header_mnet #gnb li.mgigs a { width:169px; background-position:-577px 0;}
+#header_mnet #gnb li.mnetblack a { width:184px; background-position:-745px 0;}
+#header_mnet #gnb li.voicekorea {position:relative; right:7px; float:right;  margin:-7px 0 0 0; }
+#header_mnet #gnb li.voicekorea a {background-position:0 -350px; width:62px; height:42px;}
+#header_mnet #gnb li.ssk5 {position:relative; right:0; float:right; margin-left:4px;margin:-10px 0 0;}
+#header_mnet #gnb li.ssk5 a {background-position:0 -400px; width:77px; height:44px;}
+#header_mnet #gnb li.showme {position:relative; right:0; float:right; margin-left:4px;margin:-5px 0 0;}
+#header_mnet #gnb li.showme a {background-position:0 -453px; width:69px; height:38px;}
+
+#header_mnet #gnb li.nhome a:hover, #header_mnet #gnb li.nhome_on a {background-position:0 -35px; display:none;}
+#header_mnet #gnb li.nmusic a:hover, #header_mnet #gnb li.nmusic_on a {background-position:-96px -35px;}
+#header_mnet #gnb li.ntv a:hover, #header_mnet #gnb li.ntv_on a {background-position:-192px -35px;}
+#header_mnet #gnb li.nconcert a:hover, #header_mnet #gnb li.nconcert_on a {background-position:-288px -35px;}
+#header_mnet #gnb li.nspecial a:hover, #header_mnet #gnb li.nspecial_on a {background-position:-384px -35px;}
+#header_mnet #gnb li.nmymnet a:hover, #header_mnet #gnb li.nmymnet_on a {background-position:-480px -35px; width:97px;}
+#header_mnet #gnb li.mgigs a:hover, #header_mnet #gnb li.mgigs_on a  { width:169px; background-position:-577px -35px;}
+#header_mnet #gnb li.mnetblack a:hover, #header_mnet #gnb li.mnetblack_on a  { width:184px; background-position:-745px -35px;}
+
+/*2depth menu*/
+#header_mnet #gnb ul li ul {position:absolute; top:45px; left:130px;}
+#header_mnet #gnb ul li ul li {background:url('http://mnetimg.mnet.com/images/common/gnb_line.gif') no-repeat 0 1px; display:inline-block;}
+#header_mnet #gnb ul li ul li a {background:url('http://mnetimg.mnet.com/images/common/20140109/bg_gnb.png') no-repeat; float:left; display:inline; margin:0 12px 0 15px;}
+#header_mnet #gnb ul li.mn_01, #header_mnet #gnb ul li.mn_01on {background:none}
+/*#header_mnet #gnb ul.ntv_2dep li.mn_01, #header_mnet #gnb ul.ntv_2dep li.mn_01on {background:url('http://mnetimg.mnet.com/images/common/gnb_line.gif') no-repeat 0 1px; display:inline-block;}*/
+
+/*2depth mnet music*/
+#header_mnet #gnb ul.nmusic_2dep {left:20px;}
+#header_mnet #gnb ul.nmusic_2dep li a {height:13px; width:auto;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_01 a {background-position:0px -80px; width:43px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_01 a:hover, #header_mnet #gnb ul.nmusic_2dep li.mn_01on a {background-position:0 -100px; width:43px}
+#header_mnet #gnb ul.nmusic_2dep li.mn_02 a {background-position:-71px -80px; width:43px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_02 a:hover, #header_mnet #gnb ul.nmusic_2dep li.mn_02on a {background-position:-71px -100px; width:43px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_03 a {background-position:-142px -80px; width:43px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_03 a:hover, #header_mnet #gnb ul.nmusic_2dep li.mn_03on a {background-position:-142px -100px; width:43px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_04 a {background-position:-213px -80px; width:43px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_04 a:hover, #header_mnet #gnb ul.nmusic_2dep li.mn_04on a {background-position:-213px -100px; width:43px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_05 a {background-position:-284px -80px; width:53px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_05 a:hover, #header_mnet #gnb ul.nmusic_2dep li.mn_05on a {background-position:-284px -100px; width:53px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_06 a {background-position:-353px -80px; width:65px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_06 a:hover, #header_mnet #gnb ul.nmusic_2dep li.mn_06on a {background-position:-353px -100px; width:65px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_07 a {background-position:-455px -80px; width:32px;}
+#header_mnet #gnb ul.nmusic_2dep li.mn_07 a:hover, #header_mnet #gnb ul.nmusic_2dep li.mn_07on a {background-position:-455px -100px; width:32px;}
+/*2depth concert*/
+#header_mnet #gnb ul.nconcert_2dep {left:214px;}
+#header_mnet #gnb ul.nconcert_2dep li a {height:13px; width:auto; }
+#header_mnet #gnb ul.nconcert_2dep li.mn_01 a {background-position:0 -120px; width:77px;}
+#header_mnet #gnb ul.nconcert_2dep li.mn_01 a:hover, #header_mnet #gnb ul.nconcert_2dep li.mn_01on a {background-position:0 -140px; width:77px}
+#header_mnet #gnb ul.nconcert_2dep li.mn_02 a {background-position:-106px -120px; width:32px;}
+#header_mnet #gnb ul.nconcert_2dep li.mn_02 a:hover, #header_mnet #gnb ul.nconcert_2dep li.mn_02on a {background-position:-106px -140px; width:32px;}
+#header_mnet #gnb ul.nconcert_2dep li.mn_03 a {background-position:-166px -120px; width:32px;}
+#header_mnet #gnb ul.nconcert_2dep li.mn_03 a:hover, #header_mnet #gnb ul.nconcert_2dep li.mn_03on a {background-position:-166px -140px; width:32px;}
+#header_mnet #gnb ul.nconcert_2dep li.mn_04 a {background-position:-226px -120px; width:69px;}
+#header_mnet #gnb ul.nconcert_2dep li.mn_04 a:hover, #header_mnet #gnb ul.nconcert_2dep li.mn_04on a {background-position:-226px -140px; width:69px;}
+/*2depth tv*/
+#header_mnet #gnb ul.ntv_2dep {left:122px;}
+#header_mnet #gnb ul.ntv_2dep li a {height:13px; width:auto; }
+#header_mnet #gnb ul.ntv_2dep li.mn_01 a {background-position:0 -160px; width:42px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_01 a:hover, #header_mnet #gnb ul.ntv_2dep li.mn_01on a {background-position:0 -180px; width:42px}
+#header_mnet #gnb ul.ntv_2dep li.mn_02 a {background-position:-72px -160px; width:42px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_02 a:hover, #header_mnet #gnb ul.ntv_2dep li.mn_02on a {background-position:-72px -180px; width:42px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_03 a {background-position:-142px -160px; width:53px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_03 a:hover, #header_mnet #gnb ul.ntv_2dep li.mn_03on a {background-position:-142px -180px; width:53px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_04 a {background-position:-224px -160px; width:37px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_04 a:hover, #header_mnet #gnb ul.ntv_2dep li.mn_04on a {background-position:-224px -180px; width:37px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_05 a {background-position:-290px -160px; width:42px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_05 a:hover, #header_mnet #gnb ul.ntv_2dep li.mn_05on a {background-position:-290px -180px; width:42px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_06 a {background-position:-360px -160px; width:35px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_06 a:hover, #header_mnet #gnb ul.ntv_2dep li.mn_06on a {background-position:-360px -180px; width:35px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_07 a {background-position:-423px -160px; width:32px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_07 a:hover, #header_mnet #gnb ul.ntv_2dep li.mn_07on a {background-position:-423px -180px; width:32px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_08 a {background-position:-536px -160px; width:64px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_08 a:hover, #header_mnet #gnb ul.ntv_2dep li.mn_08on a {background-position:-536px -180px; width:64px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_ssk a {background-position:-470px -160px; width:57px;}
+#header_mnet #gnb ul.ntv_2dep li.mn_ssk a:hover, #header_mnet #gnb ul.ntv_2dep li.mn_sskon a {background-position:-470px -180px; width:57px;}
+/*2depth special*/
+#header_mnet #gnb ul.nspecial_2dep {left:304px;}
+#header_mnet #gnb ul.nspecial_2dep li a {height:13px; width:auto; }
+#header_mnet #gnb ul.nspecial_2dep li.mn_01 a {background-position:0 -200px; width:53px;}
+#header_mnet #gnb ul.nspecial_2dep li.mn_01 a:hover, #header_mnet #gnb ul.nspecial_2dep li.mn_01on a {background-position:0 -220px; width:53px}
+#header_mnet #gnb ul.nspecial_2dep li.mn_02 a {background-position:-80px -200px; width:32px;}
+#header_mnet #gnb ul.nspecial_2dep li.mn_02 a:hover, #header_mnet #gnb ul.nspecial_2dep li.mn_02on a {background-position:-80px -220px; width:32px;}
+#header_mnet #gnb ul.nspecial_2dep li.mn_04 a {background-position:-136px -200px; width:46px;}
+#header_mnet #gnb ul.nspecial_2dep li.mn_04 a:hover, #header_mnet #gnb ul.nspecial_2dep li.mn_04on a {background-position:-136px -220px; width:46px;}
+#header_mnet #gnb ul.nspecial_2dep li.mn_05 a {background-position:-203px -200px; width:46px;}
+#header_mnet #gnb ul.nspecial_2dep li.mn_05 a:hover, #header_mnet #gnb ul.nspecial_2dep li.mn_05on a {background-position:-203px -220px; width:46px;}
+#header_mnet #gnb ul.nspecial_2dep li.mn_06 a {background-position:-272px -200px; width:27px;}
+#header_mnet #gnb ul.nspecial_2dep li.mn_06 a:hover, #header_mnet #gnb ul.nspecial_2dep li.mn_06on a {background-position:-272px -220px; width:27px;}
+#header_mnet #gnb ul.nspecial_2dep li.mn_07 a {background-position:-320px -200px; width:45px;}
+#header_mnet #gnb ul.nspecial_2dep li.mn_07 a:hover, #header_mnet #gnb ul.nspecial_2dep li.mn_07on a {background-position:-320px -220px; width:45px;}
+
+/* Footer */
+#footer_mnet {border-top:1px solid #c9c9d0; background:#f7f7f8; position:relative; width:100%; height:150px; z-index:1;}
+#footer_mnet .inner_wrap {position:relative;}
+#footer_mnet .ftset {background:url('http://mnetimg.mnet.com/images/common/foot2_imgset.gif') no-repeat;}
+#footer_mnet .logo {float:left; width:71px; height:37px; margin-top:0;}
+#footer_mnet .cj {background-position:0 0; float:left; width:71px; height:37px;}
+#footer_mnet .footlist {padding-top:40px; display:block; height:10px;}
+#footer_mnet .footlist li {background:url('http://mnetimg.mnet.com/images/common/foot2_imgset.gif') no-repeat 0 -107px; float:left; height:11px; color:#82848b; font-size:11px; letter-spacing:-1px; padding:0 8px 0 9px; text-align:left;}
+#footer_mnet .footlist li a {float:left; color:#5e656f; font-size:11px; letter-spacing:-1px;}
+#footer_mnet .footMenu {padding-top:17px;}
+#footer_mnet .footMenu address {background-position:1px -58px; width:732px; height:25px; display:block; margin:7px 0 0 94px;}
+#footer_mnet .footMenu address a.btn_infomore {position:absolute; background:url('http://mnetimg.mnet.com/images/common/foot2_imgset.gif') no-repeat -45px -130px; width:59px; height:12px; display:block; bottom:5px; right:118px;}
+#footer_mnet .footMenu address a.btn_infomore span {display:none;}
+
+/* Footer 20111118 */
+#footer_mnet .family_site {bottom:47px;right:15px; position:absolute;}
+#footer_mnet .family_site p {width:152px; border:1px solid #a0a0a7; position:relative; color:#8b9097; background:#f9f9fa; font-weight:bold; display:block; height:23px; overflow:hidden;}
+#footer_mnet .family_site p a.site {display:block; color:#8b9097; font-weight:bold; padding:5px 10px; }
+#footer_mnet .family_site p .btn_on {position:absolute; background:url('http://mnetimg.mnet.com/images/common/foot2_imgset.gif') no-repeat 0 -130px; width:20px; height:22px; display:block; top:0px; right:1px;}
+#footer_mnet .family_site p .btn_off {position:absolute; background:url('http://mnetimg.mnet.com/images/common/foot2_imgset.gif') no-repeat -20px -130px; width:20px; height:22px; display:block; top:0px; right:1px;}
+#footer_mnet .family_site div.family_list {position:relative;}
+#footer_mnet .family_site div.family_list ul {width:152px; height:auto !important; border:1px solid #a0a0a7; border-bottom:0; margin:0; position:absolute; bottom:24px; _bottom:50px;}
+#footer_mnet .family_site div.family_list li {width:152px; height:26px; border-bottom:1px solid #f1f1f2; background:#fff; padding:0; overflow:hidden;}
+#footer_mnet .family_site div.family_list li a {color:#272a34; font-size:12px; padding:7px 10px; width:132px; height:15px; display:block;}
+#footer_mnet .family_site div.family_list li a:hover, #footer_mnet .family_site p a:hover.site {text-decoration:none;}
+
+/* 윙배너 추가 */
+.banner_top {position:relative; margin: 0 auto; width:980px; height:0;}
+.banner_top a {display:block; margin-bottom:13px;}
+.banner_top .w_left {position:absolute; left:-93px; top:20px; width:83px;}
+.banner_top .w_right {position:absolute; right:-93px; top:20px; width:83px;}
+
+/*20121112*/
+#header_top .gnb_promotion {position:absolute; top:0; left:447px;z-index:200;}
+
+
+
+/* 팝업(별도의 페이지) */
+.mnetPopup { background-color:#fff; }
+.mnetPopup .popupTop { height:44px; border-bottom:1px solid #2198d3; background-color:#3db9e2; }
+.mnetPopup .popupTop .title { overflow:hidden; text-indent:-10000em; height:44px; background-repeat:no-repeat; }
+.mnetPopup .popupCont { padding:20px 15px; }
+.mnetPopup .popupFoot { padding:10px 0; text-align:center; border-top:1px solid #dfdfdf; }
+.mnetPopup .popupFoot .btn { display:inline-block; overflow:hidden; text-indent:-10000em; background-repeat:no-repeat; }
+
+.music_list_btn { margin-bottom:4px; }
+.music_list_btn li { float:left; }
+
+
+/* sns */
+*:first-child+html .photo_cont ul.sns_info li.info_right > span > div { display:inline; width:112px; }
+
+
+/*통합 인터레스팅 버튼 교체*/
+.mnet_interesting {float:right;position:relative;z-index:10;}
+
+.info_count {line-height:12px;}
+.info_count span {display:inline-block;background:url('http://mnetimg.mnet.com/images/common/ico_count.png') 0 0 no-repeat; padding-left:18px; margin-left:5px;}
+.info_count .interest {background-position:0 0;}
+.info_count .view {background-position:0 -23px;}
+.info_count .comment {background-position:0 -44px;}
+
+.area_interesting .music_list_btn li {float:none !important;}
+#program_spot .sta_area .area_interesting p, #program_spot2 .sta_area .area_interesting p {float:none;}
+#view_infoTheme .mnet_interesting {margin:0 30px 20px 0;}
+#view_info .mnet_interesting {margin:0 10px 20px 0;}
+#view_info .widgetlist_type01 {float:right;margin:-3px 30px 0 0;}
+#view_info .likebox_basic a.count {height:20px;padding-top:0; line-height:19px;cursor:default;}
+.themecont .info_count {margin:5px 10px 0 0;float:left;}
+.shareVod .mnet_interesting {float:left;margin-bottom:10px;}
+.shareVod div.line {clear:both;}
+.btn_contdetail {clear:both;}
+
+/*통합 연관콘텐츠 교체 relatedContent*/
+.relatedContent {position:relative; padding-bottom:30px; border-bottom:2px solid #444;}
+.relatedContent.mgt30 {margin-top:30px;}
+.relatedContent .btn_con {background:#fff url('http://mnetimg.mnet.com/images/common/btn_arrow.png') 0 0 no-repeat; position:absolute; top:50px; text-indent:-9999px;width:28px; height:100px;}
+.relatedContent .title_rc {font-size:14px; line-height:16px; margin-bottom:13px;}
+.relatedContent .title_rc em {color:#f06127; font-style: normal;}
+.relatedContent .list_relatedContent {margin:0 40px;overflow:hidden;display:block;position:relative; height:137px;}
+.relatedContent .list_relatedContent ul {width:2000px; }
+.relatedContent .list_relatedContent li {float:left; width:100px; height:137px; margin-right:30px; line-height:16px;}
+.relatedContent .list_relatedContent li .thumb {position:relative;display:block; width:100px; height:100px; margin-bottom:8px;}
+.relatedContent .list_relatedContent li .thumb:hover {text-decoration:none;}
+.relatedContent .list_relatedContent li .thumb img {width:100px; height:100px;}
+.relatedContent .list_relatedContent li i {display:block;position:absolute; top:0; left:0;width:98px; height:98px;border:1px solid #000 ;opacity:.1; filter:alpha(opacity=10);}
+.relatedContent .list_relatedContent li .bbg {display:block;position:absolute; bottom:0; left:0;width:100%; height:23px;background:#000 ;opacity:.5; filter:alpha(opacity=50);}
+.relatedContent .list_relatedContent li .time {position:absolute; bottom:0; left:7px; height:23px; line-height:23px;color:#fff; font-family:Arial; font-size:11px;}
+.relatedContent .list_relatedContent li .btn_play {position:absolute; bottom:1px; right:1px; background:url('http://mnetimg.mnet.com/images/common/btn_arrow.png') 0 -129px no-repeat;width:21px;height:21px; text-indent:-9999px;}
+.relatedContent .list_relatedContent li a {color:#666;}
+.relatedContent .list_relatedContent li a:hover i {opacity:.3; filter:alpha(opacity=30);}
+.relatedContent .list_relatedContent li a:hover .bbg {opacity:.7; filter:alpha(opacity=70);}
+.relatedContent .btn_prev {background-position:-2px 0; left:0;}
+.relatedContent .btn_prev:hover {background-position:-114px 0;}
+.relatedContent .btn_prev_off {background-position:-58px 0; left:0;}
+.relatedContent .btn_next {background-position:-26px -0; right:0;}
+.relatedContent .btn_next:hover {background-position:-138px 0;}
+.relatedContent .btn_next_off {background-position:-82px -90px;right:0;}
+
+
+
+/* sns */
+*:first-child+html .photo_cont ul.sns_info li.info_right > span > div { display:inline; width:112px; }
+
+/*gnbIdentyArea*/
+#mnet .gnbIdentyAreaWrap {background:url(http://mnetimg.mnet.com/images/common/bg_headercb.gif) repeat-x;height:36px;}
+#mnet .gnbIdentyArea {background:url(http://mnetimg.mnet.com/images/common/bg_headercb.gif) 0 0 repeat-x;height:36px;position:relative;z-index:200;border:0;}
+#mnet .gnbIdentyArea .inner_wrap {width:980px;}
+#mnet .gnbIdentyArea .interestingArea {float:left;height:32px;padding:4px 3px 0 4px;background:url(http://mnetimg.mnet.com/images/common/bg_headercb.gif) repeat-x 0 bottom;border-left:1px solid #afb1b4;border-right:1px solid #b3b4b7;}
+#mnet .gnbIdentyArea .interestingArea .area_interesting {float:left;position:relative;}
+#mnet .gnbIdentyArea .area_interesting a {background:url('http://mnetimg.mnet.com/images/00_combine/gnb/gnb_btnSet.png') 0 -100px no-repeat; display:inline-block;}
+#mnet .gnbIdentyArea .area_interesting a span {background:url('http://mnetimg.mnet.com/images/00_combine/gnb/gnb_btnSet.png') 0 -100px no-repeat;}
+#mnet .gnbIdentyArea .area_interesting .interesting:hover, .area_int_sns .area_interesting .interested {background-position:0 -130px; width:98px; height:30px;text-indent:-9999px; float:left;}
+#mnet .gnbIdentyArea .area_interesting .interesting_human_m {background-position:0 -160px; width:98px; height:30px;text-indent:-9999px; float:left;}
+#mnet .gnbIdentyArea .area_interesting .interesting_human_m:hover, #mnet .gnbIdentyArea .area_interesting .interesting_human_m.on {background-position:0 -130px; width:98px; height:30px;text-indent:-9999px; float:left;}
+#mnet .gnbIdentyArea .area_interesting .interesting_human_m.on:hover {background-position:0 -100px;}
+#mnet .gnbIdentyArea .alramPop {position:absolute;top:0px;left:100px;height:36px;line-height:36px;background:url(http://mnetimg.mnet.com/images/common/bg_headercb.gif) repeat-x 0 bottom;border-right:1px solid #bdbec1;}
+#mnet .gnbIdentyArea .alramPop span {background:url('http://mnetimg.mnet.com/images/00_combine/gnb/gnb_iconSet.png') 8px -108px no-repeat;padding:0 9px 0 17px;color:#444;}
+#mnet .gnbIdentyArea .alramPop em {color:#f06128}
+#mnet .gnbIdentyArea .interestingArea .list_interested {float:left;margin-left:3px;}
+#mnet .gnbIdentyArea .interestingArea .list_interested li {float:left;}
+#mnet .gnbIdentyArea .interestingArea .list_interested li img {width:26px;height:26px;}
+
+#mnet .gnbIdentyArea .snsArea {float:left;padding:5px 5px 7px;border-right:1px solid #b3b4b7;}
+
+#mnet .gnbIdentyArea .myMenu {height:36px;padding:0 6px;border-right:1px solid #b0b2b4;}
+#mnet .gnbIdentyArea .myMenu > li {line-height:34px;}
+#mnet .gnbIdentyArea .myMenu > li > a {color:#555;}
+#mnet .gnbIdentyArea .myMenu > li > a:hover {color:#000;}
+#mnet .gnbIdentyArea .myMenu li .alram {color:#e44d11;font-size:11px;font-family:Arial;line-height:19px;background:url('http://mnetimg.mnet.com/images/00_combine/gnb/gnb_iconSet.png') no-repeat;background-position:-40px -45px;letter-spacing:-1px;}
+#mnet .gnbIdentyArea .myMenu li.search {background:url('http://mnetimg.mnet.com/images/00_combine/com/gnbSet.gif') no-repeat 0 0;width:100px;height:24px;margin:7px 10px 0 8px;position:relative;line-height:1.5em;}
+#mnet .gnbIdentyArea .myMenu li.search input {border:0;width:60px;height:21px;margin:2px;background:#222;color:#f06128;padding:0 5px;}
+#mnet .gnbIdentyArea .myMenu li.search button.schbutton {background:url('http://mnetimg.mnet.com/images/00_combine/com/gnbSet.gif') no-repeat right -50px;display:block;width:23px;height:21px;text-indent:-9999px;position:absolute;top:1px;right:2px;}
+/* gnb myMenu*/
+#mnet .myMenu {float:right;}
+#mnet .myMenu > li {position:relative;float:left;line-height:41px;color:#e1e1e1;}
+#mnet .myMenu > li > a {color:#e1e1e1;padding:1px 0;}
+#mnet .myMenu > li a.userName {padding-right:17px;background:url('http://mnetimg.mnet.com/images/00_combine/gnb/gnb_iconSet.png') no-repeat;background-position:right -19px;}
+#mnet .myMenu li .myLayer {display:;position:absolute;top:36px;right:-6px;}
+#mnet .myMenu li .myLayer ul {width:58px;padding:7px;background:#fff;border:1px solid #323134;box-shadow:5px 5px 5px rgba(0, 0, 0, 0.2);border-radius:2px;}
+#mnet .myMenu li .myLayer ul li {padding:5px 0 2px;line-height:1.4;}
+#mnet .myMenu li .alram {display:inline-block;width:21px;height:18px;padding:0 1px 0 4px;vertical-align:middle;color:#e44d11;font-size:11px;text-align:center;line-height:18px;background:url('http://mnetimg.mnet.com/images/00_combine/com/gnbSet.gif') no-repeat 0 -30px;}
+#mnet .myMenu li .alramList {display:none;position:absolute;top:36px;right:-108px;z-index:90;}
+#mnet .myMenu > li {padding:0 6px;}
+#mnet .myMenu > li em.bar {display:none;}
+
+/* mnet tutorial layer 오픈후 2주후 삭제 */
+#to_poc_layer .to_pocCon1 { left:18px !important; }
+#to_poc_layer .to_pocCon2 { left:120px !important; }
+#to_poc_layer .to_pocCon3 { left:840px !important; }
+#to_poc_layer .to_pocCon4 { left:915px !important; }
+#to_poc_layer .to_pocCon5 { left:-169px !important; }
+#to_poc_layer .to_pocCon6 { left:-169px !important; }
+
+/*20130513*/
+.area_int_sns_s {display:inline-block;}
+.mnet_interesting {float:right;*zoom:1;}
+.area_interesting {position:relative;display:inline-block;}
+
+.area_sns {margin:2px 0 0 9px;display:inline-block;float:none !important;}
+
+#program_spot .sta_area .widgetlist_type01, #program_spot2 .sta_area .widgetlist_type01 {margin-top:3px !important;}
+
+
+/* 웹접근성 관련 수정 */
+/*paging type01*/
+.paging_type_no > span {display:inline-block; _display:inline; border:1px solid #d7d7d7; line-height:15px; padding:5px 6px; min-width:14px; margin:0 2px; font-family:Verdana; vertical-align:middle;}
+.paging_type_no > span.prev {background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') 8px -182px no-repeat; width:13px; height:15px; display:inline-block;}
+.paging_type_no > span.next {background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') -20px -182px no-repeat; width:13px; height:15px; display:inline-block;}
+.paging_type_no > span.prev_first {background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') 6px -207px no-repeat; width:13px; height:15px; display:inline-block;}
+.paging_type_no > span.next_end {background:url('http://mnetimg.mnet.com/images/common/icon_common.gif') -20px -207px no-repeat; width:13px; height:15px; display:inline-block;}
+
+.paging_type_no > span
+, .paging_type_no > a.prev, .paging_type_no > a.prev_first
+, .paging_type_no > a.next, .paging_type_no > a.next_end { font-size:0; }
+
+/* 곡 리스트 수정 */
+.info .icon {* display:block;* float:left;}
+.article_music_box .music_list_table span.btn_avi_off { margin:0 0 0 3px; }
+
+/* 컨텐츠 TabMenu Type1 */
+.Mver1STM_Wrap { position:relative; width:710px; height:70px; overflow:hidden; background:url(http://mnetimg.mnet.com/images/special/special_tab_bg.gif?ver=10) no-repeat; }
+.Mver1STM_Wrap ul.Mver1STM_List { width:710px; height:70px; }
+.Mver1STM_Wrap ul.Mver1STM_List li { float:left; }
+.Mver1STM_Wrap ul.Mver1STM_List li a { width:143px; height:37px; text-indent:-9999px; background: url(http://mnetimg.mnet.com/images/special/special_tab_v3.gif) no-repeat; display:block; }
+
+.Mver1STM_Wrap ul.Mver1STM_List li.tab1 a { width:143px; background-position:0px -212px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab1 a.on { background-position:0px -152px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab1 a:hover, .Mver1STM_Wrap ul.Mver1STM_List li.tab1 a:focus { height:36px; background-position:0px -152px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab1 a.on:hover, .Mver1STM_Wrap ul.Mver1STM_List li.tab1 a.on:focus { height:37px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab2 a { width:142px; background-position:-143px -212px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab2 a.on { background-position:-143px -152px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab2 a:hover, .Mver1STM_Wrap ul.Mver1STM_List li.tab2 a:focus { height:36px; background-position:-143px -152px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab2 a.on:hover, .Mver1STM_Wrap ul.Mver1STM_List li.tab2 a.on:focus { height:37px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab3 a { width:141px; background-position:-285px -212px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab3 a.on { background-position:-285px -152px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab3 a:hover, .Mver1STM_Wrap ul.Mver1STM_List li.tab3 a:focus { height:36px; background-position:-285px -152px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab3 a.on:hover, .Mver1STM_Wrap ul.Mver1STM_List li.tab3 a.on:focus { height:37px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab4 a { width:142px; background-position:-426px -212px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab4 a.on { background-position:-426px -152px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab4 a:hover, .Mver1STM_Wrap ul.Mver1STM_List li.tab4 a:focus { height:36px; background-position:-426px -152px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab4 a.on:hover, .Mver1STM_Wrap ul.Mver1STM_List li.tab4 a.on:focus { height:37px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab5 a { width:142px; background-position:-568px -212px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab5 a.on { background-position:-568px -152px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab5 a:hover, .Mver1STM_Wrap ul.Mver1STM_List li.tab5 a:focus { height:36px; background-position:-568px -152px; }
+.Mver1STM_Wrap ul.Mver1STM_List li.tab5 a.on:hover, .Mver1STM_Wrap ul.Mver1STM_List li.tab5 a.on:focus { height:37px; }
+
+.Mver1STM_Wrap ul.Mver1STM_List li .Mver1STM_Sub { position:absolute; left:0; bottom:0; width:708px; height:32px; border:1px solid #E0E0E0; border-top:0 none; background-color:#fff; }
+.Mver1STM_Wrap ul.Mver1STM_List li .Mver1STM_Sub p { margin:0; padding:10px 20px 0 20px; font-size:11px; color:#444; }
+.Mver1STM_Wrap ul.Mver1STM_List li .Mver1STM_Sub ul { padding:8px 0 0 4px; }
+.Mver1STM_Wrap ul.Mver1STM_List li .Mver1STM_Sub ul li { background:url(http://mnetimg.mnet.com/images/music/tab_blank.gif) no-repeat left 2px; }
+.Mver1STM_Wrap ul.Mver1STM_List li .Mver1STM_Sub ul li:first-child { background:none; }
+.Mver1STM_Wrap ul.Mver1STM_List li .Mver1STM_Sub ul li a { padding:0 14px 0 16px; width:auto; height:auto; color:#666; text-indent:0; background:none; display:inline; }
+.Mver1STM_Wrap ul.Mver1STM_List li .Mver1STM_Sub ul li a.on { font-weight:bold; color:#000; text-decoration:underline; }
+
+
+
+/* 2016 04 07 Mver1STM_Wrap 클래스에 tMagazine 클래스 추가. 매거진 매뉴 통폐합 수정 */
+.tMagazine {margin-bottom:-33px;}
+.tMagazine ul.Mver1STM_List li.tab1 a { width:179px; background-position:0px -427px; }
+.tMagazine ul.Mver1STM_List li.tab1 a.on { background-position:0px -366px; }
+.tMagazine ul.Mver1STM_List li.tab1 a:hover, .tMagazine ul.Mver1STM_List li.tab1 a:focus { height:36px; background-position:0px -366px; }
+.tMagazine ul.Mver1STM_List li.tab1 a.on:hover, .tMagazine ul.Mver1STM_List li.tab1 a.on:focus { height:37px; }
+.tMagazine ul.Mver1STM_List li.tab2 a { width:177px; background-position:-179px -427px; }
+.tMagazine ul.Mver1STM_List li.tab2 a.on { background-position:-179px -366px; }
+.tMagazine ul.Mver1STM_List li.tab2 a:hover, .tMagazine ul.Mver1STM_List li.tab2 a:focus { height:36px; background-position:-179px -366px; }
+.tMagazine ul.Mver1STM_List li.tab2 a.on:hover, .tMagazine ul.Mver1STM_List li.tab2 a.on:focus { height:37px; }
+.tMagazine ul.Mver1STM_List li.tab3 a { width:178px; background-position:-356px -427px; }
+.tMagazine ul.Mver1STM_List li.tab3 a.on { background-position:-356px -366px; }
+.tMagazine ul.Mver1STM_List li.tab3 a:hover, .tMagazine ul.Mver1STM_List li.tab3 a:focus { height:36px; background-position:-356px -366px; }
+.tMagazine ul.Mver1STM_List li.tab3 a.on:hover, .tMagazine ul.Mver1STM_List li.tab3 a.on:focus { height:37px; }
+.tMagazine ul.Mver1STM_List li.tab4 a { width:142px; background-position:-426px -427px; }
+.tMagazine ul.Mver1STM_List li.tab4 a.on { background-position:-426px -366px; }
+.tMagazine ul.Mver1STM_List li.tab4 a:hover, .tMagazine ul.Mver1STM_List li.tab4 a:focus { height:36px; background-position:-426px -366px; }
+.tMagazine ul.Mver1STM_List li.tab4 a.on:hover, .tMagazine ul.Mver1STM_List li.tab4 a.on:focus { height:37px; }
+.tMagazine ul.Mver1STM_List li.tab5 a { width:176px; background-position:-534px -427px; }
+.tMagazine ul.Mver1STM_List li.tab5 a.on { background-position:-534px -366px; }
+.tMagazine ul.Mver1STM_List li.tab5 a:hover, .tMagazine ul.Mver1STM_List li.tab5 a:focus { height:36px; background-position:-534px -366px; }
+.tMagazine ul.Mver1STM_List li.tab5 a.on:hover, .tMagazine ul.Mver1STM_List li.tab5 a.on:focus { height:37px; }
+
+.tMagazine .tab_sub  { overflow:hidden; display:none; }
+.tMagazine .tab_sub li { width:725px }
+.tMagazine .tab_sub li a { padding-right:13px; margin-right:13px; }
+.tMagazine .tab_sub li a:last-child { background:none; margin:0; padding:0; }
+
+.magazine_music { margin-bottom:0; }
+.magazine_music ul.Mver1STM_List { height:37px; }
+.magazine_music .tab_sub  { display:block; }
+
+
+
+
+/* 서브 롤링 배너 */
+.SubTopRollingV1Box { position:relative; margin:0 auto; width:710px; }
+.SubTopRollingV1Box .STRV1BtnItem
+{ background: url(http://mnetimg.mnet.com/images/common/20130619/icon_main.png) no-repeat left top; }
+.SubTopRollingV1Box .STRV1Move { position:relative; width:710px; height:207px; overflow:hidden; }
+.SubTopRollingV1Box .STRV1List { position:relative; left:0; top:0; width:710px; height:207px; }
+.SubTopRollingV1Box .STRV1Item { position:absolute; width:710px; height:207px; display:none; }
+.SubTopRollingV1Box .STRV1ItemInner { position:relative; width:710px; height:207px; }
+.SubTopRollingV1Box .STRV1BtnArea { position:absolute; padding:5px 2px 4px 8px; top:0px; right:0px; background:url(http://mnetimg.mnet.com/images/main/bg_movebtnarea_01.png) no-repeat left top; display:inline-block; }
+.SubTopRollingV1Box .STRV1BtnItem { width:18px; height:19px; margin:0 -2px; cursor:pointer; display:inline-block; }
+.SubTopRollingV1Box .STRV1BtnItem span { width:100%; height:100%; text-indent:-9999px; display:block; }
+.SubTopRollingV1Box .STRV1BtnItemPrev { background-position:0px -69px; }
+.SubTopRollingV1Box .STRV1BtnItemNext { width:19px; margin-right:0px; background-position:-36px -69px; }
+.SubTopRollingV1Box .STRV1BtnItemStop { background-position:-18px -69px; }
+.SubTopRollingV1Box .STRV1BtnItemPlay { background-position:-18px -89px; }
+.SubTopRollingV1Box .STRV1BtnItemOff { cursor:default; }
+.SubTopRollingV1Box .STRV1BtnItemPrev.STRV1BtnItemOff { background-position:0px -89px; }
+.SubTopRollingV1Box .STRV1BtnItemNext.STRV1BtnItemOff { background-position:-36px -89px; }
+.SubTopRollingV1Box .STRV1BtnItemNum { position:relative; top:1px; margin-left:1px; margin-right:6px; font-size:11px; color:#ffffff; line-height:19px; }
+.SubTopRollingV1Box .STRV1BtnItemNum strong { color:#ffffff; }
+.SubTopRollingV1Box .STRV1BtnItemNum span { color:#ffffff; }
+
+/* 스킵네비게이션 */
+#skipNavigationWrap { position:relative; z-index:2147483647; }
+#skipNavigationWrap a { position:absolute; padding:10px 20px; left:0; top:-60px; width:150px; color:#ffffff; border:2px solid #d80070; background-color:#191919; text-align:center; }
+#skipNavigationWrap a:active,
+#skipNavigationWrap a:focus{ top:0; text-decoration:none; cursor:pointer; zoom:1; }
+
+/* 캘린더 */
+.cjCalendar {width:300px;position:relative;background:#fff;padding:20px;font:normal 12px 돋움, Dotum, Arial, sans-serif;border:1px solid #161616;}
+.cjCalendar .selectYear {height:35px;margin:0 auto;text-align:center;font-size:14px;font-weight:bold;padding:0 0 0 25px;}
+.cjCalendar .selectYear.monthselect {padding-left:90px;}
+.cjCalendar .selectYear span {margin-left:-25px;}
+.cjCalendar .selectYear .thisYear {float:left;position:relative;margin:0 20px}
+.cjCalendar .selectYear .thisMonth {float:left;position:relative;margin:0 20px}
+.cjCalendar .selectYear select {width:80px;float:left;border:1px solid #b3b3b3;padding:3px;}
+.cjCalendar a.btnClose, .cjCalendar a.btnPreview, .cjCalendar a.btnNext {background:url(http://mnetimg.mnet.com/images/common/bg_calendar.gif) no-repeat;display:block;text-indent:-9999px;overflow:hidden;}
+.cjCalendar a.btnClose {position:absolute;top:12px;right:12px;width:15px;height:15px;background-position:0 0;}
+.cjCalendar a.btnPreview {width:11px;height:17px;background-position:0 -20px;position:absolute;top:3px;left:-20px;}
+.cjCalendar a.btnNext  {width:11px;height:17px;background-position:0 -40px;position:absolute;top:3px;right:-20px;}
+
+.cjCalendar .calendarDay {width:100%;border-collapse:collapse;}
+.cjCalendar thead {height:25px;border-top:3px solid #111;border-bottom:1px solid #dcdcdc;}
+.cjCalendar th {height:25px;color:#767676;font-weight:normal;text-align:center;}
+.cjCalendar td {height:33px;color:#767676;font-size:14px;text-align:center;}
+.cjCalendar td a {height:33px;line-height:33px;display:block;color:#000;font-weight:bold;text-decoration:none;}
+.cjCalendar .dimdDay, .cjCalendar .dimdDay a {color:#767676;}
+.cjCalendar .holiday, .cjCalendar .holiday a {color:#e10074;}
+.cjCalendar .today, .cjCalendar .today a {color:#006cf2;font-weight:bold;}
+
+.cjCalendar .mark {background:#353e50;color:#fff;}
+.cjCalendar .mark a {background:#353e50;color:#fff;display:block;}
+
+.cjCalendar .calendarMonth {width:100%;border-top:1px solid #dcdcdc;border-left:1px solid #dcdcdc;}
+.cjCalendar .calendarMonth:after {content:"";display:block;clear:both;}
+.cjCalendar .calendarMonth li {width:74px;height:66px;border-right:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;text-align:center;line-height:66px;float:left;}
+.cjCalendar .calendarMonth li a {height:66px;font-weight:bold;text-decoration:none;display:block;}
+.cjCalendar .calendarMonth li.mark {background:#353e50;color:#fff;}
+
+/* 2016-02-01 */
+.lay_wrap .lay_play {padding:9px 11px 8px 11px; height:12px; line-height:12px; margin-bottom:5px; border-bottom:1px solid #dcdcdc;}
+.lay_wrap .lay_play label {cursor:pointer;}
+.lay_wrap .lay_play input {vertical-align:middle; margin:-3px 0 0 0;}
+
+/*2017-10-16 마이페이지 '많이 들은 곡' 칼럼 추가(재생횟수)*/
+.music_list_table th.last{text-align:center;}
+.music_list_table th.last span{padding-left:0;}
+.music_list_table td.cnt{color:#666;text-align:center;padding-left:0;}
+
+/*2017-12-18 아티스트 레이어박스 추가 */
+.MMLItemArtist .musician p{padding-left:9px;}
+.musician p {width:auto;}
+.musician a.over_1 {background:url('http://mnetimg.mnet.com/images/music/icon_music1.gif') no-repeat right -190px !important; padding-right:10px !important;}
+.musician .mCustomScrollbar{position:absolute;width:150px;display:none;border:1px #d4d4d4 solid;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;overflow:hidden;-moz-box-shadow:5px 5px 10px 0px rgba(0, 0, 0, 0.1);-webkit-box-shadow:5px 5px 10px 0px rgba(0, 0, 0, 0.1);box-shadow:5px 5px 10px 0px rgba(0, 0, 0, 0.1);background:#fff;max-height:360px; overflow:hidden; overflow-y:auto; z-index:200;}
+.musician .mCustomScrollbar ul{}
+.musician .mCustomScrollbar ul li{width:150px;height:auto !important;min-height:16px !important;line-height:16px !important;}
+.musician .mCustomScrollbar ul li a{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#666666 !important;font-weight:normal !important;font-size:12px !important;float:none !important;padding:10px 18px;display:block;height:auto !important;min-height:16px;line-height:16px !important;font-size:12px;}
+.musician .mCustomScrollbar ul li a:hover{background-color:#f6f6f6;color:#000 !important;text-decoration:none;}
+.musician .mCustomScrollBox {border-radius:5px;overflow:hidden;}
+.musician .mCSB_dragger_bar{background-color: #eeeeee !important;}
+.over_1_hover{background-position:right -210px !important;}
+.musician a.over_1_hover{background-position:right -212px !important;}
+
+.listype1_mv:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}

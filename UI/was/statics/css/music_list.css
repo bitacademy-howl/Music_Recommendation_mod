@@ -1,0 +1,977 @@
+@charset "utf-8";
+/* CSS Document */
+
+.MnetMusicList .btn_recom{ background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -57px -154px; width:24px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:right; }
+.MnetMusicList .btn_recom:hover { background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -57px -171px; width:24px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:right; }
+.MnetMusicList .btn_recom_off { background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -57px -188px; width:24px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:right; }
+
+.MnetMusicList .btn_add{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat 0px -154px ; width:16px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+.MnetMusicList .btn_add:hover{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat 0px -171px ;}
+.MnetMusicList .btn_add_off{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat 0px -188px ; width:16px; height:16px;cursor:default;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+
+.MnetMusicList .btn_avi{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -19px -154px ; width:16px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+.MnetMusicList .btn_avi:hover{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -19px -171px ;}
+.MnetMusicList .btn_avi_off{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -19px -188px ; width:16px; height:16px;cursor:default;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+
+.MnetMusicList .btn_phone{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -38px -154px ; width:16px; height:16px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+.MnetMusicList .btn_phone:hover{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -38px -171px ;}
+.MnetMusicList .btn_phone_off{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -38px -188px ; width:16px; height:16px;cursor:default;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;margin-left:3px;}
+
+.MnetMusicList .btn_mp3{background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif) no-repeat 0px -209px ; width:32px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MnetMusicList .btn_mp3:hover{background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif) no-repeat -35px -209px ;}
+.MnetMusicList .btn_mp3_off{background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif) no-repeat -70px -209px ; width:32px; height:15px;cursor:default;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+
+.MnetMusicList .btn_drm{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat 0px -228px ; width:32px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MnetMusicList .btn_drm:hover{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -35px -228px ;}
+.MnetMusicList .btn_drm_off{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -70px -228px ; width:32px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;cursor:default;}
+
+.MnetMusicList .btn_more_view{background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat 0 -491px ; width:60px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+
+.MnetMusicList .btn_follow {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 0 ; width:69px; height:17px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.MnetMusicList .btn_following {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -17px ; width:69px; height:17px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.MnetMusicList .btn_following:hover {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -34px ;}
+
+.MnetMusicList .btn_follow_2 {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -51px ; width:69px; height:23px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.MnetMusicList .btn_following_2 {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -74px ; width:69px; height:23px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.MnetMusicList .btn_following_2:hover {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -97px ;}
+
+.MnetMusicList .btn_follow_3 {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -190px ; width:69px; height:17px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.MnetMusicList .btn_following_3 {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -207px ; width:69px; height:17px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.MnetMusicList .btn_following_3:hover {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -224px ;}
+
+.MnetMusicList .btn_follow_4 {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -245px ; width:69px; height:21px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.MnetMusicList .btn_following_4 {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -266px ; width:69px; height:21px;text-indent:-9999px; overflow:hidden; display:inline-block; float:left;}
+.MnetMusicList .btn_following_4:hover {background:url(http://mnetimg.mnet.com/images/common/btn_follow.gif) no-repeat 0 -287px;}
+
+.MnetMusicList .MMLTable .btn_down{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -417px -710px ; width:39px; height:15px;margin-left:3px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MnetMusicList .MMLTable .btn_down:hover{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -461px -710px ;}
+.MnetMusicList .MMLTable .btn_down_off{background:url('http://mnetimg.mnet.com/images/common/music_btn.gif') no-repeat -373px -710px ; width:39px; height:15px;cursor:default;margin-left:3px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+
+.MnetMusicList .btn_mqs{background:url(http://mnetimg.mnet.com/images/music/music_btn.gif) no-repeat 0 -842px ; width:32px; height:15px;margin-left:-3px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MnetMusicList .btn_mqs:hover{background:url(http://mnetimg.mnet.com/images/music/music_btn.gif) no-repeat -35px -842px ;}
+
+.MnetMusicList .hart_icon { line-height:18px; background-position:0 1px; }
+
+.MnetMusicList span.MMLI_RankNum { position:absolute; width:15px; height:10px; left:13px; top:3px; text-indent:-99999px; background: url(http://mnetimg.mnet.com/images/music/num_set.gif) -36px 0px; display:block; }
+.MnetMusicList span.MMLI_RankNumBest { width:25px; height:51px; top:-23px; left:8px; }
+.MnetMusicList span.MMLI_RankNumBest_1 { background:url(http://mnetimg.mnet.com/images/music/rank_1.gif) no-repeat left top; }
+.MnetMusicList span.MMLI_RankNumBest_2 { background:url(http://mnetimg.mnet.com/images/music/rank_2.gif) no-repeat left top; }
+.MnetMusicList span.MMLI_RankNumBest_3 { background:url(http://mnetimg.mnet.com/images/music/rank_3.gif) no-repeat left top; }
+
+.MnetMusicList .MMLI_PPS { float:left; position:relative; width:24px; height:15px; display:inline-block; z-index:100;}
+.MnetMusicList .MMLI_PPS a.MMLI_PPS_Icon { float:left; position:absolute; width:22px; height:15px; top:1px; text-indent:-9999px; background:url(http://mnetimg.mnet.com/images/common/icon_pps.png) no-repeat left top; display:block; }
+.MnetMusicList .MMLI_PPS a.MMLI_PPS_Icon_Down { float:left; position:absolute; width:22px; height:15px; top:1px; text-indent:-9999px; background:url(http://mnetimg.mnet.com/images/common/icon_pps.png) no-repeat left -50px; display:block; }
+.MnetMusicList .MMLI_PPS a.MMLI_PPS_Icon_All { float:left; position:absolute; width:22px; height:15px; top:1px; text-indent:-9999px; background:url(http://mnetimg.mnet.com/images/common/icon_pps.png) no-repeat left -100px; display:block; }
+
+.MnetMusicList .MMLI_PPS .layPps { position:absolute; left:32px; top:7px; width:230px; display:none; z-index:100; }
+.MnetMusicList .MMLI_PPS .layPps span { display:block; }
+.MnetMusicList .MMLI_PPS .layPps .laycont { position:relative; z-index:100; left:0; top:0; width:100%; color:#666; font-size:11px; line-height:17px; border:1px solid #97a0a9; background-color:#f8fcff;  }
+.MnetMusicList .MMLI_PPS .layPps .laycont em { color:#e8629a; font-weight:bold; }
+.MnetMusicList .MMLI_PPS .layPps .shadow { display:inline; position:absolute; z-index:10; width:96%; height:100%;_display:none; background:#000; opacity:.2; filter:alpha(opacity=20); top:5px; left:16px;}
+.MnetMusicList .MMLI_PPS .layPps .cont { margin:0; position:relative; left:0; top:0; z-index:200; padding:10px; background-color:#f8fcff; }
+.MnetMusicList .MMLI_PPS .layPps .arrow { position:absolute; z-index:100; left:-10px; top:-1px; width:15px; height:15px; display:block; background:url('http://mnetimg.mnet.com/images/common/icon_ppsArrow.gif') no-repeat 0 0; }
+
+.MnetMusicList .MMLI_level { position:relative; top:-1px; background:url('http://mnetimg.mnet.com/images/common/icon_level.gif') no-repeat; display:inline-block; height:14px; vertical-align: middle; overflow:hidden;}
+.MnetMusicList .MMLI_level em { position:relative; width:100%; height:14px; text-indent:-9999px; display:block; }
+.MnetMusicList span.MMLI_m01 {background-position:0 0; width:29px;}
+.MnetMusicList span.MMLI_m02 {background-position:0 -14px; width:29px;}
+.MnetMusicList span.MMLI_m03 {background-position:0 -28px; width:29px;}
+.MnetMusicList span.MMLI_m04 {background-position:0 -42px; width:29px;}
+.MnetMusicList span.MMLI_m05 {background-position:0 -56px; width:29px;}
+.MnetMusicList span.MMLI_m06 {background-position:0 -70px; width:29px;}
+.MnetMusicList span.MMLI_m07 {background-position:0 -84px; width:29px;}
+.MnetMusicList span.MMLI_m08 {background-position:0 -98px; width:29px;}
+.MnetMusicList span.MMLI_m09 {background-position:0 -112px; width:29px;}
+.MnetMusicList span.MMLI_m10 {background-position:0 -126px; width:33px;}
+.MnetMusicList span.MMLI_m11 {background-position:0 -140px; width:33px;}
+.MnetMusicList span.MMLI_m12 {background-position:0 -154px; width:33px;}
+.MnetMusicList span.MMLI_m13 {background-position:0 -168px; width:33px;}
+.MnetMusicList span.MMLI_m14 {background-position:0 -182px; width:33px;}
+.MnetMusicList span.MMLI_m15 {background-position:0 -196px; width:33px;}
+
+.MnetMusicList span.MMLI_RankNum_1, .MnetMusicList span.MMLI_RankNum_2, .MnetMusicList span.MMLI_RankNum_3, .MnetMusicList span.MMLI_RankNum_4, .MnetMusicList span.MMLI_RankNum_5, .MnetMusicList span.MMLI_RankNum_6, .MnetMusicList span.MMLI_RankNum_7, .MnetMusicList span.MMLI_RankNum_8, .MnetMusicList span.MMLI_RankNum_9
+ { width:8px; left:17px; }
+.MnetMusicList span.MMLI_RankNum_100
+ { width:23px; left:9px; }
+
+.MnetMusicList span.MMLI_RankNum_1{background-position:-36px 0px;}
+.MnetMusicList span.MMLI_RankNum_2{background-position:-36px -15px;}
+.MnetMusicList span.MMLI_RankNum_3{background-position:-36px -30px;}
+.MnetMusicList span.MMLI_RankNum_4{background-position:-36px -45px;}
+.MnetMusicList span.MMLI_RankNum_5{background-position:-36px -60px;}
+.MnetMusicList span.MMLI_RankNum_6{background-position:-36px -75px;}
+.MnetMusicList span.MMLI_RankNum_7{background-position:-36px -90px;}
+.MnetMusicList span.MMLI_RankNum_8{background-position:-36px -105px;}
+.MnetMusicList span.MMLI_RankNum_9{background-position:-36px -120px;}
+.MnetMusicList span.MMLI_RankNum_10{background-position:-36px -135px;}
+.MnetMusicList span.MMLI_RankNum_11{background-position:-36px -150px;}
+.MnetMusicList span.MMLI_RankNum_12{background-position:-36px -165px;}
+.MnetMusicList span.MMLI_RankNum_13{background-position:-36px -180px;}
+.MnetMusicList span.MMLI_RankNum_14{background-position:-36px -195px;}
+.MnetMusicList span.MMLI_RankNum_15{background-position:-36px -210px;}
+.MnetMusicList span.MMLI_RankNum_16{background-position:-36px -225px;}
+.MnetMusicList span.MMLI_RankNum_17{background-position:-36px -240px;}
+.MnetMusicList span.MMLI_RankNum_18{background-position:-36px -255px;}
+.MnetMusicList span.MMLI_RankNum_19{background-position:-36px -270px;}
+.MnetMusicList span.MMLI_RankNum_20{background-position:-36px -285px;}
+.MnetMusicList span.MMLI_RankNum_21{background-position:-36px -300px;}
+.MnetMusicList span.MMLI_RankNum_22{background-position:-36px -315px;}
+.MnetMusicList span.MMLI_RankNum_23{background-position:-36px -330px;}
+.MnetMusicList span.MMLI_RankNum_24{background-position:-36px -345px;}
+.MnetMusicList span.MMLI_RankNum_25{background-position:-36px -360px;}
+.MnetMusicList span.MMLI_RankNum_26{background-position:-36px -375px;}
+.MnetMusicList span.MMLI_RankNum_27{background-position:-36px -390px;}
+.MnetMusicList span.MMLI_RankNum_28{background-position:-36px -405px;}
+.MnetMusicList span.MMLI_RankNum_29{background-position:-36px -420px;}
+.MnetMusicList span.MMLI_RankNum_30{background-position:-36px -435px;}
+.MnetMusicList span.MMLI_RankNum_31{background-position:-36px -450px;}
+.MnetMusicList span.MMLI_RankNum_32{background-position:-36px -465px;}
+.MnetMusicList span.MMLI_RankNum_33{background-position:-36px -480px;}
+.MnetMusicList span.MMLI_RankNum_34{background-position:-36px -495px;}
+.MnetMusicList span.MMLI_RankNum_35{background-position:-36px -510px;}
+.MnetMusicList span.MMLI_RankNum_36{background-position:-36px -525px;}
+.MnetMusicList span.MMLI_RankNum_37{background-position:-36px -540px;}
+.MnetMusicList span.MMLI_RankNum_38{background-position:-36px -555px;}
+.MnetMusicList span.MMLI_RankNum_39{background-position:-36px -570px;}
+.MnetMusicList span.MMLI_RankNum_40{background-position:-36px -585px;}
+.MnetMusicList span.MMLI_RankNum_41{background-position:-36px -600px;}
+.MnetMusicList span.MMLI_RankNum_42{background-position:-36px -615px;}
+.MnetMusicList span.MMLI_RankNum_43{background-position:-36px -630px;}
+.MnetMusicList span.MMLI_RankNum_44{background-position:-36px -645px;}
+.MnetMusicList span.MMLI_RankNum_45{background-position:-36px -660px;}
+.MnetMusicList span.MMLI_RankNum_46{background-position:-36px -675px;}
+.MnetMusicList span.MMLI_RankNum_47{background-position:-36px -690px;}
+.MnetMusicList span.MMLI_RankNum_48{background-position:-36px -705px;}
+.MnetMusicList span.MMLI_RankNum_49{background-position:-36px -720px;}
+.MnetMusicList span.MMLI_RankNum_50{background-position:-36px -735px;}
+.MnetMusicList span.MMLI_RankNum_51{background-position:-36px -750px;}
+.MnetMusicList span.MMLI_RankNum_52{background-position:-36px -765px;}
+.MnetMusicList span.MMLI_RankNum_53{background-position:-36px -780px;}
+.MnetMusicList span.MMLI_RankNum_54{background-position:-36px -795px;}
+.MnetMusicList span.MMLI_RankNum_55{background-position:-36px -810px;}
+.MnetMusicList span.MMLI_RankNum_56{background-position:-36px -825px;}
+.MnetMusicList span.MMLI_RankNum_57{background-position:-36px -840px;}
+.MnetMusicList span.MMLI_RankNum_58{background-position:-36px -855px;}
+.MnetMusicList span.MMLI_RankNum_59{background-position:-36px -870px;}
+.MnetMusicList span.MMLI_RankNum_60{background-position:-36px -885px;}
+.MnetMusicList span.MMLI_RankNum_61{background-position:-36px -900px;}
+.MnetMusicList span.MMLI_RankNum_62{background-position:-36px -915px;}
+.MnetMusicList span.MMLI_RankNum_63{background-position:-36px -930px;}
+.MnetMusicList span.MMLI_RankNum_64{background-position:-36px -945px;}
+.MnetMusicList span.MMLI_RankNum_65{background-position:-36px -960px;}
+.MnetMusicList span.MMLI_RankNum_66{background-position:-36px -975px;}
+.MnetMusicList span.MMLI_RankNum_67{background-position:-36px -990px;}
+.MnetMusicList span.MMLI_RankNum_68{background-position:-36px -1005px;}
+.MnetMusicList span.MMLI_RankNum_69{background-position:-36px -1020px;}
+.MnetMusicList span.MMLI_RankNum_70{background-position:-36px -1035px;}
+.MnetMusicList span.MMLI_RankNum_71{background-position:-36px -1050px;}
+.MnetMusicList span.MMLI_RankNum_72{background-position:-36px -1065px;}
+.MnetMusicList span.MMLI_RankNum_73{background-position:-36px -1080px;}
+.MnetMusicList span.MMLI_RankNum_74{background-position:-36px -1095px;}
+.MnetMusicList span.MMLI_RankNum_75{background-position:-36px -1110px;}
+.MnetMusicList span.MMLI_RankNum_76{background-position:-36px -1125px;}
+.MnetMusicList span.MMLI_RankNum_77{background-position:-36px -1140px;}
+.MnetMusicList span.MMLI_RankNum_78{background-position:-36px -1155px;}
+.MnetMusicList span.MMLI_RankNum_79{background-position:-36px -1170px;}
+.MnetMusicList span.MMLI_RankNum_80{background-position:-36px -1185px;}
+.MnetMusicList span.MMLI_RankNum_81{background-position:-36px -1200px;}
+.MnetMusicList span.MMLI_RankNum_82{background-position:-36px -1215px;}
+.MnetMusicList span.MMLI_RankNum_83{background-position:-36px -1230px;}
+.MnetMusicList span.MMLI_RankNum_84{background-position:-36px -1245px;}
+.MnetMusicList span.MMLI_RankNum_85{background-position:-36px -1260px;}
+.MnetMusicList span.MMLI_RankNum_86{background-position:-36px -1275px;}
+.MnetMusicList span.MMLI_RankNum_87{background-position:-36px -1290px;}
+.MnetMusicList span.MMLI_RankNum_88{background-position:-36px -1305px;}
+.MnetMusicList span.MMLI_RankNum_89{background-position:-36px -1320px;}
+.MnetMusicList span.MMLI_RankNum_90{background-position:-36px -1335px;}
+.MnetMusicList span.MMLI_RankNum_91{background-position:-36px -1350px;}
+.MnetMusicList span.MMLI_RankNum_92{background-position:-36px -1365px;}
+.MnetMusicList span.MMLI_RankNum_93{background-position:-36px -1380px;}
+.MnetMusicList span.MMLI_RankNum_94{background-position:-36px -1395px;}
+.MnetMusicList span.MMLI_RankNum_95{background-position:-36px -1410px;}
+.MnetMusicList span.MMLI_RankNum_96{background-position:-36px -1425px;}
+.MnetMusicList span.MMLI_RankNum_97{background-position:-36px -1440px;}
+.MnetMusicList span.MMLI_RankNum_98{background-position:-36px -1455px;}
+.MnetMusicList span.MMLI_RankNum_99{background-position:-36px -1470px;}
+.MnetMusicList span.MMLI_RankNum_100{background-position:-36px -1485px;}
+
+.MnetMusicList span.MMLIDate_Year { }
+.MnetMusicList span.MMLIDate_Month { clear:left; }
+.MnetMusicList span.MMLIDate_Set  { float:left; text-indent:-99999px; background:url(http://mnetimg.mnet.com/images/music/num_set.gif) no-repeat; display:block; }
+
+.MnetMusicList span.MMLIDate_Year_2006{background-position:0 -165px ; width:27px; height:13px;}
+.MnetMusicList span.MMLIDate_Year_2007{background-position:0 -180px ; width:27px; height:13px;}
+.MnetMusicList span.MMLIDate_Year_2008{background-position:0 -195px ; width:27px; height:13px;}
+.MnetMusicList span.MMLIDate_Year_2009{background-position:0 -210px ; width:27px; height:13px;}
+.MnetMusicList span.MMLIDate_Year_2010{background-position:0 -225px ; width:27px; height:13px;}
+.MnetMusicList span.MMLIDate_Year_2011{background-position:0 0 ; width:27px; height:13px;}
+.MnetMusicList span.MMLIDate_Year_2012{background-position:0 -30px ; width:27px; height:13px;}
+.MnetMusicList span.MMLIDate_Year_2013{background-position:0 -45px ; width:27px; height:13px;}
+.MnetMusicList span.MMLIDate_Year_2014{background-position:0 -60px ; width:27px; height:13px; }
+.MnetMusicList span.MMLIDate_Year_2015{background-position:0 -75px ; width:27px; height:13px; }
+.MnetMusicList span.MMLIDate_Year_2016{background-position:0 -90px ; width:27px; height:13px; }
+.MnetMusicList span.MMLIDate_Year_2017{background-position:0 -105px ; width:27px; height:13px; }
+.MnetMusicList span.MMLIDate_Year_2018{background-position:0 -120px ; width:27px; height:13px; }
+.MnetMusicList span.MMLIDate_Year_2019{background-position:0 -135px ; width:27px; height:13px; }
+.MnetMusicList span.MMLIDate_Year_2020{background-position:0 -150px ; width:27px; height:13px; }
+
+
+.MnetMusicList span.MMLIDate_Month_00{background-position:-60px 0px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_01{background-position:-60px -15px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_02{background-position:-60px -30px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_03{background-position:-60px -45px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_04{background-position:-60px -60px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_05{background-position:-60px -75px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_06{background-position:-60px -90px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_07{background-position:-60px -105px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_08{background-position:-60px -120px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_09{background-position:-60px -135px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_10{background-position:-60px -150px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_11{background-position:-60px -165px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_12{background-position:-60px -180px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_13{background-position:-60px -195px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_14{background-position:-60px -210px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_15{background-position:-60px -225px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_16{background-position:-60px -240px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_17{background-position:-60px -255px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_18{background-position:-60px -270px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_19{background-position:-60px -285px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_20{background-position:-60px -300px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_21{background-position:-60px -315px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_22{background-position:-60px -330px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_23{background-position:-60px -345px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_24{background-position:-60px -360px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_25{background-position:-60px -375px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_26{background-position:-60px -390px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_27{background-position:-60px -405px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_28{background-position:-60px -420px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_29{background-position:-60px -435px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_30{background-position:-60px -450px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Month_31{background-position:-60px -465px ; width:15px; height:10px; float:left;}
+.MnetMusicList span.MMLIDate_Set_blank{background-position:right top; width:3px; height:10px;display:inline;float:left;margin-right:1px;}
+
+/* Mnet Music List */
+.MnetMusicList { width:710px; clear:both; }
+.MnetMusicList input:focus { outline-style:solid; outline-width:1px; }
+.MMLScorllOut { position:absolute; left:-99999px; width:0; height:0; font-size:0; line-height:0; overflow:hidden; }
+
+/* Mnet Music List Top Cboth PaddingTop */
+.MnetMusicListCboth { padding-top:17px;  }
+
+/* Mnet Music List Header */
+.MMLHeader { position:relative; margin-bottom:14px; /* padding:10px 0 0 0; */ width:100%; height:23px;/*  border-top:1px solid #e5e5e5;  */}  /* 2016-08-11 */
+
+.MMLHeader p.MMLHSummary { float:left; padding:5px 0 0 11px; font-size:11px; color:#767676; } /* 2013.07.25 추가 수정 */
+.MMLHeader p.MMLHSummary span { color:#444444; } /* 2013.07.25 추가 수정 */
+.MMLHeader p.MMLHSummary strong { color:#444444; } /* 2013.07.25 추가 수정 */
+
+.MMLHeader .MMLHTableBtn { float:left; }
+.MMLHeader .MMLHTableBtn li { float:left; padding-right:3px; display:inline; }
+.MMLHeader .MMLHTableBtn li.MMLHItemFirst { padding-right:15px; background:url(http://mnetimg.mnet.com/images/music/blank.gif) no-repeat right top; }
+
+.MMLHeader .MMLHSortBtn { float:right; }
+.MMLHeader .MMLHSortBtn li { float:left; padding:2px 0 0 0; display:inline; }
+
+.MMLHeader .MMLHSortBtn li a.btn_sort_01
+, .MMLHeader .MMLHSortBtn li a.btn_sort_02
+, .MMLHeader .MMLHSortBtn li a.btn_sort_01_on
+, .MMLHeader .MMLHSortBtn li a.btn_sort_02_on
+{ width:42px; height:18px; text-indent:-9999px; background: url(http://mnetimg.mnet.com/images/music/music_btn.gif) no-repeat 0 -515px; display:block; }
+
+.MMLHeader .MMLHSortBtn li a.btn_sort_01 { background-position:0 -515px; }
+.MMLHeader .MMLHSortBtn li a.btn_sort_01:hover, .MMLHeader .MMLHSortBtn li a.btn_sort_01_on { background-position:0 -534px; }
+.MMLHeader .MMLHSortBtn li a.btn_sort_02 { width:44px; background-position:-42px -534px; }
+.MMLHeader .MMLHSortBtn li a.btn_sort_02:hover, .MMLHeader .MMLHSortBtn li a.btn_sort_02_on { width:44px; background-position:-42px -515px; }
+
+.MMLHeader .MMLHSortBtnTy1 li a.btn_sort_01
+, .MMLHeader .MMLHSortBtnTy1 li a.btn_sort_02
+, .MMLHeader .MMLHSortBtnTy1 li a.btn_sort_03
+, .MMLHeader .MMLHSortBtnTy1 li a.btn_sort_01_on
+, .MMLHeader .MMLHSortBtnTy1 li a.btn_sort_02_on
+, .MMLHeader .MMLHSortBtnTy1 li a.btn_sort_03_on
+{ width:44px; height:20px; text-indent:-9999px; background:url(http://mnetimg.mnet.com/images/player/mp_btn.gif) no-repeat 0 -303px; display:block; } /* 2013.07.25 추가 수정 */
+
+.MMLHeader .MMLHSortBtnTy1 li a.btn_sort_01 { background-position:0 -303px; } /* 2013.07.25 추가 수정 */
+.MMLHeader .MMLHSortBtnTy1 li a.btn_sort_01:hover, .MMLHeader .MMLHSortBtnTy1 li a.btn_sort_01_on { background-position:0 -323px; } /* 2013.07.25 추가 수정 */
+.MMLHeader .MMLHSortBtnTy1 li a.btn_sort_02 { width:43px; background-position:-55px -171px; } /* 2013.07.25 추가 수정 */
+.MMLHeader .MMLHSortBtnTy1 li a.btn_sort_02:hover, .MMLHeader .MMLHSortBtnTy1 li a.btn_sort_02_on { width:43px; background-position:-55px -191px; } /* 2013.07.25 추가 수정 */
+.MMLHeader .MMLHSortBtnTy1 li a.btn_sort_03 { width:42px; background-position:-141px -171px; } /* 2013.07.25 추가 수정 */
+.MMLHeader .MMLHSortBtnTy1 li a.btn_sort_03:hover, .MMLHeader .MMLHSortBtnTy1 li a.btn_sort_03_on { width:42px; background-position:-141px -191px; } /* 2013.07.25 추가 수정 */
+
+.MMLHeader .MMLHSortBtnWorld {float:right;margin-top:0px;}
+.MMLHeader .MMLHSortBtnWorld li{float:left;position:relative;padding-top:2px;}
+.MMLHeader .MMLHSortBtnWorld .btn_world_01{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat 0px -553px ; width:42px; height:18px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MMLHeader .MMLHSortBtnWorld .btn_world_01:hover{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat 0px -572px;}
+.MMLHeader .MMLHSortBtnWorld .btn_world_01_on{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat 0px -572px ; width:42px; height:18px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MMLHeader .MMLHSortBtnWorld .btn_world_02{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat -42px -553px ; width:41px; height:18px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MMLHeader .MMLHSortBtnWorld .btn_world_02:hover{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat -42px -572px;}
+.MMLHeader .MMLHSortBtnWorld .btn_world_02_on{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat -42px -572px ; width:41px; height:18px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MMLHeader .MMLHSortBtnWorld .btn_world_03{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat -83px -553px ; width:42px; height:18px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MMLHeader .MMLHSortBtnWorld .btn_world_03:hover{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat -83px -572px;}
+.MMLHeader .MMLHSortBtnWorld .btn_world_03_on{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat -83px -572px ; width:42px; height:18px;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MMLHeader .MMLHSortBtnWorld li.btn{float:right;display:inline;margin:0 0 0 7px;padding:0px 0 0 7px;border-left:1px solid #E0E0E0;}
+
+.MMLHeader .btn_album_edit{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat right -481px; width:83px; height:31px;text-indent:-9999px; overflow:hidden;display:inline-block;float:right;}
+.MMLHeader .btn_other_vote{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat right -513px; width:84px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:right;}
+.MMLHeader .btn_other_vote2{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat right -537px; width:74px; height:23px;text-indent:-9999px; overflow:hidden;display:inline-block;float:right;}
+.MMLHeader .btn_big_size{background:url('http://mnetimg.mnet.com/images/music/btn_ori.png') no-repeat; width:110px; height:70px;text-indent:-9999px;}
+.MMLHeader .btn_online_vote{background:url('http://mnetimg.mnet.com/images/music/music_btn.gif') no-repeat right -561px; width:50px; height:20px;text-indent:-9999px;display:block;}
+
+.MMLHeader .social{float:right;padding-top:2px;}
+.MMLHeader .social li{float:left;margin-left:10px;}
+.MMLHeader .social li.blank{padding-right:10px; margin-right:-10px;}
+.MMLHeader .social li .social_m{display:block;background:url('http://mnetimg.mnet.com/images/music/m_shere_bg.gif') no-repeat left top;padding-left:62px;}
+.MMLHeader .social li .social_m span{display:inline-block;background:url('http://mnetimg.mnet.com/images/music/m_shere_bg2.gif') no-repeat right top;font-size:9px;font-family:Tahoma;font-weight:bold;padding:4px 6px 0 0;height:16px;color:#5E5873;letter-spacing:-1px;}
+.MMLHeader .social li .social_facebook{display:block;background:url('http://mnetimg.mnet.com/images/music/facebook_bg.gif') no-repeat left top;padding-left:56px;}
+.MMLHeader .social li .social_facebook span{display:inline-block;background:url('http://mnetimg.mnet.com/images/music/facebook_bg2.gif') no-repeat right top;font-size:9px;font-family:Tahoma;font-weight:bold;padding:4px 6px 0 0;height:16px;color:#5E5873;letter-spacing:-1px;}
+.MMLHeader .social li .social_tweet{display:inline-block;margin-left:8px;background:url('http://mnetimg.mnet.com/images/music/btn_tweet.gif') no-repeat left top;width:55px;height:20px;}
+
+.MMLHeader .btn_down_all {float:right;background:url('http://mnetimg.mnet.com/images/music/btn_down_all.gif') no-repeat 0 0; padding-left:10px; color:#fff; font-size:11px; font-weight:bold;}
+.MMLHeader .btn_down_all span {background:url('http://mnetimg.mnet.com/images/music/btn_down_all.gif') no-repeat right 0; padding-right:10px;height:23px; display:inline-block; line-height:23px;}
+
+/* Mnet Music List Footer */
+.MMLFooter { position:relative; margin-top:10px; padding:0 0 10px 0; width:100%; height:23px; border-bottom:1px solid #e5e5e5; }
+.MMLFooterNoline { border-bottom:0 none; }
+
+.MMLFooter .MMLFTableBtn { float:left; }
+.MMLFooter .MMLFTableBtn li { float:left; padding-right:3px; display:inline; }
+.MMLFooter .MMLFTableBtn li.MMLFItemFirst { padding-right:15px; background:url(http://mnetimg.mnet.com/images/music/blank.gif) no-repeat right top; }
+
+.MMLFooter .MMLFSortBtn { float:right; }
+.MMLFooter .MMLFSortBtn li { float:left; padding:2px 0 0 0; display:inline; }
+
+.MMLFooter .MMLFSortBtn li a.btn_sort_01
+, .MMLFooter .MMLFSortBtn li a.btn_sort_02
+, .MMLFooter .MMLFSortBtn li a.btn_sort_01_on
+, .MMLFooter .MMLFSortBtn li a.btn_sort_02_on
+{ width:42px; height:18px; text-indent:-9999px; background: url(http://mnetimg.mnet.com/images/music/music_btn.gif) no-repeat 0 -515px; display:block; }
+
+.MMLFooter .MMLFSortBtn li a.btn_sort_01 { background-position:0 -515px; }
+.MMLFooter .MMLFSortBtn li a.btn_sort_01:hover, .MMLFooter .MMLFSortBtn li a.btn_sort_01_on { background-position:0 -534px; }
+.MMLFooter .MMLFSortBtn li a.btn_sort_02 { width:44px; background-position:-42px -534px; }
+.MMLFooter .MMLFSortBtn li a.btn_sort_02:hover, .MMLFooter .MMLFSortBtn li a.btn_sort_02_on { width:44px; background-position:-42px -515px; }
+
+.MMLFooter .MMLFTableBtnR { float:right; }
+.MMLFooter .MMLFTableBtnR li { padding-left:3px; padding-right:0; }
+
+/* Mnet Music Table */
+.MMLTable { width:100%; margin-top:14px; margin-bottom:10px; }
+.MMLTable table { border-collapse:collapse; border-spacing:0; table-layout: fixed;}
+
+.MMLTable table col.MMLItemCheck { width:22px; }
+.MMLTable table col.MMLItemDate { width:68px; }
+.MMLTable table col.MMLItemRank { width:29px; }
+.MMLTable table col.MMLItemUpdown { width:62px; }
+.MMLTable table col.MMLItemTitle { width:247px; }
+.MMLTable table col.MMLItemArtist { width:100px; }
+.MMLTable table col.MMLItemAlbum { width:135px; }
+.MMLTable table col.MMLItemRecommend { width:33px; }
+.MMLTable table col.MMLItemMy { width:26px; }
+.MMLTable table col.MMLItemVideo { width:27px; }
+.MMLTable table col.MMLItemDown { width:51px; }
+.MMLTable table col.MMLItemExp { width:269px; }
+.MMLTable table col.MMLItemPurchas { width:90px; } /* 2013.07.24 추가 수정 */
+.MMLTable table col.MMLItemGather { width:115px; } /* 2013.07.24 추가 수정 */
+.MMLTable table col.MMLItemProduction { width:169px; } /* 2013.08.06 추가 수정 */
+.MMLTable table col.MMLItemMQS { width:36px; }
+
+.MMLTable table thead { }
+.MMLTable table thead tr { }
+.MMLTable table thead tr th { margin:0; padding:0; font-size:11px; color:#666666; font-weight:bold; letter-spacing:-1px; line-height:18px; text-align:left; border-top:1px solid #c2c2c2; border-bottom:1px solid #c2c2c2; border-left:1px solid #d5d5d5; background-color:#f0f0f0; }
+.MMLTable table thead tr th span { padding:4px 7px 3px 7px; height:18px; border-top:1px solid #ffffff; border-left:1px solid #ffffff; display:block; }
+
+.MMLTable table thead tr th:first-child { border-left:0 none; }
+.MMLTable table thead tr th:first-child span { border-left:0 none; }
+
+.MMLTable table thead tr th.MMLItemNoline { border-left:0 none; }
+.MMLTable table thead tr th.MMLItemNoline span { border-left:0 none; }
+
+.MMLTable table thead tr th.MMLItemCheck span { padding-top:6px; padding-bottom:1px; padding-left:0; padding-right:0; text-align:center; }
+.MMLTable table thead tr th.MMLItemCheck input { margin-left:8px; width:13px; height:13px; display:block; }
+.MMLTable table thead tr th.MMLItemDate span { padding-left:7px; padding-right:0; text-align:left; }
+.MMLTable table thead tr th.MMLItemRank span { padding-left:0; padding-right:0; text-align:center; }
+.MMLTable table thead tr th.MMLItemUpdown span { padding-left:10px; padding-right:0; text-align:left; }
+
+.MMLTable table thead tr th.MMLItemRecommend { }
+.MMLTable table thead tr th.MMLItemRecommend span { padding-left:5px; padding-right:0; }
+.MMLTable table thead tr th.MMLItemMy { }
+.MMLTable table thead tr th.MMLItemMy span { padding-left:0; padding-right:0; }
+.MMLTable table thead tr th.MMLItemVideo { }
+.MMLTable table thead tr th.MMLItemVideo span { padding-left:0; padding-right:0; }
+.MMLTable table thead tr th.MMLItemDown { }
+.MMLTable table thead tr th.MMLItemDown span { padding-left:0; padding-right:0; text-align:left; }
+.MMLTable table thead tr th.MMLItemPurchas { }  /* 2013.07.24 추가 수정 */
+.MMLTable table thead tr th.MMLItemPurchas span { padding-left:8px; padding-right:0; text-align:left; }  /* 2013.07.24 추가 수정 */
+.MMLTable table thead tr th.MMLItemGather { }  /* 2013.07.24 추가 수정 */
+.MMLTable table thead tr th.MMLItemGather span { padding-left:8px; padding-right:0; text-align:left; }  /* 2013.07.24 추가 수정 */
+.MMLTable table thead tr th.MMLItemProduction { }  /* 2013.08.06 추가 수정 */
+.MMLTable table thead tr th.MMLItemProduction span { padding-left:8px; padding-right:0; text-align:left; }  /* 2013.08.06 추가 수정 */
+.MMLTable table thead tr th.MMLItemMQS span { padding-left:0; padding-right:0; text-align:left; }
+
+.MMLTable table tbody tr td { margin:0; padding:8px 0 6px 0; line-height:18px; text-align:left; border-bottom:1px solid #e5e5e5; }
+.MMLTable table tbody tr td a { color:#111111; line-height:18px; }
+.MMLTable table tbody tr td.MMLItemCheck { padding:8px 0 6px 0; }
+.MMLTable table tbody tr td.MMLItemCheck input { margin-left:8px; width:13px; height:13px; display:block; }
+.MMLTable table tbody tr td.MMLItemDate { padding:7px 0 7px 0; font-size:11px; color:#666666; font-family:Tahoma; text-align:left; }
+.MMLTable table tbody tr td.MMLItemDate div.MMLItemDate_Box { position:relative; padding-top:2px; padding-left:11px; width:57px; height:18px; line-height:18px; }
+.MMLTable table tbody tr td.MMLItemRank { padding:7px 0 7px 0; font-size:11px; color:#666666; font-family:Tahoma; text-align:center; }
+
+.MMLTable table tbody tr td.MMLItemRank div.MMLIRankNum_Box { position:relative; width:29px; height:18px; line-height:18px; }
+
+.MMLTable table tbody tr td.MMLItemUpdown { }
+.MMLTable table tbody tr td.MMLItemUpdown div.MMLIUpdown_Box { position:relative; width:62px; height:18px; line-height:18px; overflow:hidden; }
+
+.MMLTable table tbody tr td.MMLItemTitle { }
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { position:relative; width:247px; line-height:18px; }
+
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLITitleSong_Box { float:left; width:222px; height:18px; overflow:hidden; }
+
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap { position:relative; width:262px; height:18px; line-height:18px; }
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album { float:left; position:relative; width:50px; height:50px; padding-left:9px; padding-right:14px; overflow:hidden;}
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album a { width:100%; height:100%; text-align:center; display:block; overflow:hidden; position:relative;} /* 2016-09-09 수정 - 김동호 */
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album a img{ margin: auto; left: 0; top: 0px; right: 0px; bottom: 0px; vertical-align: middle; position: absolute; max-width: 75px; max-height: 75px;}
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap_Artist a img{ width:100%; height:100%; object-fit:contain;}
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap_Artist div.MMLITitle_Album a img{ width:100%; height:100%; object-fit:contain; max-width: 100%; max-height: 100%; position:relative; left:0;}
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album a span.photoLine { position:absolute; width:48px; height:48px; left:0; top:0px; border:1px solid #000; filter:alpha(opacity=10); opacity:0.1; display:block; }
+
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album a.MMLIInfo_Play { position:absolute; right:19px; bottom:3px; width:25px; height:25px; text-indent:-99999px; background:url(http://mnetimg.mnet.com/images/music/btn_player_sm.png) no-repeat; display:block; }
+
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Info { padding-left:25px; width:237px; height:18px; color:#cfcfcf; line-height:18px; overflow:hidden; }
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Info a.MMLIInfo_Artist { color:#666666; }
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Info a.MMLIInfo_Album { color:#666666; }
+
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitleDate_Box { float:left; }
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitleFollow_Box { position:absolute; right:3px; top:0; }
+.MMLTable table tbody tr td.MMLItemTitle span.MMLITitleTop100Btn { position:absolute;  bottom:3px; right:3px; z-index:1; }
+.MMLTable table tbody tr td.MMLItemTitle span.MMLITitleTop100Btn a { float:right; padding:2px 17px 0 0; font-size:11px; color:#767676; line-height:13px; letter-spacing:-1px; background:url(http://mnetimg.mnet.com/images/music/info_con_open.gif) no-repeat right 2px; }
+
+.MMLTable table tbody tr td.MMLItemTitle div.MMLITitleTop100_Table { clear:both; padding:4px 0 19px 0; display:none; }
+
+.MMLTable table tbody tr td.MMLItemTitle .MMLITitle_Wrap.on div.MMLITitleTop100_Table { display:block; }
+.MMLTable table tbody tr td.MMLItemTitle .MMLITitle_Wrap.on span.MMLITitleTop100Btn { position:static; float:right; }
+
+.MMLTable table tbody tr td.MMLItemArtist { }
+.MMLTable table tbody tr td.MMLItemArtist div.MMLIArtist_Box { position:relative; width:102px; padding:0 9px 0 9px; line-height:18px; }
+.MMLTable table tbody tr td.MMLItemArtist div.MMLIArtist_Box a.MMLI_Artist_Over { max-width:92px; padding-right:10px; background:url('http://mnetimg.mnet.com/images/music/icon_music.gif?v=3') no-repeat right -188px; }
+.MMLTable table tbody tr td.MMLItemArtist div.MMLIArtist_Box ul.MMLIArtistBoxList { position:absolute; left:10px; top:17px; width:120px; border:1px solid #bababa; border-top:0 none; background-color:#fff; display:none; }
+.MMLTable table tbody tr td.MMLItemArtist div.MMLIArtist_Box.on { z-index:10; }
+.MMLTable table tbody tr td.MMLItemArtist div.MMLIArtist_Box.on ul.MMLIArtistBoxList { display:block; }
+.MMLTable table tbody tr td.MMLItemArtist div.MMLIArtist_Box ul.MMLIArtistBoxList li { border-top:1px solid #bababa; }
+.MMLTable table tbody tr td.MMLItemArtist div.MMLIArtist_Box ul.MMLIArtistBoxList li a { width:108px; padding:3px 6px; color:#666666; line-height:17px; white-space:nowrap; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; text-overflow:ellipsis; overflow:hidden; display:block; } /* 2013.07.25 추가 수정 */
+.MMLTable table tbody tr td.MMLItemArtist div.MMLIArtist_Box ul.MMLIArtistBoxList li a:hover, .MMLTable table tbody tr td.MMLItemArtist div.MMLIArtistBox_Over ul.MMLIArtistBoxList li a:focus { background-color:#f3f3f3; } /* 2013.07.25 추가 수정 */
+.MMLTable table tbody tr td.MMLItemAlbum { }
+.MMLTable table tbody tr td.MMLItemAlbum div.MMLIAlbum_Box { position:relative; overflow:hidden; width:116px; padding:0 9px 0 9px; line-height:18px; }
+.MMLTable table tbody tr td.MMLItemRecommend { text-align:center; }
+.MMLTable table tbody tr td.MMLItemRecommend div.MMLIRecommend_Box { padding-right:3px; }
+.MMLTable table tbody tr td.MMLItemMy { text-align:center; }
+.MMLTable table tbody tr td.MMLItemMy div.MMLIMy_Box { padding-left:5px; }
+.MMLTable table tbody tr td.MMLItemVideo { text-align:center; }
+.MMLTable table tbody tr td.MMLItemVideo div.MMLIVideo_Box { padding-left:4px; }
+.MMLTable table tbody tr td.MMLItemDown { text-align:center; }
+.MMLTable table tbody tr td.MMLItemDown div.MMLIDown_Box { padding-left:6px; }
+.MMLTable table tbody tr td.MMLItemExp { text-align:left; vertical-align:top; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box { padding-left:0px; }
+.MMLTable table tbody tr td.MMLItemPurchas { text-align:left; vertical-align:middle; } /* 2013.07.24 추가 수정 */
+.MMLTable table tbody tr td.MMLItemPurchas div.MMLIPurchas_Box { padding-left:8px; padding-right:8px; } /* 2013.07.24 추가 수정 */
+.MMLTable table tbody tr td.MMLItemGather { text-align:left; vertical-align:middle; } /* 2013.07.24 추가 수정 */
+.MMLTable table tbody tr td.MMLItemProduction { text-align:left; vertical-align:middle; } /* 2013.08.06 추가 수정 */
+.MMLTable table tbody tr td.MMLItemProduction div.MMLIProduction_Box { padding-left:8px; padding-right:8px; } /* 2013.08.06 추가 수정 */
+.MMLTable table tbody tr td.MMLItemGather div.MMLIGathe_Box { padding-left:8px; padding-right:8px; } /* 2013.07.24 추가 수정 */
+.MMLTable table tbody tr td.MMLItemMQS div.MMLItemMQS_Box { position:relative; padding-left:0; }
+
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph { margin-left:12px; margin-top:18px; width:247px; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph .MMLIExp_GraphBox { position:relative; width:100%; height:28px; margin-bottom:24px; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph .MMLIExp_GraphBox li { float:left; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph .MMLIExp_GraphBox li strong { font-size:11px; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph .MMLIExp_GraphBox li em { font-size:11px; color:#3db9e2; font-weight:bold; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph .MMLIExp_GraphBox li em i { position:absolute; bottom:0px; width:100%; height:11px; background:url(http://mnetimg.mnet.com/images/music/gr_bar.gif) no-repeat; display:block; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph .MMLIExp_GraphBox li.left em i { left:0px; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph .MMLIExp_GraphBox li.right { float:right; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph .MMLIExp_GraphBox li.right em { color:#ed6ca2; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph .MMLIExp_GraphBox li.right em i { right:0; background-image:url(http://mnetimg.mnet.com/images/music/gr_bar_on.gif); background-position:left top; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Graph .MMLIExp_GraphBox li.right em i b { float:right; width:10px; height:100%; background:url(http://mnetimg.mnet.com/images/music/gr_bar_on.gif) no-repeat right top; display:block; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Text { margin-left:12px; margin-top:22px; margin-bottom:3px; width:247px; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Text dl { }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Text dl dt { width:100%; height:18px; margin-bottom:4px; color:#444444; font-weight:normal; overflow:hidden; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Text dl dd { }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Text dl dd strong { font-size:14px; color:#ed6ca2; font-weight:bold; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Text dl dd span { margin-left:4px; padding-left:8px; font-family:Tahoma; font-size:11px; color:#767676; line-height:11px; background: url(http://mnetimg.mnet.com/images/common/20130619/line_main.png) no-repeat 0 3px; }
+.MMLTable table tbody tr td.MMLItemExp div.MMLIExp_Box .MMLIExp_Btn { float:right; padding-right:10px; }
+
+.MMLTable .MMLITitleAlbum_Box { width:100%; height:18px; color:#767676; overflow:hidden; }
+.MMLTable .MMLITitleAlbum_Box .MMLITi_Album { color:#111111; font-weight:bold; }
+.MMLTable .MMLITitleAlbum_Box .MMLITi_Artist { color:#767676; }
+
+.MnetMusicList a.MMLI_SongInfo { float:left; position:relative; top:2px; left:0px; margin-left:2px; margin-right:8px; padding:0; width:15px; height:13px; text-indent:-9999px; background:url(http://mnetimg.mnet.com/images/common/music_btn.gif) no-repeat -60px -248px; display:block; }
+.MnetMusicList a.MMLI_Song { padding:0; margin-right:5px; }
+.MnetMusicList span.icon_19 { position:relative; top:1px; margin-right:8px; }
+.MnetMusicList span.icon_title { position:relative; top:1px; margin-right:8px; }
+.MnetMusicList span.icon_hot { position:relative; top:1px; margin-right:8px; }
+.MnetMusicList span.icon_free { position:relative; top:1px; margin-right:8px; }
+.MnetMusicList a.MMLI_Mp3Add { position:absolute; width:55px; height:16px; right:0px; top:0px; text-indent:-9999px; background:#f8f8f8 url(http://mnetimg.mnet.com/images/music/icon_music.gif) no-repeat 4px -83px; display:none; }
+.MnetMusicList a.MMLI_Like { position:absolute; width:47px; height:16px; right:0px; top:0px; text-indent:-9999px; background:#f8f8f8 url(http://mnetimg.mnet.com/images/music/icon_music.gif) no-repeat -52px -83px; display:none; }
+.MnetMusicList a.MMLI_Like_cancel { position:absolute; width:47px; height:16px; right:0px; top:0px; text-indent:-9999px; background:#f8f8f8 url(http://mnetimg.mnet.com/images/music/icon_music.gif) no-repeat -52px -62px; display:none; }
+.MnetMusicList span.MMLI_Propose { float:left; margin-left:28px; width:37px; height:13px; text-indent:-99999px; overflow:hidden; background: url(http://mnetimg.mnet.com/images/music/vote_icon.gif) no-repeat; display:block; }
+.MnetMusicList .MMLTable .MMLI_Artist { max-width:102px; color:#666666; }
+.MnetMusicList .MMLTable .MMLI_Album { max-width:116px; color:#666666; }
+.MnetMusicList span.MMLI_UpdownNum { font-family:Tahoma; font-size:10px; color:#444444; }
+.MnetMusicList span.MMLI_Updown { float:left; width:25px; height:18px; text-indent:-99999px; background:url(http://mnetimg.mnet.com/images/music/rank_bar.gif) no-repeat 14px 5px; display:block; }
+.MnetMusicList span.MMLI_Updown_Down { background:url(http://mnetimg.mnet.com/images/music/rank_down.gif) no-repeat 14px 6px; }
+.MnetMusicList span.MMLI_Updown_Up { background:url(http://mnetimg.mnet.com/images/music/rank_up.gif) no-repeat 14px 5px; }
+.MnetMusicList span.MMLI_Updown_New { width:37px; background:url(http://mnetimg.mnet.com/images/music/new.gif) no-repeat 14px 6px; }
+.MnetMusicList span.MMLI_Info_Date { margin-right:6px; padding-right:10px; font-size:11px; color:#767676; background:url(http://mnetimg.mnet.com/images/music/info_blank.gif) no-repeat right 1px; }  /* 2013.08.06 추가 수정 */
+.MnetMusicList span.MMLI_Like_Text { margin-right:6px; padding-right:10px; font-size:11px; color:#767676; background:url(http://mnetimg.mnet.com/images/music/info_blank.gif) no-repeat right 1px; }  /* 2013.07.24 추가 수정 */
+.MnetMusicList span.MMLI_Like_Text strong { font-size:11px; color:#ED6CA2; }
+.MnetMusicList span.MMLI_Inquiry_Text { font-size:11px; color:#767676;  }   /* 2013.07.24 추가 수정 */
+.MnetMusicList span.MMLI_Inquiry_Text strong { font-size:11px; color:#666666; }
+
+.MnetMusicList p.MMLIPeak_Box { clear:both; line-height:11px; }
+.MnetMusicList span.MMLI_Peak { float:left; width:41px; height:11px; text-indent:-99999px; line-height:11px; background:url(http://mnetimg.mnet.com/images/music/peak_txt.gif) no-repeat 14px 3px; display:block; } /* 2013.07.23 추가 수정 */
+.MnetMusicList span.MMLI_PeakNum { font-family:Tahoma; font-size:10px; color:#767676; line-height:11px; }
+.MnetMusicList p.MMLIDay_Box { clear:both; line-height:11px; }
+.MnetMusicList span.MMLI_Day { float:left; width:41px; height:11px; text-indent:-99999px; line-height:11px; background:url(http://mnetimg.mnet.com/images/music/day_txt.gif) no-repeat 14px 3px; display:block; } /* 2013.07.23 추가 수정 */
+.MnetMusicList span.MMLI_Week { float:left; width:41px; height:11px; text-indent:-99999px; line-height:11px; background:url(http://mnetimg.mnet.com/images/music/week_txt.gif) no-repeat 14px 3px; display:block; } /* 2013.07.23 추가 수정 */
+.MnetMusicList span.MMLI_Month { float:left; width:41px; height:11px; text-indent:-99999px; line-height:11px; background:url(http://mnetimg.mnet.com/images/music/month_txt.gif) no-repeat 14px 3px; display:block; } /* 2013.07.23 추가 수정 */
+.MnetMusicList span.MMLI_DayNum { font-family:Tahoma; font-size:10px; color:#767676; line-height:11px; }
+
+.MnetMusicList table tbody tr.cd_01 td{height:30px;border-bottom:1px solid #D0D0D0;padding:0 0 0 7px;}
+.MnetMusicList table tbody tr.cd_02 td{vertical-align:top;padding:0 0 0 7px;height:23px;border-bottom:1px solid #D0D0D0}
+.MnetMusicList table tbody tr td .cd_icon{background:url('http://mnetimg.mnet.com/images/music/cd_icon.gif') no-repeat 0 3px;padding:2px 0 0 27px;color:#333;height:16px}
+
+.MnetMusicList .MMLTable .MMLI_Artist.disabled
+, .MnetMusicList .MMLTable .MMLI_Album.disabled
+{  }
+
+.MnetMusicList .MMLTable .MMLI_Artist
+, .MnetMusicList .MMLTable .MMLI_Album
+{ float:left; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; display:inline-block; }
+
+.MnetMusicList a.btn_recom
+{ float:right; margin-left:0 !important; margin-right:0; }
+.MnetMusicList a.btn_add
+, .MnetMusicList a.btn_avi
+, .MnetMusicList span.btn_avi_off
+, .MnetMusicList a.btn_mp3
+, .MnetMusicList a.btn_mp3_off
+, .MnetMusicList a.btn_drm
+, .MnetMusicList a.btn_drm_off
+{ margin-left:0 !important; margin-right:0; }
+
+.MnetMusicList tbody tr.on td { background-color:#f8f8f8; }
+/* .MnetMusicList tbody tr.on td .MMLITitle_Box { z-index:100; } */
+.MnetMusicList tbody tr.on a.MMLI_Mp3Add { display:block; }
+.MMLTable table tbody tr.on td.MMLItemTitle div.MMLITitle_Album a span.photoLine { filter:alpha(opacity=40); opacity:0.4; }
+
+/* ?�범 ?�록�?관??리스??*/
+.MnetMusicListMention .MMLTable table col.MMLItemTitle { width:383px; }
+.MnetMusicListMention .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { width:383px; }
+.MnetMusicListMention .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box  .MMLITitleSong_Box { width:358px; }
+
+/* 공연�??�이 980 리스??*/
+.MnetMusicListBig { width:980px; }
+.MnetMusicListBig .MMLTable table col.MMLItemTitle { width:416px; }
+.MnetMusicListBig .MMLTable table col.MMLItemArtist { width:165px; }
+.MnetMusicListBig .MMLTable table col.MMLItemAlbum { width:171px; }
+
+.MnetMusicListBig .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { width:416px; }
+.MnetMusicListBig .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLITitleSong_Box { width:391px; }
+.MnetMusicListBig .MMLTable table tbody tr td.MMLItemArtist div.MMLIArtist_Box { width:145px; }
+.MnetMusicListBig .MMLTable table .MMLI_Artist { max-width:167px;  }
+.MnetMusicListBig .MMLTable table tbody tr td.MMLItemAlbum div.MMLIAlbum_Box { width:152px; }
+.MnetMusicListBig .MMLTable table .MMLI_Album { max-width:152px; }
+
+/* 뮤직리스??챠트??*/
+.MnetMusicListChart .MMLTable table tbody tr td { padding-top:6px; padding-bottom:5px; height:50px; }
+.MnetMusicListChart .MMLTable table tbody tr td.MMLItemUpdown { padding-top:5px; padding-bottom:6px; }
+.MnetMusicListChart .MMLTable table col.MMLItemTitle { width:422px; }
+.MnetMusicListChart .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap { width:422px; height:50px; }
+.MnetMusicListChart .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { float:left; margin-top:5px; width:349px; overflow:visible; }
+.MnetMusicListChart .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleSong_Box { width:299px; height:18px; line-height:18px; overflow:hidden; }
+.MnetMusicListChart .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box a.MMLI_Mp3Add { top:12px; }
+.MnetMusicListChart .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Info { float:left; margin-top:6px; width:274px; }
+.MnetMusicListChart  a.MMLI_Song { font-weight:bold; }
+.MnetMusicListChart .MMLTable table tbody tr td.MMLItemUpdown div.MMLIUpdown_Box { height:auto; }
+
+/* 뮤직리스???�범??*/
+.MnetMusicListChartAlbum .MMLTable table col.MMLItemRank { width:39px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemRank { vertical-align:top; }
+.MnetMusicListChartAlbum span.MMLI_RankNumBest { top:-34px !important; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemRank div.MMLIRankNum_Box { top:27px; }
+.MnetMusicListChartAlbum .MMLTable table col.MMLItemDown { width:79px; }
+.MnetMusicListChartAlbum .MMLTable table thead tr th.MMLItemDown span { padding-left:6px; text-transform:uppercase; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td { padding-top:6px; padding-bottom:7px; height:auto; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemUpdown { padding-top:5px; padding-bottom:6px; vertical-align:top; }
+.MnetMusicListChartAlbum .MMLTable table col.MMLItemTitle { width:527px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap { width:607px; height:auto; min-height:75px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album { width:75px; height:75px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album a span.photoLine { width:73px; height:73px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { float:left; margin-top:10px; width:509px; height:68px; overflow:visible; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleSong_Box { width:424px; height:18px; line-height:18px; overflow:hidden; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box a.MMLI_Mp3Add { top:12px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Info { float:left; margin-top:6px; padding-left:0; width:424px; }
+.MnetMusicListChartAlbum  a.MMLI_Song { font-weight:bold; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemUpdown div.MMLIUpdown_Box { margin-top:29px; height:auto; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleGenre_Box { margin-bottom:14px; width:434px; height:17px; font-size:11px; line-height:17px; overflow:hidden; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleGenre_Box .MMLIInfo_Date { font-family:Tahoma; font-size:11px; color:#767676; line-height:11px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLIInfo_Genre { color:#767676; }
+
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap_Artist { min-height:95px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap_Artist div.MMLITitle_Album { width:95px; height:95px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap_Artist div.MMLITitle_Album a span.photoLine { width:93px; height:93px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap_Artist > div.MMLITitle_Box { margin-top:6px; width:484px; height:61px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap_Artist > div.MMLITitle_Box .MMLITitleAlbum_Box { margin-bottom:3px; width:424px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap_Artist > .MMLITitle_Box > div.MMLITitleSong_Box { margin-bottom:5px; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap_Artist > .MMLITitle_Box > div.MMLITitleSong_Box a.MMLI_Song { font-weight:normal; }
+.MnetMusicListChartAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap_Artist > .MMLITitle_Box > div.MMLITitleGenre_Box { margin-bottom:7px; }
+
+/* 뮤직리스??최신?�약 */
+.MnetMusicListNew .MMLTable table col.MMLItemTitle { width:484px; }
+.MnetMusicListNew .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap { width:484px; height:50px; }
+
+.MnetMusicListNew .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { float:left; margin-top:5px; width:411px; overflow:visible;; }
+.MnetMusicListNew .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleSong_Box { width:361px; height:18px; line-height:18px; overflow:hidden; }
+.MnetMusicListNew .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box a.MMLI_Mp3Add { top:12px; }
+.MnetMusicListNew .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Info { float:left; margin-top:6px; width:336px; }
+.MnetMusicListNew  a.MMLI_Song { font-weight:bold; }
+
+/* 뮤직리스???�범 */
+.MnetMusicListAlbum table col.MMLItemMy { width:64px; }
+.MnetMusicListAlbum table thead tr th.MMLItemMy span i { font-weight:normal; }
+.MnetMusicListAlbum table tbody tr td.MMLItemMy div.MMLIMy_Box { margin-left:33px; }
+
+.MnetMusicListAlbum .MMLTable table col.MMLItemTitle { width:489px; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap { width:489px; height:101px; }
+
+.MnetMusicListAlbum table tbody tr td.MMLItemTitle div.MMLITitle_Album { top:3px; left:1px; padding-right:16px; width:95px; height:95px; }
+.MnetMusicListAlbum table tbody tr td.MMLItemTitle div.MMLITitle_Album a span.photoLine { width:93px; height:93px; }
+
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { float:left; margin-top:12px; width:366px; overflow:visible; z-index:1; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleArtis_Box { margin-bottom:4px; width:402px; height:18px; line-height:18px; overflow:hidden; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box span.MMLIInfo_Artist { color:#767676; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box a.MMLIInfo_Artist { font-weight:bold; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleAlbum_Box { margin-bottom:0px; width:402px; height:18px; line-height:18px; overflow:hidden; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box a.MMLIInfo_Album { color:#666666; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleGenre_Box { margin-bottom:6px; width:402px; height:17px; font-size:11px; line-height:17px; overflow:hidden; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLIInfo_Genre { color:#767676; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleSong_Box { width:402px; height:18px; line-height:18px; overflow:hidden; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box a.MMLI_Mp3Add { top:12px; }
+.MnetMusicListAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Info { float:left; margin-top:6px; width:377px; }
+
+.MnetMusicListAlbum a.MMLI_SongInfo { margin-left:0px; margin-right:4px; }
+.MnetMusicListAlbum a.MMLI_Song {  }
+.MnetMusicListAlbum span.MMLIDate_Year_2013 { float:none; width:27px; margin-right:30px; }
+
+/* 뮤직리스???�벤???��?지??*/
+.MnetMusicListAlbumTy1 .MMLTable table col.MMLItemAlbum { width:106px; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemAlbum div.MMLIAlbum_Box { position:relative; width:95px; padding:0 3px 0 8px; line-height:18px; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemAlbum div.MMLIAlbum_Box .MMLIAlbum_Link { position:relative; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemAlbum div.MMLIAlbum_Box .MMLIAlbum_Link a { width:100%; height:100%; display:block; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemAlbum div.MMLIAlbum_Box .MMLIAlbum_Link a span.photoLine { position:absolute; left:0; top:0px; width:93px; height:93px; border:1px solid #000000; filter:alpha(opacity=10); opacity:0.1; display:block; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemAlbum div.MMLIAlbum_Box .MMLIAlbum_Link a.MMLIInfo_Play { position:absolute; right:3px; bottom:3px; width:25px; height:25px; text-indent:-99999px; background:url(http://mnetimg.mnet.com/images/music/btn_player_sm.png) no-repeat; display:block; }
+
+.MnetMusicListAlbumTy1 table col.MMLItemMy { width:64px; }
+.MnetMusicListAlbumTy1 table thead tr th.MMLItemMy span i { font-weight:normal; }
+.MnetMusicListAlbumTy1 table tbody tr td.MMLItemMy div.MMLIMy_Box { margin-left:33px; }
+
+.MnetMusicListAlbumTy1 .MMLTable table col.MMLItemTitle { width:335px; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap { width:311px; height:101px; margin:0 12px; }
+
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { float:left; margin-top:13px; width:311px; overflow:visible; z-index:1; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleArtis_Box { margin-bottom:4px; width:311px; height:18px; line-height:18px; overflow:hidden; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box span.MMLIInfo_Artist { color:#767676; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box a.MMLIInfo_Artist { font-weight:bold; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleAlbum_Box { margin-bottom:1px; width:311px; height:18px; line-height:18px; overflow:hidden; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box a.MMLIInfo_Album { color:#666666; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleGenre_Box { margin-bottom:5px; width:311px; height:17px; font-size:11px; line-height:17px; overflow:hidden; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLIInfo_Genre { color:#767676; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLIInfo_Date { margin-left:4px; padding-left:8px; font-family:Tahoma; font-size:11px; color:#767676; line-height:11px; background: url(http://mnetimg.mnet.com/images/common/20130619/line_main.png) no-repeat 0 3px; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleSong_Box { width:311px; height:18px; line-height:18px; overflow:hidden; }
+.MnetMusicListAlbumTy1 .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box a.MMLI_Mp3Add { top:12px; }
+
+.MnetMusicListAlbumTy1 a.MMLI_SongInfo { margin-left:0px; margin-right:4px; }
+.MnetMusicListAlbumTy1 a.MMLI_Song {  }
+.MnetMusicListAlbumTy1 span.MMLIDate_Year_2013 { float:none; width:27px; margin-right:30px; }
+
+/* Like 가 ?�입?�어 ?�는 뮤직 리스??*/
+.MnetMusicListLike tbody tr.on a.MMLI_Mp3Add { right:47px; }
+.MnetMusicListLike tbody tr.on a.MMLI_Like { display:block; }
+.MnetMusicListLike tbody tr.on a.MMLI_Like_cancel { display:block; }
+
+/* 뮤직리스???�운로드 보�?????*/
+.MnetMusicListDown { width:774px; }
+
+.MnetMusicListDown .MMLTable table col.MMLItemDown { width:56px; }
+.MnetMusicListDown .MMLTable table thead tr th.MMLItemDown span { text-align:center; }
+.MnetMusicListDown .MMLTable table tbody tr td.MMLItemDown div.MMLIDown_Box { padding-left:0; text-align:center; }
+.MnetMusicListDown .MMLTable table tbody tr td.MMLItemDown .btn_mp3 { margin-left:13px !important; }
+
+.MnetMusicListDown .MMLTable table col.MMLItemTitle
+, .MnetMusicListDown .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { width:319px; }
+.MnetMusicListDown .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLITitleSong_Box { width:294px; }
+
+.MnetMusicListDown .MMLTable table col.MMLItemAlbum { width:115px; }
+.MnetMusicListDown .MMLTable table tbody tr td.MMLItemAlbum div.MMLIAlbum_Box { width:96px; }
+.MnetMusicList.MnetMusicListDown .MMLTable .MMLI_Album { max-width:96px; }
+
+.MnetMusicListDown .MMLTable table tbody tr td.MMLItemPurchas div.MMLIPurchas_Box { font-size:12px; color:#bbbbbb; }
+
+/* 뮤직리스???�운로드 ?�범??*/
+.MnetMusicListDownAlbum { width:774px; }
+
+.MnetMusicListDownAlbum .MMLTable table col.MMLItemDown { width:56px; }
+.MnetMusicListDownAlbum .MMLTable table thead tr th.MMLItemDown span { text-align:center; }
+.MnetMusicListDownAlbum .MMLTable table tbody tr td.MMLItemDown div.MMLIDown_Box { padding-left:0; text-align:center; }
+.MnetMusicListDownAlbum .MMLTable table tbody tr td.MMLItemDown .btn_mp3 { margin-left:13px !important; }
+
+.MnetMusicListDownAlbum .MMLTable table col.MMLItemTitle { width:319px; }
+.MnetMusicListDownAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap { width:308px; height:70px; }
+.MnetMusicListDownAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album { width:70px; height:70px; }
+.MnetMusicListDownAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album a span.photoLine { width:68px; height:68px; }
+.MnetMusicListDownAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { float:left; width:215px; padding-top:26px; }
+.MnetMusicListDownAlbum .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLITitleSong_Box { width:215px; }
+
+.MnetMusicListDownAlbum .MMLTable table tbody tr td.MMLItemPurchas div.MMLIPurchas_Box { font-size:12px; color:#bbbbbb; }
+
+/* 뮤직리스???�운로드 공개?�범??*/
+.MnetMusicListOpen table col.MMLItemTitle { width:541px; }
+.MnetMusicListOpen .MMLTable table tbody tr td { padding-top:11px; padding-bottom:12px; }
+.MnetMusicListOpen .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap { width:541px; height:95px; }
+.MnetMusicListOpen .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album { width:95px; height:95px; }
+.MnetMusicListOpen .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Album a img { max-width:95px; _width:95px; max-height:95px; _height:95px; line-height:95px; }
+.MnetMusicListOpen .MMLTable table tbody tr.on td.MMLItemTitle div.MMLITitle_Album a span.photoLine { width:93px; height:93px; }
+.MnetMusicListOpen .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { float:left; padding-top:10px; width:413px; }
+.MnetMusicListOpen .MMLTable .MMLITitleAlbum_Box { margin-bottom:5px; }
+.MnetMusicListOpen .MMLTable .MMLITitleAlbum_Box .MMLITi_Album { font-size:14px; color:#333333; }
+.MnetMusicListOpen .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLITitleGenre_Box { margin-bottom:7px; width:100%; height:36px; line-height:18px; overflow:hidden; }
+.MnetMusicListOpen .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLITitleGenre_Box a { color:#666666; }
+
+.MnetMusicListOpen .MMLTable table tbody tr td.MMLItemProduction { vertical-align:top; }
+.MnetMusicListOpen .MMLTable table tbody tr td.MMLItemProduction div.MMLIProduction_Box { padding-top:7px; padding-left:10px; }
+.MnetMusicListOpen .MMLTable table tbody tr td.MMLItemProduction div.MMLIProduction_Box p { margin-bottom:5px; color:#767676; }
+.MnetMusicListOpen .MMLTable table tbody tr td.MMLItemProduction div.MMLIProduction_Box p a { color:#434856; }
+
+/* 뮤직리스???�의 리스??*/
+.MMLTable .MMLTableSub { margin-left:9px; }
+.MMLTable .MMLTableSub table { width:595px; }
+
+.MMLTable .MMLTableSub table col.MMLItemSRank { width:38px; }
+.MMLTable .MMLTableSub table col.MMLItemSAlbum { width:175px; }
+.MMLTable .MMLTableSub table col.MMLItemSRecommend { width:28px; }
+.MMLTable .MMLTableSub table col.MMLItemSMy { width:28px; }
+.MMLTable .MMLTableSub table col.MMLItemSVideo { width:28px; }
+.MMLTable .MMLTableSub table col.MMLItemSDown { width:48px; }
+
+.MMLTable .MMLTableSub table th.MMLItemSRank { text-align:center; }
+
+.MMLTable .MMLTableSub table thead tr th { border-left:0 none; background-color:transparent; }
+.MMLTable .MMLTableSub table thead tr th span { padding:4px 0px 3px 0px; border-left:0 none; }
+
+.MMLTable .MMLTableSub table tbody tr td
+, .MMLTable .MMLTableSub table tbody tr.on td { padding:5px 0 6px 0; background-color:transparent; }
+
+.MMLTable .MMLTableSub table tbody td.MMLItemSRank { color:#767676; font-weight:bold; text-align:center; }
+.MnetMusicList .MMLTable .MMLTableSub table tbody tr td.MMLItemSTitle div.MMLITitle_Box { float:left; margin-top:0; width:250px; height:18px; }
+.MnetMusicList .MMLTable .MMLTableSub table tbody tr td.MMLItemSTitle div.MMLITitle_Box .MMLITitleSong_Box { width:220px; }
+
+.MMLTable .MMLTableSub table tbody td.MMLItemSAlbum { }
+.MMLTable .MMLTableSub table tbody td.MMLItemSAlbum .MMLIAlbum_Box { width:170px; }
+.MnetMusicList .MMLTable .MMLTableSub .MMLI_Album { max-width:170px; }
+.MMLTable .MMLTableSub table tbody td.MMLItemSRecommend { }
+.MMLTable .MMLTableSub table tbody td.MMLItemSRecommend .MMLIRecommend_Box { }
+.MMLTable .MMLTableSub table tbody td.MMLItemSRecommend .btn_recom { float:left; }
+.MMLTable .MMLTableSub table tbody td.MMLItemSMy { }
+.MMLTable .MMLTableSub table tbody td.MMLItemSMy .MMLIMy_Box { padding-left:6px; }
+.MMLTable .MMLTableSub table tbody td.MMLItemSVideo { }
+.MMLTable .MMLTableSub table tbody td.MMLItemSVideo .MMLIVideo_Box { padding-left:4px; }
+.MMLTable .MMLTableSub table tbody td.MMLItemSDown { }
+.MMLTable .MMLTableSub table tbody td.MMLItemSDown .MMLIDown_Box { padding-left:2px; }
+
+.MnetMusicList .MMLTable tbody tr.on .MMLTableSub a.MMLI_Mp3Add { display:none; }
+.MnetMusicList .MMLTable tbody tr .MMLTableSub tr.on a.MMLI_Mp3Add { display:block; }
+.MnetMusicList .MMLTable  .MMLTableSub table tbody tr td.MMLItemSTitle div.MMLITitle_Box a.MMLI_Mp3Add { top:1px; }
+
+.MMLTable .MMLTableSub p.MMLEmptyMsg { margin:0 0 -10px 0; padding:10px 0; line-height:15px; text-align:center; border:1px solid #e5ebef; background-color:#edf7fa; } /* 2013.07.24 추가 수정 */
+.MMLTable .MMLTableSub p.MMLEmptyMsg span { padding-left:15px; background:url(http://mnetimg.mnet.com/images/music/alert_box.gif) 0 0 no-repeat; } /* 2013.07.24 추가 수정 */
+
+/* Hera 뮤직리스??리스?�형 */
+.MnetMusicListHera { min-width:623px; width:100%; }
+.MnetMusicListHera .MMLHeader { padding-top:6px; margin-bottom:7px; }
+.MnetMusicListHera .MMLHeader .MMLHSortBtn { margin-right:11px; }
+.MnetMusicListHera .MMLTable { margin-top:7px; }
+.MnetMusicListHera .MMLTable table { table-layout:fixed; }
+
+.MnetMusicListHera .MMLTable table col.MMLItemAlbum { width:120px; }
+.MnetMusicListHera .MMLTable table tbody tr td.MMLItemAlbum div.MMLIAlbum_Box { width:101px; }
+.MnetMusicListHera .MMLTable .MMLI_Album  { max-width:101px; }
+
+.MnetMusicListHera .MMLTable table col.MMLItemTitle { width:100%; }
+.MnetMusicListHera table tbody tr td.MMLItemTitle div.MMLITitle_Box { width:100%; }
+.MnetMusicListHera .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLITitleSong_Box { position:relative; width:100%; max-width:90%; padding-left:2px; }
+.MnetMusicListHera a.MMLI_Song { height:18px; display:inline-block; white-space:nowrap; overflow:hidden; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; text-overflow:ellipsis; }
+
+.MnetMusicListHera table tbody tr td.MMLItemTitle div.MMLITitle_Box:before, .MnetMusicListHera table tbody tr td.MMLItemTitle div.MMLITitle_Box:after {content:"";display:table;}
+.MnetMusicListHera table tbody tr td.MMLItemTitle div.MMLITitle_Box:after {clear:both;}
+.MnetMusicListHera table tbody tr td.MMLItemTitle div.MMLITitle_Box {zoom:1;}
+* html .MnetMusicListHera table tbody tr td.MMLItemTitle div.MMLITitle_Box {zoom:1;}
+
+/* Hera 검??뮤직리스??리스?�형 */
+.MnetMusicListHeraSch { min-width:623px; width:100%; }
+.MnetMusicListHeraSch .MMLHeader { padding-top:6px; margin-bottom:7px; }
+.MnetMusicListHeraSch .MMLHeader .MMLHSortBtn { margin-right:11px; }
+.MnetMusicListHeraSch .MMLTable { margin-top:7px; }
+.MnetMusicListHeraSch .MMLTable table { table-layout:fixed; }
+
+.MnetMusicListHeraSch .MMLTable table col.MMLItemAlbum { width:120px; }
+.MnetMusicListHeraSch .MMLTable table tbody tr td.MMLItemAlbum div.MMLIAlbum_Box { width:101px; }
+.MnetMusicListHeraSch .MMLTable .MMLI_Album  { max-width:101px; }
+
+.MnetMusicListHeraSch .MMLTable table col.MMLItemTitle { width:100%; }
+.MnetMusicListHeraSch table tbody tr td.MMLItemTitle div.MMLITitle_Box { width:100%; }
+.MnetMusicListHeraSch .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLITitleSong_Box { position:relative; width:100%; max-width:85%; padding-left:2px; }
+.MnetMusicListHeraSch a.MMLI_SongInfo { position:absolute; left:0px; top:2px; }
+.MnetMusicListHeraSch a.MMLI_Song { padding-left:25px; height:18px; display:inline-block; white-space:nowrap; overflow:hidden; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; text-overflow:ellipsis; }
+
+.MnetMusicListHeraSch .MMLTable span.search_w { color:#0000CC !important; font-weight:bold; }
+
+.MnetMusicListHeraSch table tbody tr td.MMLItemTitle div.MMLITitle_Box:before, .MnetMusicListHeraSch table tbody tr td.MMLItemTitle div.MMLITitle_Box:after {content:"";display:table;}
+.MnetMusicListHeraSch table tbody tr td.MMLItemTitle div.MMLITitle_Box:after {clear:both;}
+.MnetMusicListHeraSch table tbody tr td.MMLItemTitle div.MMLITitle_Box {zoom:1;}
+* html .MnetMusicListHeraSch table tbody tr td.MMLItemTitle div.MMLITitle_Box {zoom:1;}
+
+/* Hera 뮤직리스???�범?�형 */
+.MnetMusicListAlbumHera { min-width:623px; width:100%; }
+.MnetMusicListAlbumHera .MMLHeader { padding-top:6px; margin-bottom:7px; }
+.MnetMusicListAlbumHera .MMLHeader .MMLHSortBtn { margin-right:11px; }
+.MnetMusicListAlbumHera .MMLTable { margin-top:7px; }
+.MnetMusicListAlbumHera .MMLTable table { table-layout:fixed; }
+
+.MnetMusicListAlbumHera .MMLTable table col.MMLItemTitle { width:100%; }
+.MnetMusicListAlbumHera .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap { width:100%; }
+.MnetMusicListAlbumHera table tbody tr td.MMLItemTitle div.MMLITitle_Album { position:absolute; top:3px; left:1px; width: 95px; height: 95px; padding-right:16px; }
+.MnetMusicListAlbumHera .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { float:none; margin-top:0px; margin-left:120px; padding-top:12px; width:auto; }
+
+.MnetMusicListAlbumHera .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleArtis_Box
+, .MnetMusicListAlbumHera .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleAlbum_Box
+, .MnetMusicListAlbumHera .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleGenre_Box
+, .MnetMusicListAlbumHera .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box div.MMLITitleSong_Box { width:100%; }
+
+/* 뮤직리스??UI ??*/
+.MMLUl { margin-bottom:10px; }
+.MMLUl ul { border-top:1px solid #dcdcdc; }
+.MMLUl ul li { position:relative; margin:0; padding:0; border-bottom:1px solid #dcdcdc; }
+.MMLUl ul li .MMLISongWrap { padding:6px 140px 7px 0px; }
+.MMLUl ul li .MMLITitle_Box { width:100%; height:18px; }
+.MMLUl ul li .MMLITitle_Box .MMLITitleSong_Box { float:left; width:545px; height:18px; overflow:hidden; }
+.MnetMusicList .MMLUl a.MMLI_SongInfo { margin-left:0; }
+.MnetMusicList .MMLUl a.MMLI_Song { color:#111111; font-weight:bold; }
+.MnetMusicList .MMLUl span.MMLIArtist_Box { padding:0 0 0 5px; color:#bbbbbb; }
+.MnetMusicList .MMLUl span.MMLIArtist_Box a.MMLI_Artist { margin:0 0 0 5px; color:#333333; }
+.MnetMusicList .MMLUl span.MMLIAlbum_Box { padding:0 0 0 5px; color:#bbbbbb; }
+.MnetMusicList .MMLUl span.MMLIAlbum_Box a.MMLI_Album { margin:0 0 0 5px; color:#333333; }
+
+.MMLUl ul li .MMLISongInfoWrap { position:absolute; left:583px; top:7px; }
+.MMLUl ul li .MMLISongInfoWrap span.MMLIMy_Box { float:left; width:16px; height:16px; display:block; }
+.MMLUl ul li .MMLISongInfoWrap span.MMLIVideo_Box { float:left; padding-left:3px; width:16px; height:16px; display:block; }
+.MMLUl ul li .MMLISongInfoWrap span.MMLIDown_Box { float:left; padding-left:9px; width:32px; height:16px; display:block; }
+.MMLUl ul li .MMLISongInfoWrap span.MMLIMQS_Box { float:left; padding-left:9px; width:32px; height:16px; display:block; }
+
+.MMLUl ul li.on { background-color:#f8f8f8; z-index:100; }
+
+/* ?�음?�용?�내 버튼 */
+.mqs_info { display:none; position:relative; z-index:10 }
+.mqs_infoTxt { position:absolute; right:9px; top:-32px; overflow:hidden; width:132px; height:29px; background:url(http://mnetimg.mnet.com/images/music/mqs_info.png) no-repeat; }
+.mqs_info a { display:block; margin:3px 0 0 32px; color:#fff !important; font-size:11px; font-weight:bold; text-decoration:none; }
+.mqs_info button { position:absolute; right:8px; top:6px; width:9px; height:9px; text-indent:-9999px; }
+
+/* ?�음(MQS, CDQ) ?�택 */
+.MMLmqsSel { display:none; position:relative; z-index:10; }
+.MMLmqsSel ul { position:absolute; left:-6px; top:18px; width:37px; border:1px solid #666; background-color:#fff; z-index:10000; }
+.MMLmqsSel li a { display:block; width:37px; height:23px; background-color:#f0f0f0; color:#333 !important; line-height:25px !important; text-align:center; text-decoration:none; }
+.music_info_cont .MMLmqsSel ul { left:3px; top:135px; *top:70px; } /* ?�악 ?�보?�이지 - 곡정�?*/
+
+/* ?�음 ?�범 ?�위 구매 ?�내 메시지 */
+.mqsInfoLayer { position:fixed; left:50%; top:50%; margin:-115px 0 0 -170px; width:340px; border:1px solid #333; background-color:#fff; z-index:200; }
+.mqsInfoLayer_fix { }
+.mqsInfoLayer.type2 { margin:-157px 0 0 -170px; }
+.mqsInfoLayer dl { width:340px !important; border-bottom:none !important; }
+.mqsInfoLayer dt { float:none !important; padding:0 0 0 8px; width:332px !important; height:30px; border-bottom:1px solid #dcdcdc; background-color:#f3f3f3; color:#333; font-weight:bold; line-height:31px; }
+.mqsInfoLayer dd { padding:18px 0 0 0; width:340px !important; color:#767676; text-align:center; line-height:20px; }
+.mqsInfoLayer.type2 dd { padding:18px 23px 0 23px; width:294px !important; text-align:left; }
+.mqsInfoLayer dd strong { display:block; padding:12px 0 0 0; color:#333; }
+.mqsInfoLayer.type2 dd strong { padding:12px 0 5px 0; }
+.mqsInfoLayer .btnArea { overflow:hidden; margin:20px 0 0 0; padding:12px 0 12px 0; height:100%; border-top:1px solid #dcdcdc; text-align:center; }
+.mqsInfoLayer .btnArea button, .mqsInfoLayer .close button { display:block; overflow:hidden; width:56px; height:23px; background:url(http://mnetimg.mnet.com/images/music/music_btn.gif) no-repeat; text-indent:-9999px; }
+.mqsInfoLayer .btnArea .btn_yes { float:left; margin:0 5px 0 111px; background-position:0 -872px; }
+.mqsInfoLayer .btnArea .btn_no { float:left; background-position:-61px -872px; }
+.mqsInfoLayer .btnArea .btn_ok { margin:0 auto; width:32px; height:22px; background-position:-468px -246px; }
+.mqsInfoLayer .close button { position:absolute; right:13px; top:10px; width:11px; height:11px; background-position:-127px -872px; }
+.music_info_cont .mqsInfoLayer { position:absolute; left:119px; top:50%; margin:-114px 0 0 0; } /* ?�악 ?�보?�이지 - 곡정�?*/
+
+
+/* IE7 only */
+*:first-child+html .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLITitleSong_Box { position:relative; }
+*:first-child+html .MnetMusicList a.MMLI_SongInfo { left:2px; margin:0; padding-left:2px; padding-right:8px; zoom:1; }
+*:first-child+html .MMLTable table thead tr th span { padding-top:3px; padding-bottom:4px; }
+*:first-child+html .MMLTable table thead tr th.MMLItemCheck span { padding-top:6px; height:15px; }
+*:first-child+html .MMLTable table thead tr th.MMLItemCheck input { margin-left:7px; }
+*:first-child+html .MnetMusicList span.icon_19 { top:-1px; }
+*:first-child+html .MnetMusicList span.icon_title { top:-1px; }
+*:first-child+html .MnetMusicList span.icon_hot { top:-1px; }
+*:first-child+html .MnetMusicList span.icon_free { top:-1px; }
+*:first-child+html .MnetMusicListChart tr.on a.MMLI_SongInfo  { left:2px; margin:0; padding-left:2px; padding-right:8px; zoom:1; }
+*:first-child+html .MnetMusicListChartAlbum tr a.MMLI_SongInfo
+, *:first-child+html .MnetMusicListChartAlbum tr.on a.MMLI_SongInfo  { left:2px; margin:0; padding-left:2px; padding-right:8px; zoom:1; }
+*:first-child+html .MnetMusicListChartAlbum tr .MMLTableSub a.MMLI_SongInfo { left:0px !important; }
+*:first-child+html .MnetMusicListChartAlbum tr.on .MMLTableSub tr.on a.MMLI_SongInfo { left:2px; }
+*:first-child+html .MnetMusicListNew tr.on a.MMLI_SongInfo  { left:2px; margin:0; padding-left:2px; padding-right:8px; zoom:1; }
+*:first-child+html .MnetMusicListAlbum tr a.MMLI_SongInfo  { left:2px; margin:0; padding-left:2px; padding-right:8px; zoom:1; }
+*:first-child+html .MnetMusicListLike .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box a.MMLI_Song { position:relative; top:2px; }
+*:first-child+html .MnetMusicListLike .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box span.icon_title { top:0px; }
+
+*:first-child+html .MMLUl ul li .MMLITitle_Box .MMLITitleSong_Box { position:relative; }
+
+*:first-child+html .MnetMusicList tbody tr.on td div.MMLITitle_Wrap { z-index:100; }
+*:first-child+html .MnetMusicList tbody tr.on td div.MMLITitle_Box { z-index:100; }
+*:first-child+html .MnetMusicList tbody tr.on td div.MMLITitle_Wrap .MMLTableSub div.MMLITitle_Box { z-index:1; }
+*:first-child+html .MnetMusicList tbody tr.on td div.MMLITitle_Wrap .MMLTableSub tbody tr.on td div.MMLITitle_Box { z-index:100; }
+
+*:first-child+html .MnetMusicList .MMLI_level { top:0px; }
+*:first-child+html .MnetMusicList .MMLTable .disabled { color:#b3b3b3 !important; }
+
+/* IE8 only */
+@media \0screen {
+	.MMLTable table thead tr th span { padding-top:3px; padding-bottom:4px; }
+	.MnetMusicList .MMLTable .disabled { color:#b3b3b3 !important; }
+}
+
+
+/* 검?�쪽 ?�이 780 리스??*/
+.MnetMusicListSearch { width:780px; }
+.MnetMusicListSearch  table col.MMLItemTitle { width:290px; }
+.MnetMusicListSearch  table col.MMLItemArtist { width:120px; }
+.MnetMusicListSearch table tbody tr td.MMLItemArtist div.MMLIArtist_Box  { width:120px; }
+.MnetMusicListSearch .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box { width:290px; }
+.MnetMusicListSearch .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box .MMLITitleSong_Box { width:265px; }
+.MnetMusicListSearch .MMLTable .MMLItemArtist .musition {display:block;padding:3px 0 0 9px;font-size:11px;}
+.MnetMusicListSearch .MMLTable .MMLItemArtist .musition span {color:#767676;}
+.MnetMusicListSearch .MMLTable .MMLI_Artist, .MnetMusicList .MMLTable .MMLI_Album {float:none;}
+.MnetMusicListSearch .MMLTable table tbody tr td a strong {color:#0000CC;}
+
+/*20150320*/
+.MnetMusicList .btn_CDQ{background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif) no-repeat -120px -228px ; width:32px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MnetMusicList .btn_CDQ:hover{background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif) no-repeat -170px -228px ;}
+/*.MnetMusicList .btn_CDQ_off{background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif) no-repeat -170px -228px ; width:32px; height:15px;cursor:default;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}*/
+
+.MnetMusicList .btn_MAQ{background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif) no-repeat -120px -209px ; width:32px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MnetMusicList .btn_MAQ:hover{background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif) no-repeat -170px -209px ;}
+/*.MnetMusicList .btn_MAQ_off{background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif) no-repeat -170px -209px ; width:32px; height:15px;cursor:default;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}*/
+
+.MnetMusicList .btn_ALBUM {background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif?v=2) no-repeat -220px -209px ; width:46px; height:15px;margin-left:7px !important;text-indent:-9999px; overflow:hidden;display:inline-block;margin:0 auto;}
+.MnetMusicList .btn_ALBUM:hover{background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif?v=2) no-repeat -270px -209px ;}
+
+.MnetMusicList .btn_DRM {background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif?v=2) no-repeat 0px -228px ; width:32px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;}
+.MnetMusicList .btn_DRM:hover {background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif?v=2) no-repeat -35px -228px ;}
+.MnetMusicList .btn_DRM_off {background:url(http://mnetimg.mnet.com/images/common/music_btn_2014.gif?v=2) no-repeat -70px -228px ; width:32px; height:15px;margin-left:9px !important;text-indent:-9999px; overflow:hidden;display:inline-block;float:left;cursor:default;}
+
+.MnetMusicListDown .MMLTable table tbody tr td.MMLItemDown .btn_MAQ, .MnetMusicListDown .MMLTable table tbody tr td.MMLItemDown .btn_CDQ, .MnetMusicList a.btn_drm { margin-left:13px !important; }
+.MnetMusicListDown .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Box.myinfo {width:350px;}

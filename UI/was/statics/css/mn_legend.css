@@ -1,0 +1,480 @@
+@charset "utf-8";
+/* CSS Document */
+/* ���߰� */
+.legend_tab {position:relative; width:980px; height:86px; margin-top:30px; background:#fff; }
+.legend_tab .top_tab {overflow:hidden; height:100%; }
+.legend_tab .top_tab li {float:left;}
+.legend_tab .top_tab a {display:block; overflow:hidden; width:490px; height:38px; background:url('http://mnetimg.mnet.com/images/music/legend/legend_tab2.gif?ver=3') no-repeat; text-indent:-9999px; }
+.legend_tab .top_tab .tab1 a {background-position:0 0; }
+.legend_tab .top_tab .tab1 a.on  {background-position:0 -160px;}
+.legend_tab .top_tab .tab2 a {background-position:-490px -160px; }
+.legend_tab .top_tab .tab2 a.on {background-position:-490px 0; }
+.legend_tab .top_tab ul { display:none; position:absolute; left:0; top:38px; overflow:hidden; padding:0 0 0 25px; width:953px; height:47px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; border-left:1px solid #ccc; }
+.legend_tab .top_tab li li a {height:47px;}
+.legend_tab .top_tab .tab1_1 a {width:145px; background-position:-25px -38px;}
+.legend_tab .top_tab .tab1_2 a {width:105px; background-position:-170px -38px;}
+.legend_tab .top_tab .tab1_3 a {width:105px; background-position:-275px -38px;}
+.legend_tab .top_tab .tab1_1 a.on {background-position:-25px -198px;}
+.legend_tab .top_tab .tab1_2 a.on {background-position:-170px -198px;}
+.legend_tab .top_tab .tab1_3 a.on {background-position:-275px -198px;}
+.legend_tab .top_tab .tab2_1 a {width:106px; background-position:-25px -86px;}
+.legend_tab .top_tab .tab2_2 a {width:98px; background-position:-131px -86px;}
+.legend_tab .top_tab .tab2_3 a {width:98px; background-position:-229px -86px;}
+.legend_tab .top_tab .tab2_4 a {width:97px; background-position:-327px -86px;}
+.legend_tab .top_tab .tab2_5 a {width:103px; background-position:-424px -86px;}
+.legend_tab .top_tab .tab2_6 a {width:108px; background-position:-535px -86px;}
+.legend_tab .top_tab .tab2_7 a {width:108px; background-position:-642px -86px;}
+.legend_tab .top_tab .tab2_1 a.on {background-position:-25px -246px;}
+.legend_tab .top_tab .tab2_2 a.on {background-position:-131px -246px;}
+.legend_tab .top_tab .tab2_3 a.on {background-position:-229px -246px;}
+.legend_tab .top_tab .tab2_4 a.on {background-position:-327px -246px;}
+.legend_tab .top_tab .tab2_5 a.on {background-position:-424px -246px;}
+.legend_tab .top_tab .tab2_6 a.on {background-position:-535px -246px;}
+.legend_tab .top_tab .tab2_7 a.on {background-position:-642px -246px;}
+
+.top_visual {background:#fff url('http://mnetimg.mnet.com/images/music/legend/img_legend_top2.jpg') no-repeat 0 20px; display:block; width:980px; height:320px; padding-top:20px; position:relative;}
+.top_visual .vod {position:relative; top:38px; left:505px; width:450px;}
+.top_visual .vod .btn_play {position:absolute; background:url('http://mnetimg.mnet.com/images/music/legend/btn_player_legend.png') no-repeat; display:block; width:400px; height:225px;}
+.top_visual a.link_go {position:absolute; display:block; top:75px; left:505px; width:400px; height:242px;}
+
+.event_area {border-bottom:2px solid #676767; background:#fff; padding-top:30px; height:150px; position:relative;}
+.event_area dl.event_box {}
+.event_area dl.event_box dt {background:#fff url('http://mnetimg.mnet.com/images/music/legend/img_event.jpg') no-repeat 0 0; width:165px; height:132px; display:block; float:left; margin-left:24px;}
+.event_area dl.event_box dd {font-size:16px; font-weight:bold; color:#454545; padding:0 0 0 37px; line-height:24px; float:left; border-left:1px solid #e5e4e4; margin:6px 0;}
+.event_area dl.event_box dd em {color:#d80e28; font-weight:bold;}
+.event_area dl.event_box dd dl.date_box {border:1px solid #dfdfdf; border-right:0; font-size:12px; float:left; margin-top:18px;}
+.event_area dl.event_box dd dl.date_box dt {background:#f1f1f1; border-right:1px solid #d4d7db; color:#000; width:45px; height:50px; float:left; font-weight:bold; line-height:50px; font-size:12px; text-align:center; margin:0;}
+.event_area dl.event_box dd dl.date_box dd {border-right:1px solid #d4d7db; border-left:0; color:#666; padding:0 50px 0 16px; float:left; font-size:12px; line-height:50px; font-weight:normal; margin:0;}
+.event_area a.layer_close {background:#fff url('http://mnetimg.mnet.com/images/music/legend/btn_legend.gif') no-repeat right -29px; display:block; width:21px; height:21px; position:absolute; top:14px; right:0; text-indent:-9999px; overflow:hidden; display:none;}
+
+/*cont_legend*/
+#content.cont_legend {background:url('http://mnetimg.mnet.com/images/music/legend/bg_legend2.gif') repeat-y 0 0; width:730px; padding-top:0;}
+#content.cont_legend2 {width:730px;padding-top:0;}
+#content.cont_legend3 {width:980px;padding:0 0 50px 0;background:#fff;}
+
+.performance_part {padding:40px 30px 20px; border-left:1px solid #ddd;}
+.performance_part h2 {height:25px;}
+.performance_part h2 span {float:left;}
+.performance_part h2 span.btn_area {float:left;}
+.performance_part h2 span.btn_area em.line {background:#e0e0e0; display:block; float:left; width:1px; height:20px; margin:0 20px 0 15px;}
+.performance_part h2 span.btn_area a.btn_all_listen {background:url('http://mnetimg.mnet.com/images/music/legend/btn_legend.gif') no-repeat 0 -77px; display:block; width:50px; height:23px; text-indent:-9999px; overflow:hidden; float:left;margin-right:5px;}
+.performance_part h2 span.btn_area a.btn_my_add {background:url("http://mnetimg.mnet.com/images/common/music_btn.gif") no-repeat scroll 0 -69px !important; display:block; width:83px !important; text-indent:-9999px;overflow:hidden; float:left;}
+.performance_part .legendartist_info dl {width:665px;}
+.performance_part .legendartist_info dd.descript2 {width:480px;}
+
+.year_part {background:url('http://mnetimg.mnet.com/images/music/legend/bg_yearpart.gif') no-repeat 0 bottom; padding:40px 0 20px;}
+.year_part h2 {height:50px;}
+.year_part h2 em.dot_big {background:url('http://mnetimg.mnet.com/images/music/legend/img_dot.png') no-repeat 13px 5px; width:78px; height:29px; dispaly:block; float:left; text-indent:-9999px;}
+.year_part h2 span {float:left;}
+.year_part h2 span.btn_area {float:left; margin-top:12px;}
+.year_part h2 span.btn_area em.line {background:#e0e0e0; display:block; float:left; width:1px; height:20px; margin:2px 20px 0 21px;}
+.year_part h2 span.btn_area a.btn_all_listen {background:url('http://mnetimg.mnet.com/images/music/legend/btn_legend.gif') no-repeat 0 -77px; display:block; width:50px; height:23px; text-indent:-9999px; overflow:hidden; float:left;margin-right:5px;}
+.year_part h2 span.btn_area a.btn_my_add {background:url("http://mnetimg.mnet.com/images/common/music_btn.gif") no-repeat scroll 0 -69px !important; display:block; width:83px !important; text-indent:-9999px;overflow:hidden; float:left;}
+
+.legendartist_info {width:700px; position:relative; clear:both; margin-bottom:25px; *zoom:1;}
+.legendartist_info:after {content:""; display:block; clear:both;}
+.legendartist_info em.dot_small {background:url('http://mnetimg.mnet.com/images/music/legend/img_dot.png') no-repeat 13px -24px; width:78px; height:20px; display:block; float:left; margin-top:65px; text-indent:-9999px;}
+.legendartist_info dl {width:622px; float:left; padding-top:25px; border-top:1px solid #eeeeee;}
+.legendartist_info dl.first {border-top:0;}
+.legendartist_info dt {height:34px; float:left;}
+.legendartist_info dd {display:block; float:left; width:430px;}
+.legendartist_info .thumbnail {width:160px; height:160px; position:relative; display:block; float:left; margin-right:20px;}
+.legendartist_info .thumbnail .pic_b {width:158px; height:158px; position:absolute;}
+.legendartist_info dd.no1 {width:60px; height:76px; float:left; margin-right:15px; background:url('http://mnetimg.mnet.com/images/music/legend/icon_no1.gif') left top no-repeat;}
+.legendartist_info dd.ganre { color:#767676; width:410px; height:29px; line-height:18px; float:left;}
+.legendartist_info dd.descript {background:url('http://mnetimg.mnet.com/images/music/legend/btn_legend.gif') no-repeat 0 -58px; padding-left:10px; color:#333; font-size:14px; height:18px; margin-bottom:14px;}
+.legendartist_info dd.descript2 {color:#333;  margin-top:30px; line-height:22px;}
+.legendartist_info dd li {width:430px; line-height:22px; white-space:nowrap; overflow:hidden; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; text-overflow:ellipsis; display:block;}
+.legendartist_info dd li a.btn_info {background:url('http://mnetimg.mnet.com/images/music/legend/btn_legend.gif') no-repeat 0 -37px; display:inline-block; width:25px; height:13px; margin-top:-2px; vertical-align:middle;}
+.legendartist_info a.btn_artistpage {background:url('http://mnetimg.mnet.com/images/music/legend/btn_legend.gif') no-repeat 0 0; display:block; width:103px; height:24px; position:absolute; text-indent:-9999px; overflow:hidden; top:25px; right:0;}
+.legendartist_info a.btn_interest {background:url('http://mnetimg.mnet.com/images/music/legend/btn_legend.gif') no-repeat 0 -110px; display:block; width:62px; height:24px; position:absolute; text-indent:-9999px; overflow:hidden; top:25px; right:0;}
+.legendartist_info a.btn_listen {background:url('http://mnetimg.mnet.com/images/music/legend/btn_legend.gif') no-repeat 0 -140px; display:block; width:90px; height:24px; position:absolute; text-indent:-9999px; overflow:hidden; top:25px; right:30px;}
+
+.legendartist_info dd li { margin-bottom:3px; line-height:18px; }
+.legendartist_info dd li a.btn_info { float:left; display:block; margin-top:0; position:relative; top:2px; text-indent:-9999px; }
+.legendartist_info dd li a { float:left; max-width:380px; white-space:nowrap; overflow:hidden; text-overflow: ellipsis; }
+.legendartist_info dd.no1 { text-indent:-99999px; } /* ?�접근성 추�? */
+
+#content.cont_intro {width:730px; padding-top:0; *zoom:1;}
+#content.cont_intro h2, .part_artist h2 {background:url('http://mnetimg.mnet.com/images/music/legend/legend_tit.gif') no-repeat; width:385px; height:25px; margin:40px 0 28px; text-indent:-9999px;}
+#content.cont_intro h2.tit_01 {background-position:0 0;}
+#content.cont_intro h2.tit_02 {background-position:0 -30px;}
+#content.cont_intro h2.tit_03 {background-position:0 -60px;}
+#content.cont_intro h2.tit_04 {background-position:0 -230px; width:325px;}
+.part_artist h2.tit_05 {background-position:0 -270px; width:325px; margin:30px 0 15px 15px; background-color:#fff;}
+
+.infobox {margin-left:35px; color:#666; line-height:22px;}
+.infobox dl {padding-bottom:20px;}
+.infobox dt {color:#333; font-size:16px; font-weight:bold; margin-bottom:10px; line-height:29px; clear:both;}
+.infobox dt em {background:url('http://mnetimg.mnet.com/images/music/legend/legend_tit.gif') no-repeat; display:block; float:left; width:26px; height:26px; margin-right:12px; text-indent:-9999px;}
+.infobox dt em.nb_01 {background-position:0 -90px}
+.infobox dt em.nb_02 {background-position:0 -120px}
+.infobox dt em.nb_03 {background-position:0 -150px}
+.infobox dd {line-height:28px; color:#666; margin-left:30px;}
+.infobox dd.mgno  {line-height:28px; color:#666; margin-left:0;}
+.infobox dd table {width:337px; float:left; border:2px solid #b5bfca; color:#666; margin-bottom:20px;}
+.infobox dd table th {border-bottom:1px solid #dce1e6; text-align:center; height:29px;}
+.infobox dd table td {border-bottom:1px solid #dce1e6; border-left:1px solid #dce1e6; text-indent:10px;}
+.infobox dd table td.name {height:29px;text-align:center; font-weight:bold; text-indent:0;}
+.infobox dd table th.bdno {border-bottom:0;}
+
+.visual_01 {background:url('http://mnetimg.mnet.com/images/music/legend/legend_post.jpg') no-repeat 0 0; display:block;  width:673px; height:200px; text-indent:-9999px; margin-top:25px;}
+.visual_02 {background:url('http://mnetimg.mnet.com/images/music/legend/legend_post.jpg') no-repeat 0 -220px; display:block;  width:326px; height:358px; text-indent:-9999px; float:left;}
+.visual_03 {background:url('http://mnetimg.mnet.com/images/music/legend/legend_post.jpg') no-repeat -347px -220px; display:block;  width:326px; height:144px; text-indent:-9999px; float:left;}
+
+.infobox .intro_01 {border:1px solid #ced1d3; border-bottom:0; float:left;}
+.infobox .intro_01 li {border-bottom:1px solid #dce1e6; color:#666; padding:18px 0 0 20px; width:325px; height:52px;}
+.infobox .intro_01 li span {font-weight:bold; font-size:16px; color:#333; display:block; line-height:18px;}
+.infobox .intro_01 li:last-child {height:54px;}
+
+.infobox .intro_02 {border:1px solid #ced1d3; padding:62px 0 0 20px; width:325px; height:80px; float:left; margin:0;}
+.infobox .intro_02 span {font-weight:bold; font-size:16px; color:#333; line-height:18px;}
+
+.infobox .member_list {width:640px; border:1px solid #ced1d3; border-left:0; border-bottom:0;}
+.infobox .member_list li {border-bottom:1px solid #ced1d3; border-left:1px solid #dce1e6; padding:0 0 0 10px; line-height:30px; width:309px; float:left;}
+.infobox .member_list span {font-weight:bold;}
+
+#aside_rnb h3.tit_legend {background:url('http://mnetimg.mnet.com/images/music/legend/tit_legend.gif') no-repeat 0 0; display:block; width:132px; height:14px; text-indent:-9999px;}
+#aside_rnb h3.tit_legendarticle {background:url('http://mnetimg.mnet.com/images/music/legend/tit_legend.gif') no-repeat 0 -20px; display:block; width:47px; height:12px;}
+#aside_rnb h3.tit_legendvod {background:url('http://mnetimg.mnet.com/images/music/legend/tit_legend.gif') no-repeat 0 -35px; display:block; width:47px; height:12px;}
+#aside_rnb h3.tit_legendalbum {background:url('http://mnetimg.mnet.com/images/music/legend/imgset_song.png') no-repeat 0 -180px; display:block; width:47px; height:13px;}
+#aside_rnb h3.tit_legendsong {background:url('http://mnetimg.mnet.com/images/music/legend/tit_legend.gif') no-repeat 0 -50px; display:block; width:132px; height:14px; text-indent:-9999px;}
+
+#aside_rnb .legend_article dl dt span.pic_b {width:68px; height:38px;}
+#aside_rnb .legend_article dt > a { width:70px; }
+#aside_rnb .legend_article dt > a > img { line-height:40px; max-width:70px; _width:70px; max-height:40px; _height:40px; }
+#aside_rnb .legend_article .title {color:#666;}
+
+#aside_rnb .music_spacial.legend_album dl dt {width:50px;}
+#aside_rnb .music_spacial dl dd p {}
+#aside_rnb .legend_album dl dt span.pic_b {width:41px; height:41px;}
+#aside_rnb .legend_album dt > a { width:43px; }
+#aside_rnb .legend_album dt > a > img { line-height:40px; max-width:43px; _width:43px; max-height:40px; _height:40px; }
+#aside_rnb .legend_album .title {color:#666;}
+
+#aside_rnb .legend_vod dl {height:43px;}
+#aside_rnb .legend_vod dl dt {width:76px; height:43px;}
+#aside_rnb .legend_vod dl dd p {height:20px;}
+#aside_rnb .legend_vod dl dt span.pic_b {width:68px; height:41px;}
+#aside_rnb .legend_vod dt > a { width:70px; }
+#aside_rnb .legend_vod dt > a > img { line-height:43px; max-width:70px; _width:70px; max-height:43px; _height:43px; }
+#aside_rnb .legend_vod .descript {color:#727272;}
+#aside_rnb .legend_vod .descript em {color:#cfcfcf;}
+
+.reply_area {width:710px; background:#fff; padding:40px 20px 40px 0; margin:0; border-top:1px solid #dcdcdc; }
+
+.legendy {background:url('http://mnetimg.mnet.com/images/music/legend/legend_year.gif') no-repeat 0 0; display:block; width:132px; height:34px; text-indent:-9999px;}
+.legendy.y1930 {background-position:0 0;}
+.legendy.y1940 {background-position:0 -60px;}
+.legendy.y1950 {background-position:0 -120px;}
+.legendy.y1960 {background-position:0 -180px;}
+.legendy.y1970 {background-position:0 -240px;}
+.legendy.y1980 {background-position:0 -300px;}
+.legendy.y1990 {background-position:0 -360px;}
+.legendy.y2000 {background-position:0 -420px;}
+.legendy.y2010 {background-position:0 -480px;}
+
+.navi_legend {position:absolute; z-index:100; top:40px;}
+.navi_legend .legendynavi {background:url('http://mnetimg.mnet.com/images/music/legend/legend_year.gif') no-repeat 0 0; display:block; width:59px; height:33px; text-indent:-9999px; overflow:hidden;}
+.navi_legend .legendynavi.navi1930 {background-position:0 -530px; height:33px;}
+.navi_legend .legendynavi.navi1940 {background-position:0 -562px;}
+.navi_legend .legendynavi.navi1950 {background-position:0 -594px;}
+.navi_legend .legendynavi.navi1960 {background-position:0 -626px;}
+.navi_legend .legendynavi.navi1970 {background-position:0 -658px;}
+.navi_legend .legendynavi.navi1980 {background-position:0 -690px;}
+.navi_legend .legendynavi.navi1990 {background-position:0 -722px;}
+.navi_legend .legendynavi.navi2000 {background-position:0 -754px;}
+.navi_legend .legendynavi.navi2010 {background-position:0 -786px;}
+
+.navi_legend .legendynavi.navi1930:hover {background-position:-60px -530px; height:33px;}
+.navi_legend .legendynavi.navi1940:hover {background-position:-60px -562px;}
+.navi_legend .legendynavi.navi1950:hover {background-position:-60px -594px;}
+.navi_legend .legendynavi.navi1960:hover {background-position:-60px -626px;}
+.navi_legend .legendynavi.navi1970:hover {background-position:-60px -658px;}
+.navi_legend .legendynavi.navi1980:hover {background-position:-60px -690px;}
+.navi_legend .legendynavi.navi1990:hover {background-position:-60px -722px;}
+.navi_legend .legendynavi.navi2000:hover {background-position:-60px -754px;}
+.navi_legend .legendynavi.navi2010:hover {background-position:-60px -786px;}
+
+.navi_legend .legendynavi.navi1930.on {background-position:-120px -530px; height:33px;}
+.navi_legend .legendynavi.navi1940.on {background-position:-120px -562px;}
+.navi_legend .legendynavi.navi1950.on {background-position:-120px -594px;}
+.navi_legend .legendynavi.navi1960.on {background-position:-120px -626px;}
+.navi_legend .legendynavi.navi1970.on {background-position:-120px -658px;}
+.navi_legend .legendynavi.navi1980.on {background-position:-120px -690px;}
+.navi_legend .legendynavi.navi1990.on {background-position:-120px -722px;}
+.navi_legend .legendynavi.navi2000.on {background-position:-120px -754px;}
+.navi_legend .legendynavi.navi2010.on {background-position:-120px -786px;}
+
+.legenda {background:url('http://mnetimg.mnet.com/images/music/legend/name_artist.gif') no-repeat; display:block; width:288px; height:30px; text-indent:-9999px;}
+.legenda.artist_01 {background-position:0 0;}
+.legenda.artist_02 {background-position:0 -37px;}
+.legenda.artist_03 {background-position:0 -74px;}
+.legenda.artist_04 {background-position:0 -109px;}
+.legenda.artist_05 {background-position:0 -145px;}
+.legenda.artist_06 {background-position:0 -184px;}
+.legenda.artist_07 {background-position:0 -218px;}
+.legenda.artist_08 {background-position:0 -254px;}
+.legenda.artist_09 {background-position:0 -291px;}
+.legenda.artist_10 {background-position:0 -326px;}
+.legenda.artist_11 {background-position:0 -362px;}
+.legenda.artist_12 {background-position:0 -398px;}
+.legenda.artist_13 {background-position:0 -434px;}
+.legenda.artist_14 {background-position:0 -470px;}
+.legenda.artist_15 {background-position:0 -506px;}
+.legenda.artist_16 {background-position:0 -542px;}
+.legenda.artist_17 {background-position:0 -578px;}
+.legenda.artist_18 {background-position:0 -614px;}
+.legenda.artist_19 {background-position:0 -650px;}
+.legenda.artist_20 {background-position:0 -686px;}
+.legenda.artist_21 {background-position:0 -722px;}
+.legenda.artist_22 {background-position:0 -759px;}
+.legenda.artist_23 {background-position:0 -796px;}
+.legenda.artist_24 {background-position:0 -830px;}
+.legenda.artist_25 {background-position:0 -867px;}
+.legenda.artist_26 {background-position:0 -902px;}
+.legenda.artist_27 {background-position:0 -938px;}
+.legenda.artist_28 {background-position:0 -974px;}
+.legenda.artist_29 {background-position:0 -1010px;}
+.legenda.artist_30 {background-position:0 -1046px;}
+.legenda.artist_31 {background-position:0 -1082px;}
+.legenda.artist_32 {background-position:0 -1118px;}
+.legenda.artist_33 {background-position:0 -1154px;}
+.legenda.artist_34 {background-position:0 -1191px;}
+.legenda.artist_35 {background-position:0 -1226px;}
+.legenda.artist_36 {background-position:0 -1262px;}
+.legenda.artist_37 {background-position:0 -1298px;}
+.legenda.artist_38 {background-position:0 -1334px;}
+.legenda.artist_39 {background-position:0 -1370px;}
+.legenda.artist_40 {background-position:0 -1406px;}
+.legenda.artist_41 {background-position:0 -1442px;}
+.legenda.artist_42 {background-position:0 -1478px;}
+.legenda.artist_43 {background-position:0 -1514px;}
+.legenda.artist_44 {background-position:0 -1550px;}
+.legenda.artist_45 {background-position:0 -1586px;}
+.legenda.artist_46 {background-position:0 -1622px;}
+.legenda.artist_47 {background-position:0 -1658px;}
+.legenda.artist_48 {background-position:0 -1694px;}
+.legenda.artist_49 {background-position:0 -1730px;}
+.legenda.artist_50 {background-position:0 -1766px;}
+.legenda.artist_51 {background-position:-335px 0;}
+.legenda.artist_52 {background-position:-335px -37px;}
+.legenda.artist_53 {background-position:-335px -74px;}
+.legenda.artist_54 {background-position:-335px -109px;}
+.legenda.artist_55 {background-position:-335px -145px;}
+.legenda.artist_56 {background-position:-335px -184px;}
+.legenda.artist_57 {background-position:-335px -218px;}
+.legenda.artist_58 {background-position:-335px -254px;}
+.legenda.artist_59 {background-position:-335px -291px;}
+.legenda.artist_60 {background-position:-335px -326px;}
+.legenda.artist_61 {background-position:-335px -362px;}
+.legenda.artist_62 {background-position:-335px -398px;}
+.legenda.artist_63 {background-position:-335px -434px;}
+.legenda.artist_64 {background-position:-335px -470px;}
+.legenda.artist_65 {background-position:-335px -506px;}
+.legenda.artist_66 {background-position:-335px -542px;}
+.legenda.artist_67 {background-position:-335px -578px;}
+.legenda.artist_68 {background-position:-335px -614px;}
+.legenda.artist_69 {background-position:-335px -650px;}
+.legenda.artist_70 {background-position:-335px -686px;}
+.legenda.artist_71 {background-position:-335px -722px;}
+.legenda.artist_72 {background-position:-335px -759px;}
+.legenda.artist_73 {background-position:-335px -796px;}
+.legenda.artist_74 {background-position:-335px -830px;}
+.legenda.artist_75 {background-position:-335px -867px;}
+.legenda.artist_76 {background-position:-335px -902px;}
+.legenda.artist_77 {background-position:-335px -938px;}
+.legenda.artist_78 {background-position:-335px -974px;}
+.legenda.artist_79 {background-position:-335px -1010px;}
+.legenda.artist_80 {background-position:-335px -1046px;}
+.legenda.artist_81 {background-position:-335px -1082px;}
+.legenda.artist_82 {background-position:-335px -1118px;}
+.legenda.artist_83 {background-position:-335px -1154px;}
+.legenda.artist_84 {background-position:-335px -1191px;}
+.legenda.artist_85 {background-position:-335px -1226px;}
+.legenda.artist_86 {background-position:-335px -1262px;}
+.legenda.artist_87 {background-position:-335px -1298px;}
+.legenda.artist_88 {background-position:-335px -1334px;}
+.legenda.artist_89 {background-position:-335px -1370px;}
+.legenda.artist_90 {background-position:-335px -1406px;}
+.legenda.artist_91 {background-position:-335px -1442px;}
+.legenda.artist_92 {background-position:-335px -1478px;}
+.legenda.artist_93 {background-position:-335px -1514px;}
+.legenda.artist_94 {background-position:-335px -1550px;}
+.legenda.artist_95 {background-position:-335px -1586px;}
+.legenda.artist_96 {background-position:-335px -1622px;}
+.legenda.artist_97 {background-position:-335px -1658px;}
+.legenda.artist_98 {background-position:-335px -1694px;}
+.legenda.artist_99 {background-position:-335px -1730px;}
+.legenda.artist_100 {background-position:-335px -1766px;}
+
+.music_list_btn.socialBtn {padding-top:10px; height:25px; background:#fff; margin-bottom:0;}
+.lay_add .btn_addalbum {width:67px;}
+.lay_wrap ul.add_myalbum li a {font-weight:normal;}
+
+.btn_top {background: url("http://mnetimg.mnet.com/images/music/legend/btn_top.png") no-repeat 0 0;height:33px;overflow:hidden;left:50%;text-indent:-9999px; width:33px;bottom:160px; position: fixed; left:50%; margin-left:473px; display:none;}
+
+.legendp {background:url('http://mnetimg.mnet.com/images/music/legend/tits_part.gif') no-repeat 0 0; display:block; width:110px; height:20px; text-indent:-9999px;}
+.legendp.part1 {background-position:0 0;}
+.legendp.part2 {background-position:0 -30px; width:52px;}
+.legendp.part3 {background-position:0 -60px; width:70px;}
+.legendp.part4 {background-position:-2px -90px; width:67px;}
+.legendp.part5 {background-position:0 -120px; width:54px;}
+.legendp.part6 {background-position:0 -150px;}
+
+.part_artist {background:#fff; padding-top:30px;}
+.part_artist li {float:left;}
+.part_artist li a {background:url('http://mnetimg.mnet.com/images/music/legend/tab_part.gif') no-repeat; display:block; float:left; width:163px; height:120px;}
+.part_artist li a.part_01 {background-position:0 0; width:164px;}
+.part_artist li a.part_02 {background-position:-164px 0;}
+.part_artist li a.part_03 {background-position:-327px 0;}
+.part_artist li a.part_04 {background-position:-491px 0; width:164px;}
+.part_artist li a.part_05 {background-position:-654px 0;}
+.part_artist li a.part_06 {background-position:-817px 0;}
+.part_artist li a:hover.part_01 {background-position:0 -150px; width:164px;}
+.part_artist li a:hover.part_02 {background-position:-164px -150px;}
+.part_artist li a:hover.part_03 {background-position:-327px -150px;}
+.part_artist li a:hover.part_04 {background-position:-491px -150px; width:164px;}
+.part_artist li a:hover.part_05 {background-position:-654px -150px;}
+.part_artist li a:hover.part_06 {background-position:-817px -150px;}
+.part_artist li a.part_01.selected {background-position:0 -300px; width:164px;}
+.part_artist li a.part_02.selected {background-position:-164px -300px;}
+.part_artist li a.part_03.selected {background-position:-327px -300px;}
+.part_artist li a.part_04.selected {background-position:-491px -300px; width:164px;}
+.part_artist li a.part_05.selected {background-position:-654px -300px;}
+.part_artist li a.part_06.selected {background-position:-817px -300px;}
+
+.part_artist li a { text-indent:-99999px; } /* 접근성추가 */
+
+.infobox2 {background:url('http://mnetimg.mnet.com/images/music/legend/legend_post2.jpg') no-repeat; height:1012px; padding:3px 0 0 135px; width:535px; color:#333; line-height:22px; margin-left:35px;}
+.infobox2 dl {border-bottom:1px solid #e3e3e3; padding:30px 0 20px;}
+.infobox2 dt {font-size:16px; font-weight:bold; margin-bottom:10px;}
+.infobox2 dd {color:#666;}
+.infobox2 dd strong {display:block; margin:10px 0 5px; color:#333;}
+
+#content_wrap {*zoom:1;}
+#content_wrap:after {content:""; display:block; clear:both;}
+
+/* 20130912 */
+.legenda.artist_101 {background-position:-335px -1800px;}
+.legenda.artist_102 {background-position:-335px -1830px;}
+.legenda.artist_103 {background-position:-335px -1860px;}
+.legenda.artist_104 {background-position:-335px -1890px;}
+.legenda.artist_105 {background-position:-335px -1920px;}
+.legenda.artist_106 {background-position:-335px -1950px;}
+.legenda.artist_107 {background-position:-335px -1980px;}
+.legenda.artist_108 {background-position:-335px -2010px;}
+
+/* legend 100 song */
+.mylegend { padding:26px 0 0 0; height:1391px; background:#fff url('http://mnetimg.mnet.com/images/music/legend/bg_mylegend.gif') no-repeat 0 26px; }
+.mylegendCon1 { margin:35px 0 0 131px; height:476px; background:url('http://mnetimg.mnet.com/images/music/legend/mylegend1.png') no-repeat 0 0; text-indent:-9999px; }
+.mylegendCon1 strong { display:block; }
+.mylegendCon2 { margin:0 0 0 40px; height:308px; background:url('http://mnetimg.mnet.com/images/music/legend/mylegend2.png') no-repeat 0 0; text-indent:-9999px; }
+.mylegendCon2 em { display:block; }
+.mylegendCon3 .mov { margin:0 0 0 170px; }
+.mylegendCon3 .movBtnList { margin:22px 0 0 276px; }
+.mylegendCon3 .movBtnList a { float:left; overflow:hidden; margin:0 51px 0 0; width:111px; height:112px; background:url('http://mnetimg.mnet.com/images/music/legend/mylegend4.png') no-repeat 0 0;  text-indent:-9999px; }
+.mylegendCon3 .movBtnList a.movBtn1 { background-position:0 0; }
+.mylegendCon3 .movBtnList a.movBtn2 { background-position:-162px 0; }
+.mylegendCon3 .movBtnList a.movBtn3 { background-position:-323px 0; }
+.legendReple { background-color:#fff; }
+.legendReple .reply_area { width:980px; margin:0 0 -30px 0; padding:0 0 0 0; border-top:none; background-color:#fff; }
+.legendReple #cmt .cmtWrite { background-color:#fff; }
+
+.legendSong .top_visual {background:#fff url('http://mnetimg.mnet.com/images/music/legend/img_legendson_top.jpg') no-repeat 0 20px; display:block; width:980px; height:320px; padding-top:20px; position:relative;}
+.legendSong .top_visual .vod {position:relative; top:38px; left:505px; width:450px;}
+.legendSong .top_visual2 {background:url('http://mnetimg.mnet.com/images/music/legend/img_legendson_top2.jpg') no-repeat 0 20px; display:block; width:980px; height:374px; padding-top:20px; position:relative; text-indent:-9999px;}
+.legendSong .top_visual3 {background:url('http://mnetimg.mnet.com/images/music/legend/img_legendson_top3.jpg') no-repeat 0 20px; display:block; width:980px; height:470px; padding-top:20px; position:relative;}
+.legendSong .top_visual3 dl {position:absolute;top:350px;left:305px;}
+.legendSong .top_visual3 dt {text-indent:-9999px;}
+.legendSong .top_visual3 dd {width:365px;font-size:14px;color:#fff;font-weight:bold;text-align:center;}
+.legendSong .top_visual3 dd strong {display:block;font-size:40px;line-height:53px;}
+
+.legendSong .year_part h2 span.btn_area {float:right; margin:12px 20px 0 0;}
+.legendSong .year_part h2 span.btn_area a {display:block;float:left;margin-right:5px;text-indent:-9999px;overflow:hidden;background:url('http://mnetimg.mnet.com/images/music/legend/btn_legend.gif') no-repeat;}
+.legendSong .year_part h2 span.btn_area a.btnAllisten {width:60px;height:23px;background-position:0 -170px;}
+.legendSong .year_part h2 span.btn_area a.btnDown {width:51px;height:23px;background-position:0 -200px;}
+.legendSong .year_part h2 span.btn_area a.btnMybox {width:82px;height:23px;background-position:0 -230px;}
+
+.legendSong .legendartist_info dt {font-size:16px;font-weight:bold;}
+.legendSong .legendartist_info dt {height:25px;}
+.legendSong .legendartist_info dt a.btn_info {display:block;float:left;width:22px;height:13px;margin-top:2px;vertical-align:middle;text-indent:-9999px;background:url('http://mnetimg.mnet.com/images/music/legend/btn_legend.gif') no-repeat 0 -37px;}
+.legendSong .legendartist_info dd.ganre {float:left;width:410px;height:40px;margin:0 0 0 23px;font-size:14px;color:#666;line-height:18px;}
+.legendSong .legendartist_info dd.descript2 {float:left;width:410px;margin:0 0 0 23px;color:#666;}
+.legendSong .legendartist_info dd.descript2 em {color:#aaa;}
+
+.legendSong .titSonglist {display:block;width:170px;height:29px;margin:45px 0 10px;text-indent:-9999px;background:url('http://mnetimg.mnet.com/images/music/legend/imgset_song.png') no-repeat 0 -150px;}
+.legendSong .MnetMusicList {width:980px;}
+.legendSong .MnetMusicListNew .MMLTable table tbody tr td.MMLItemTitle div.MMLITitle_Wrap {width:760px;}
+
+.legendSong #content.cont_intro h2, .legendSong .part_artist h2 {background:url('http://mnetimg.mnet.com/images/music/legend/imgset_song.png') no-repeat; width:385px; height:25px; margin:40px 0 28px; text-indent:-9999px;}
+.legendSong #content.cont_intro h2.tit_01 {background-position:0 0;}
+.legendSong #content.cont_intro h2.tit_02 {background-position:0 -30px;}
+
+.legendSong .infobox {margin-left:35px; color:#666; line-height:22px;}
+.legendSong .infobox dl {padding-bottom:20px;}
+.legendSong .infobox dt {color:#333; font-size:16px; font-weight:bold; margin-bottom:10px; line-height:29px; clear:both;}
+.legendSong .infobox dt em {background:url('http://mnetimg.mnet.com/images/music/legend/imgset_song.png') no-repeat; display:block; float:left; width:26px; height:26px; margin-right:12px; text-indent:-9999px;}
+.legendSong .infobox dt em.nb_01 {background-position:0 -60px}
+.legendSong .infobox dt em.nb_02 {background-position:0 -90px}
+.legendSong .infobox dt em.nb_03 {background-position:0 -120px}
+.legendSong .infobox dd {line-height:20px; color:#666; margin:0 10px 0 30px;}
+.legendSong .infobox dd.songTable {margin:0 10px 0 0px;}
+.legendSong .infobox dd.songTable .secondTable {margin-left:-2px;}
+
+.mylegendVote {float:left;padding:37px 14px;border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7;}
+.mylegendVote li  {position:relative;float:left;width:93px;height:163px;border:1px solid transparent;
+	-webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+.mylegendVote li:hover {border:1px solid #dbdbdb;background:#ececec;
+	-webkit-transition: all 350ms ease-out;
+    -moz-transition: all 350ms ease-out;
+    -ms-transition: all 350ms ease-out;
+    -o-transition: all 350ms ease-out;
+    transition: all 350ms ease-out;
+}
+.mylegendVote li a {display:block;}
+.mylegendVote li a:hover {text-decoration:none;}
+.mylegendVote dl {margin:9px 9px 0;}
+.mylegendVote dt {width:73px;height:73px;border:1px solid #b8b8b8;background:#c3c3c3;}
+.mylegendVote dt img {width:73px;height:73px;}
+.mylegendVote dd {margin-top:10px;color:#676767;text-align:center;height:36px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.mylegendVote dd strong {display:block;color:#353535;height:18px;line-height:18px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.mylegendVote a.myVote {position:absolute;left:50%;bottom:10px;display:block;width:21px;height:24px;margin:0px 0 0 -10px;text-align:center;background:url('http://mnetimg.mnet.com/images/music/legend/imgset_song.png') no-repeat 0 -274px;}
+.mylegendVote a.myVote:hover {border:0 none;}
+.mylegendVote a.myVote.selected {position:absolute;left:50%;bottom:10px;display:block;width:21px;height:24px;margin:0px 0 0 -10px;text-align:center;background:url('http://mnetimg.mnet.com/images/music/legend/imgset_song.png') no-repeat -30px -274px;}
+
+.voteBtn {clear:both;padding:45px 0 50px;background:#f9f9f9;border:1px solid #e7e7e7;border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7;}
+.voteBtn a {display:block;width:264px;height:67px;margin:0 auto;text-indent:-9999px;background:url('http://mnetimg.mnet.com/images/music/legend/imgset_song.png') no-repeat 0 -200px;}
+
+/*tabHlegend*/
+.tabHlegend {display:block;float:left;padding-top:20px;background:#fff;}
+.tabHlegend li {float:left;}
+.tabHlegend li a {display:block;float:left;width:327px;height:65px;text-indent:-9999px;background:url('http://mnetimg.mnet.com/images/music/legend/tab_hlegend.gif?ver=3') no-repeat;}
+.tabHlegend li a.tab_01 {background-position:0 0;}
+.tabHlegend li a.tab_02 {background-position:-327px 0;}
+.tabHlegend li a.tab_03 {width:326px;background-position:-654px 0;}
+.tabHlegend li.selected a.tab_01 {background-position:0 -65px;}
+.tabHlegend li.selected a.tab_02 {background-position:-327px -65px;}
+.tabHlegend li.selected a.tab_03 {width:326px;background-position:-654px -65px;}
+.legendartist_info.hlegend dl {width:710px; float:left; padding-bottom:25px; border-bottom:1px solid #eeeeee; border-top:0 none;}
+
+.legendartist_info.hlegend {width:740px;}
+.legendartist_info.hlegend dl {width:160px;height:200px;margin-right:25px;border:0 none;}
+.legendartist_info.hlegend dt {float:none;height:auto;font-size:14px;line-height:18px;}
+.legendartist_info.hlegend dt a {float:left;width:135px;}
+.legendSong .legendartist_info.hlegend dd.descript2 {margin:10px 0 0 0;width:auto;line-height:16px;}
+.legendartist_info.hlegend .thumbnail {float:none;width:140px;height:150px;}
+.legendartist_info.hlegend .thumbnail a {display:block;}
+.legendartist_info.hlegend .thumbnail .pic_b {width:138px;height:138px;}
+.legendartist_info.hlegend .thumbnail img {width:140px;height:140px;}
+
+/*legendeventNote*/
+.legendeventNote {width:980px;height:903px;text-indent:-9999px;background:#fff url('http://mnetimg.mnet.com/images/music/legend/img_noteEvent.jpg') no-repeat 0 26px; }
+.legendeventNote h1 {height:510px;}
+.legendeventNote dl {height:180px;}
+.legendeventNote ul {height:160px;}
