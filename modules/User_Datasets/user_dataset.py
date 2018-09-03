@@ -11,34 +11,34 @@ import os
 
 #
 
-# users_interests = [["Hadoop", "Big Data", "HBase", "Java", "Spark", "Storm", "Cassandra"],
-#                    ["NoSQL", "MongoDB", "Cassandra", "HBase", "Postgres"],
-#                    ["Python", "scikit-learn", "scipy", "numpy", "statsmodels", "pandas"],
-#                    ["R", "Python", "statistics", "regression", "probability"],
-#                    ["machine learning", "regression", "decision trees", "libsvm"],
-#                    ["Python", "R", "Java", "C++", "Haskell", "programming languages"],
-#                    ["statistics", "probability", "mathmatics", "theory"],
-#                    ["machine learning", "scikit-learn", "Mahout", "neural networks"],
-#                    ["neual networks", "deep learning", "Big Data", "artifical intelligence"],
-#                    ["Hadoop", "Java", "MapReduce", "Big Data"],
-#                    ["statistics", "R", "statsmodels"],
-#                    ["C++", "deeplearning", "artificial intelligence", "probability"],
-#                    ["pandas", "R", "Python"],
-#                    ["databases", "HBase", "postgres", "MySQL", "MongoDB"],
-#                    ["libsvm", "regression", "support vector machines"]]
+users_interests = [["Hadoop", "Big Data", "HBase", "Java", "Spark", "Storm", "Cassandra"],
+                   ["NoSQL", "MongoDB", "Cassandra", "HBase", "Postgres"],
+                   ["Python", "scikit-learn", "scipy", "numpy", "statsmodels", "pandas"],
+                   ["R", "Python", "statistics", "regression", "probability"],
+                   ["machine learning", "regression", "decision trees", "libsvm"],
+                   ["Python", "R", "Java", "C++", "Haskell", "programming languages"],
+                   ["statistics", "probability", "mathmatics", "theory"],
+                   ["machine learning", "scikit-learn", "Mahout", "neural networks"],
+                   ["neual networks", "deep learning", "Big Data", "artifical intelligence"],
+                   ["Hadoop", "Java", "MapReduce", "Big Data"],
+                   ["statistics", "R", "statsmodels"],
+                   ["C++", "deeplearning", "artificial intelligence", "probability"],
+                   ["pandas", "R", "Python"],
+                   ["databases", "HBase", "postgres", "MySQL", "MongoDB"],
+                   ["libsvm", "regression", "support vector machines"]]
 
-music_list = pandas.read_csv("__result__/mnet_weeks_100.csv")
-list = music_list["title"]
-list = numpy.array(list).tolist()
-print(list, len(list))
+# music_list = pandas.read_csv("__result__/mnet_weeks_100.csv")
+# list = music_list["title"]
+# list = numpy.array(list).tolist()
+# print(list, len(list))
 
-users_interests = []
-
-for user in range(50):
-    songs = []
-    for music_index in range(50):
-        songs.append(list[randint(0, len(list)-1)])
-    users_interests.append(songs)
-
-for user_interests in users_interests:
-    print(user_interests)
+# users_interests = []
+#
+# for user in range(50):
+#     songs = []
+#     for music_index in range(50):
+#         songs.append(list[randint(0, len(list)-1)])
+#     users_interests.append(songs)
+#
+# for user_interests in users_interests:
+#     print(user_interests)

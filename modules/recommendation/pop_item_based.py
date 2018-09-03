@@ -24,5 +24,5 @@ def most_popular_new_interest(user_interests, max_results=5):
                    if interest not in user_interests]
     return suggestions[:max_results]
 
-suggestions = most_popular_new_interest(users_interests[1], 5)
+suggestions = most_popular_new_interest(users_interests[0], 5)
 print("most_popular_new_interest : ", suggestions)

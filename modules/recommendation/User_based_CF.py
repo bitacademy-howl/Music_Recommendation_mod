@@ -73,4 +73,4 @@ def user_based_suggestions(user_id, include_current_interests=False):
                 for suggestion, weight in suggestions
                 if suggestion not in users_interests[user_id]]
 
-
+print(user_based_suggestions(0))
