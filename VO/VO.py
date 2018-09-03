@@ -45,9 +45,8 @@ class Music_VO(db.Model):
     def as_dict(self):
         return {x.name: getattr(self, x.name) for x in self.__table__.columns}
 
-
-
-
+    def from_dict(self, **args):
+        self.args = args
 
 class test_VO(db.Model):
     __tablename__ = 'Test'
