@@ -256,7 +256,7 @@ ch = Ch2(outer_data=outer_data)
 print(ch)
 print(ch.attr1)
 
-# 만약 A의 메서드를 사용하고 싶고, B의 속성을 사용하고 싶다면
+# 만약 A의 멤버를 사용하고 싶고, B의 생성자을 사용하고 싶다면
 outer_data = (1,2,3,4,5,4,3,2,1)
 
 class A:
@@ -282,8 +282,8 @@ class Ch3(B, A):
         print("자식 생성자 호출")
 
         ###################################################################################
-        B.__init__(self, outer_data)
-        # A.__init__(self, outer_data)
+        # B.__init__(self, outer_data)
+        A.__init__(self, outer_data)
         # super(__class__, self).__init__(outer_data)
         ###################################################################################
 
