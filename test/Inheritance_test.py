@@ -196,23 +196,116 @@ ch.getsuper_what()
 # super == parent 가 성립하지 않는다
 # 상속문에 나열한 순서로 생성되며 부모객체간 overriding 은 일어나지 않는다.
 # 만약 child2는 model2, model 순서로 상속받는다 하면
-# model.what = 1
 # model2.what = 2
-# 이므로 model2의 what이 최종 overriding 되어
-# super().what 이 되는 것이다.
+# model.what = 1
+# 이므로 model2 의 what 이 생성되어 메모리에 올라가고, model.what 은 버려진다.?!?!?!?!?
+# 때문에 model2.what = super().what 이 되는 것이다.
+
+# 이런 일련의 과정들(상속의 우선순위, 생성순서, 중복 속성의 선택 등)은
+# super 라는 별도의 클래스에 의해 정의되며, super() 생성자는 이러한 객체를 만들고 해당 객체를 return 하는 것!
 
 class child2(model2, model):
     __tablename__ = "asd"
     def get_super_attr(self):
         print(super().what, type(super()))
+        print(model2.what == super().what)
 
 ch2 = child2()
 ch2.get_super_attr()
 print(ch2.__table__)
+
+# 아래서 볼수 있듯이, 생성하지 않고는 호출 불가...당연하지만....
+# static 선언에 대해서는 좀더 알아볼 것!
+# 특히 정적 변수.....
+# print(child2.get_super_attr())
 #############################################################################################################
 
 # 이상 다중 상속의 맛은 조금 보았고, inner 클래스의 생성 및 활용에 대해서도 알아보았다.
 # inner 클래스는 어찌보면 단순하게 멤버로 다른 클래스형을 가지는 형태로 생각 할 수 있지만,
 # 그 사용용도와, 객체가 생성되는 시점과 내부에서의 동작을 정의 해 주어야 하는 점에서 차이가 있을 듯 하다.
 # 상속과 클래스를 자유자재로 다루는 능력은 객체 지향이건 함수 지향이건 무조건 능숙하게 다루도록 하자.
-# 객체 & class 라는 개념을 안쓰는 경우가 없는 듯
+# 객체 & class 라는 개념을 안쓸 이유가 없는 듯
+
+outer_data = (1,2,3,4,5,4,3,2,1)
+
+class A:
+    attr1 = "A.attr1"
+    attr2 = "A.attr2"
+    def __init__(self, outer_data):
+        self.outerdata_result = list(outer_data)
+
+class B:
+    attr1 = "B.attr1"
+    attr2 = "B.attr2"
+    def __init__(self, outer_data):
+        self.outerdata_result = set(outer_data)
+
+# 생성자 상속과 상속 순서의 확인
+class Ch1(A, B):
+    def __str__(self):
+        return str(self.outerdata_result)
+class Ch2(B, A):
+    def __str__(self):
+        return str(self.outerdata_result)
+
+ch = Ch1(outer_data=outer_data)
+print(ch)
+print(ch.attr1)
+
+ch = Ch2(outer_data=outer_data)
+print(ch)
+print(ch.attr1)
+
+# 만약 A의 메서드를 사용하고 싶고, B의 속성을 사용하고 싶다면
+outer_data = (1,2,3,4,5,4,3,2,1)
+
+class A:
+    attr1 = "A.attr1"
+    attr2 = "A.attr2"
+    def method_A(self):
+        print("A")
+    def __init__(self, outer_data):
+        print("생성자 A 호출")
+        self.outerdata_result = list(outer_data)
+
+class B:
+    attr1 = "B.attr1"
+    attr2 = "B.attr2"
+    def method_B(self):
+        print("B")
+    def __init__(self, outer_data):
+        print("생성자 B 호출")
+        self.outerdata_result = set(outer_data)
+        
+class Ch3(B, A):
+    def __init__(self, outer_data):
+        print("자식 생성자 호출")
+
+        ###################################################################################
+        B.__init__(self, outer_data)
+        # A.__init__(self, outer_data)
+        # super(__class__, self).__init__(outer_data)
+        ###################################################################################
+
+        print("자식 생성자 종료")
+
+    def __str__(self):
+        return str(self.outerdata_result)
+print("############################################################################")
+ch = Ch3(outer_data)
+print(ch.attr1, ch.attr2, ch)
+ch.method_A()
+ch.method_B()
+
+# 위 예제 코드는 상속의 순서와 super활용으로
+# super().__init__ 메서드조차 상속의 순서인 B 의 그것으로 정의된 것을 알 수 있다.
+# 각 부모객체는 __init__ 에서 outerdata_result 만을 정의 하므로....
+# __init__ 이 호출된 클래스에 따라  outerdata_result, __str__ 만 변화한다.
+
+
+
+# 다이아몬드 상속문제라는게 있다고는 하는데....
+# 다중 상속의 경우 최상위 생성자가 두번 호출되는 경우가 발생하고, 이의 호출 순서에 따라
+# 얘기치 못한 상황이 발생한다고는 하는데...
+# 잘 정리된 문서로 다시 찾아봐야겠다....
+# super 클래스와 MRO 등등...
