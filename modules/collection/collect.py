@@ -1,10 +1,9 @@
 import datetime
-from itertools import count
 
 from bs4 import BeautifulSoup
 import pandas as pd
 import modules.collection.crawler as cw
-from VO import Music_VO, db
+from db_accessing import Music_VO, db
 from modules.collection.urlMaker import UrlMaker
 
 class Collector:

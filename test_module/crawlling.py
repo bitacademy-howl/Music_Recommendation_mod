@@ -1,10 +1,8 @@
-from datetime import datetime as dt
-from itertools import count
 from bs4 import BeautifulSoup
 import pandas as pd
 
 import modules.collection.crawler as cw
-from VO import db, test_VO
+from db_accessing import db, test_VO
 
 def inner_crawing():
     pass

@@ -8,12 +8,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:stark1234@localhos
 
 # transection 에 대한 응답
 app.config['SQLALCHEMY_ECHO'] = False
-
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-# app.secret_key = 'manyrandombyte'
+app.secret_key = 'stark'
 
-db = SQLAlchemy(app)
+db = SQLAlchemy(app, session_options={"autoflush": False, "autocommit" : False,})
 
-from VO.VO import *
+from db_accessing.VO import *
 
 db.create_all()
