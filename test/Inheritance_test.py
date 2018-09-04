@@ -194,7 +194,8 @@ ch.getsuper_what()
 
 # super()는 다중 상속을 받아 생성되는 별도의 하나의 객체를 생성하는 하나의 클래스이며
 # super == parent 가 성립하지 않는다
-# 상속문에 나열한 순서로 생성되며 부모객체간 overriding 은 일어나지 않는다.
+# 상속문에 나열한 순서로 생성되며
+# 부모객체간 overriding 은 일어나지 않는 것인지 역순으로 overriding 되는 것인지.... 가장 앞의 부모를 우선한다.
 # 만약 child2는 model2, model 순서로 상속받는다 하면
 # model2.what = 2
 # model.what = 1
