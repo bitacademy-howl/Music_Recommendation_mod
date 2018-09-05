@@ -2,7 +2,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 import modules.collection.crawler as cw
-from db_accessing import db, test_VO
+from db_accessing import db, Single_VO
+
 
 def inner_crawing():
     pass
@@ -13,7 +14,7 @@ def crawling_test():
     RESULT_DIRECTORY = '__result__'
 
     year = 2017
-    testVO = test_VO()
+    testVO = Single_VO()
 
     for month in range(1, 2, 1):
         page = "%s0%s" % (year, month)

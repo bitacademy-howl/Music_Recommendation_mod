@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_ECHO'] = False
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.secret_key = 'stark'
 
-db = SQLAlchemy(app, session_options={"autoflush": False, "autocommit" : False,})
+db = SQLAlchemy(app, session_options={"autoflush": False, "autocommit" : False})
 
 from db_accessing.VO import *
 

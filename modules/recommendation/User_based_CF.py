@@ -1,6 +1,6 @@
 from collections import defaultdict
 from modules.User_Datasets.user_dataset import users_interests
-from modules.recommendation.similarity_functions import cosine_similarity
+from test.ss_test import cosine_similarity
 
 unique_interests = sorted(list({interest
                                 for user_interests in users_interests
@@ -12,6 +12,7 @@ def make_user_interest_vector(user_interests):
     # unique_interests[i] 가 관심사 리스트에 존재한다면 i 번째 요소가 1이고, 존재하지 않으면 0인 벡터를 생성
     return [1 if interest in user_interests else 0
             for interest in unique_interests]
+
 # vector_of_1 = make_user_interest_vector(users_interests[3])
 # print(vector_of_1)
 
