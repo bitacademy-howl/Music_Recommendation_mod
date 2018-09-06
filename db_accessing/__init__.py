@@ -14,5 +14,6 @@ app.secret_key = 'stark'
 db = SQLAlchemy(app, session_options={"autoflush": False, "autocommit" : False})
 
 from db_accessing.VO import *
+# from db_accessing.test_VO import *
 
 db.create_all()

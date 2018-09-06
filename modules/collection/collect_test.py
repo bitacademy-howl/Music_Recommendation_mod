@@ -2,7 +2,7 @@ import datetime
 
 from bs4 import BeautifulSoup
 import modules.collection.crawler as cw
-from db_accessing import Music_VO, db, Artist_VO, Album_VO
+from db_accessing import Music_VO, db, Album_VO
 from modules.collection.urlMaker import UrlMaker
 
 class Collector:
@@ -11,7 +11,6 @@ class Collector:
         # mnet monthly chart 로부터 음원 데이터를 긁어오는 과정...
         # VO 객체들
         musicVO = Music_VO()
-        artistVO = Artist_VO()
         albumVO = Album_VO()
 
         html = cw.crawling(url=url)
@@ -23,33 +22,30 @@ class Collector:
         tag_tbody = tag_music_list.find('tbody')
         tags_tr = tag_tbody.findAll('tr')
 
-        with db.session.no_autoflush:
-            print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-            for tag_tr in tags_tr:
-                # item_title 태그내 정보들...
-                item_title_tag_td = tag_tr.find('td', attrs={'class': 'MMLItemTitle'})
+        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        for tag_tr in tags_tr:
+            # item_title 태그내 정보들...
+            item_title_tag_td = tag_tr.find('td', attrs={'class': 'MMLItemTitle'})
 
-                # 8개 해야된다......
-                # 음원의 고유 아이디
-                musicVO.Music_ID = tag_tr.find('td', attrs={'class': 'MMLItemCheck'}).find('input')["value"]
-                musicVO.Music_Title = item_title_tag_td.find('a', attrs={'class': 'MMLI_Song'}).get_text()
+            # 8개 해야된다......
+            # 음원의 고유 아이디
+            musicVO.Music_ID = tag_tr.find('td', attrs={'class': 'MMLItemCheck'}).find('input')["value"]
+            musicVO.Music_Title = item_title_tag_td.find('a', attrs={'class': 'MMLI_Song'}).get_text()
 
-                musicVO.Album_ID = item_title_tag_td.find('div', attrs={'class': 'MMLITitle_Album'}).find('a')
+            musicVO.Album_ID = item_title_tag_td.find('div', attrs={'class': 'MMLITitle_Album'}).find('a')
 
-                if musicVO.Album_ID != None:
-                    music_node = musicVO.Album_ID["href"].strip(" ")
+            if musicVO.Album_ID != None:
+                music_node = musicVO.Album_ID["href"].strip(" ")
 
-                    musicVO.Album_ID = int(music_node.rsplit('/', 1)[1])
-                    albumVO.Album_ID = musicVO.Album_ID
+                musicVO.Album_ID = int(music_node.rsplit('/', 1)[1])
+                albumVO.Album_ID = int(music_node.rsplit('/', 1)[1])
 
-                    # Collector.crawling_track(music_node)
-
-                db.session.merge(artistVO)
                 db.session.merge(albumVO)
                 db.session.commit()
                 db.session.merge(musicVO)
+                db.session.commit()
 
-            db.session.commit()
+            # db.session.commit()
 
     def crawling_track(node):
         um = UrlMaker()

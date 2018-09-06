@@ -1,7 +1,5 @@
 from konlpy.tag import Kkma
-
 from modules.recommendation.similarity_functions import cosine_similarity
-
 
 class NL_processor:
     def noun_count(self, text):
@@ -134,11 +132,37 @@ And it's over
 # print(NLP1.all_count_result)
 # print(NLP1.noun_count_result)
 
-# k1 = sorted(NLP1.noun_count_result.items(), key=lambda freq : freq[1], reverse=True)
-# k2 = sorted(NLP2.noun_count_result.items(), key=lambda freq : freq[1], reverse=True)
+k1 = sorted(NLP1.noun_count_result.items(), key=lambda freq : freq[1], reverse=True)
+k2 = sorted(NLP2.noun_count_result.items(), key=lambda freq : freq[1], reverse=True)
+print(k1, '\n', k2, '\n', type(k1))
 
 k1 = list(NLP1.noun_count_result.keys())
 k2 = list(NLP2.noun_count_result.keys())
 
 print(k1, '\n', k2, '\n', type(k1))
 cosine_similarity(k1, k2)
+
+from modules.recommendation.similarity_functions import cosine_similarity
+
+k3 = k1.copy()
+
+k3.extend(k2)
+
+sample_dict = list(set(k3))
+sample_dict.sort()
+
+print(sample_dict, "\n", k1, "\n", k2, "\n")
+
+# def make_user_interest_vector(user_interests, sample_dict):
+#     # unique_interests[i] 가 관심사 리스트에 존재한다면 i 번째 요소가 1이고, 존재하지 않으면 0인 벡터를 생성
+#     return [1 if interest in user_interests else 0
+#             for interest in sample_dict]
+#
+# interestV_1 = make_user_interest_vector(k1, sample_dict)
+# print(interestV_1)
+# interestV_2 = make_user_interest_vector(k2, sample_dict)
+# print(interestV_2)
+
+sim = cosine_similarity(k1, k2)
+
+print(sim)

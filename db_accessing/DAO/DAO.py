@@ -1,8 +1,8 @@
-# from sqlalchemy import create_engine, MetaData
-# from sqlalchemy.orm import scoped_session, sessionmaker
+from sqlalchemy import create_engine, MetaData
+from sqlalchemy.orm import scoped_session, sessionmaker
 #
-# import db_accessing
-#
+import db_accessing
+
 # class DAO:
 #     engine = create_engine('mysql+pymysql://root:stark1234@localhost/webdb?charset=utf8', convert_unicode=True)
 #     metadata = MetaData()
