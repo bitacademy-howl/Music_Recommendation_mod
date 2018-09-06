@@ -1,6 +1,6 @@
 import datetime
 
-class URL_Node:
+class URL_mid_Node:
     TOP100_CHART = "/chart/TOP100/"
     TRACK = "/track/"
     ARTIST = "/artist/"
@@ -18,7 +18,7 @@ class UrlMaker:
         # 페이지를 링크로 이동하기 위해서 사용
         return "".join([self.BASE_URL, node])
 
-    def __init__(self, node=URL_Node.TOP100_CHART):
+    def __init__(self, node=URL_mid_Node.TOP100_CHART):
         self.NODE = node
         self.setDate()
 
