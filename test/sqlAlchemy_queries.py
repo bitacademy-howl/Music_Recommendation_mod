@@ -1,5 +1,5 @@
 from db_accessing import db_session
-from db_accessing.VO import Music_VO
+from db_accessing.VO import Music_VO, Album_VO
 
 # ############################################################################################################
 # # 컬럼이 일치하는 행
@@ -62,8 +62,17 @@ print(a.all())    # <<<<<<<<< 객체화 하여 결과 리스트 return
 
 ############################################################################################################
 # 객체 Relation 구현 후 테스트....
-BBOOM = Music_VO.query.filter_by(Music_Title="뿜뿜").all()[0]
-x = BBOOM.Album.Singer.Artist_Name
-print(x)
-print(BBOOM)
+# BBOOM = Music_VO.query.filter_by(Music_Title="뿜뿜").all()[0]
+# x = BBOOM.Album.Singer.Artist_Name
+# print(x)
+# print(BBOOM)
 ############################################################################################################
+
+alVO = Album_VO.query.filter_by(Album_ID=3188608).all()[0]
+print(alVO)
+
+print(alVO.Musics[0].Album == alVO.Musics[1].Album)
+
+# for music in alVO.Musics:
+    # print(alVO)
+    # print(music.Album)

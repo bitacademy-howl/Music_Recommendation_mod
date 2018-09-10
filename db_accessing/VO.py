@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, Integer, String, Boolean, DateTime
+from sqlalchemy import Column, ForeignKey, Integer, String, Boolean, DateTime, Table
 from sqlalchemy.orm import relationship, backref
 
 from db_accessing import Base
@@ -23,11 +23,16 @@ class Artist_VO(Base):
 
     # Relations
     Albums = relationship("Album_VO", back_populates='Singer')
-    # Compose = relationship("Music_VO", back_populates='Composer')
-    # Write = relationship("Music_VO", back_populates='Lyricist')
+    Compose = relationship("Music_VO", back_populates='Composers')
+    # Write = relationship("Music_VO", back_populates='Lyricists')
 
     def __repr__(self):
-        return "< %s ('%d', '%s', '%s', '%b')>" % (self.__tablename__, self.Artist_Name, self.Gender, self.Group)
+        return "< {0} " \
+               "(Artist_ID : {1}, " \
+               "Artist_Name : {2}, " \
+               "Gender : {3}, " \
+               "Group : {4}, " \
+               "Artist_Node : {5})>".format(self.__tablename__, self.Artist_ID, self.Artist_Name, self.Gender, self.Group, self.Artist_Node)
 
     def as_dict(self):
         return {x.name: getattr(self, x.name) for x in self.__table__.columns}
@@ -57,14 +62,15 @@ class Album_VO(Base):
         pass
 
     def __repr__(self):
-        return "< %s >\n" \
-               "(Album_ID : '%d'\n" \
-               "Album_Title : '%s'\n" \
-               "Agency : '%s'\n" \
-               "Distributor : %s\n" \
-               "Release_Date: %s\n" \
-               "Singer_ID : %d\n)>" % \
-               (self.__tablename__, self.Album_ID, self.Album_Title, self.Agency, self.Distributor, str(self.Release_Date), self.Singer_ID)
+        return "< {0} >\n" \
+               "(Album_ID : {1}\n" \
+               "Album_Title : {2}\n" \
+               "Agency : {3}\n" \
+               "Distributor : {4}\n" \
+               "Release_Date: {5}\n" \
+               "Singer_ID : {6}\n" \
+               "Album_Node : {7}\n" \
+               "Musics : {8})>".format(self.__tablename__, self.Album_ID, self.Album_Title, self.Agency, self.Distributor, str(self.Release_Date), self.Singer_ID, self.Album_Node, self.Musics)
 
     def as_dict(self):
         return {x.name: getattr(self, x.name) for x in self.__table__.columns}
@@ -88,23 +94,28 @@ class Music_VO(Base):
     # 음원이 속한 앨범 - 앨범 테이블에는 Artist(singer), 소속사, 유통사 정보 포함
     Album_ID = Column(Integer, ForeignKey('Album_table.Album_ID', ondelete='CASCADE', name='Album_FK'))
     Composer_ID = Column(Integer, ForeignKey("Artist_table.Artist_ID", name='Composer_ID_FK')) # 작곡가
-    Lyricist_ID = Column(Integer, ForeignKey("Artist_table.Artist_ID", name='Lyricist_ID_FK')) # 작사가
+    # Lyricist_ID = Column(Integer, ForeignKey("Artist_table.Artist_ID", name='Lyricist_ID_FK')) # 작사가
 
     # Relations
     Album = relationship("Album_VO", back_populates='Musics')
-    # Composer = relationship("Artist_VO", back_populates='Compose')
-    # Lyricist = relationship("Artist_VO", back_populates='Write')
+    Composers = relationship("Artist_VO", back_populates="Compose", foreign_keys=[Composer_ID])
+    # Lyricists = relationship("Artist_VO", back_populates="Write", foreign_keys=[Lyricist_ID])
 
     def __init__(self):
         pass
 
     def __repr__(self):
-        return "< %s ('%s', '%s', '%s')>" % \
-               (self.__tablename__, self.Music_ID, self.Music_Title, self.Genre)
+        return "< {0} (Music_ID : {1}, \n" \
+               "Music_Title : {2}, \n" \
+               "Genre : {3}, \n" \
+               "Music_Node : {4}, \n" \
+               "Album : {5}, \n" \
+               "Composers : {6}, \n" \
+               ")>".format(self.__tablename__, self.Music_ID, self.Music_Title, self.Genre, self.Music_Node, self.Album, self.Composers)
+               # "Lyricist : {7})>".format(self.__tablename__, self.Music_ID, self.Music_Title, self.Genre, self.Music_Node, self.Album, self.Composers, self.Lyricist)
 
     def as_dict(self):
         return {x.name: getattr(self, x.name) for x in self.__table__.columns}
-
 
 ########################################################################################################################
 # VO_Examples 1:

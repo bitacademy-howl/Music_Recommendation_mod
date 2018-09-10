@@ -1,5 +1,6 @@
 import datetime
 
+import time
 from bs4 import BeautifulSoup
 import modules.collection.crawler as cw
 from db_accessing import *
@@ -71,11 +72,15 @@ class Collector:
         albumVO = Album_VO()
         artistVO = Artist_VO()
 
+        # Music_ID 는 링크로부터 채워서 올것!
+        # Music_VO.Music_ID =
+
         # bs from html response....
         html = cw.crawling(url=url)
         bs = BeautifulSoup(html, 'html.parser')
+        tag_music_info = bs.find('div', attrs={'class': 'music_info_view'})
         # 곡 소개 테이블
-        summary = bs.find('div', attrs={'class': 'music_info_cont'})
+        summary = tag_music_info.find('div', attrs={'class': 'music_info_cont'})
         album_tag = summary.find('tbody').find('a')
 
         if album_tag is not None:
@@ -91,13 +96,53 @@ class Collector:
             artistVO.Artist_Name = artist_tag.get_text()
             albumVO.Singer_ID = artistVO.Artist_ID
 
-        tag_music_info = bs.find('div', attrs={'class': 'music_info_view'})
+        attrs = summary.find('li', attrs={'class': 'left_con'}).findAll('p', attrs={'class' : 'right'})
 
-        summary = tag_music_info.find('li', attrs={'class': 'left_con'})
-        tags_tr = summary.findAll('p', attrs={'class': 'right'})
+    def crawling_artist(id):
+        artistVO = Artist_VO()
+        artistVO.Artist_ID = id
+        artistVO.Artist_Node = '/artist/{0}'.format(id)
+        artistVO.Group = False
 
+        url = ''.join(['http://www.mnet.com', artistVO.Artist_Node])
+        html = cw.crawling(url)
+        bs = BeautifulSoup(html, 'html.parser')
+        tag_artist_info = bs.find('div', attrs={'class': 'artist_info'})
+
+        if tag_artist_info is not None:
+            singer = tag_artist_info.find('a', attrs={'class': 'song_name'})
+            if singer is not None:
+                artistVO.Artist_Name = singer.get_text()
+            else:
+                artistVO.Artist_Name = tag_artist_info.find('li', attrs={'class': 'top_left'}).find(
+                    'p').get_text().strip()
+                print("############# strip 결과 #############\n", artistVO.Artist_Name,
+                      "\n############# strip 결과 #############\n")
+
+            a = tag_artist_info.find('div', attrs={'class': 'a_info_cont'})
+
+            tags = tag_artist_info.findAll('span', attrs={'class': 'right'})
+            for tag in tags:
+                if tag is not None:
+                    text_list = tag.get_text().strip().replace(' ', '').replace('\r', '').replace('\n', '').replace(
+                        '\t', '').replace('\xa0', '').split('|')
+                    print(text_list)
+                    for text in text_list:
+                        if text == '남성' or text == '여성' or text == '혼성':
+                            artistVO.Gender = text
+                        if text == '그룹':
+                            artistVO.Group = True
+            db_session.merge(artistVO)
+            db_session.commit()
+
+        time.sleep(0.5)  # sleep 안주면 200 번째 request 이후 차단됨...
+                         # 방화벽 or IPS
 
     # 메인에서 호출할 함수들.....
+    def collecting_artist(self):
+        for id in range(1, 3000000, 1):
+            self.crawling_artist(id)
+
     def collecting_track(self, node):
         um = UrlMaker()
         row_num_table = Music_VO.qurey.count()
@@ -106,7 +151,6 @@ class Collector:
             result = Music_VO.query.limit(10).offset(offs).all()
             for i in result:
                 self.crawling_track(um.direct_node_connect(i.Music_Node))
-
 
     def collecting_chart(self):
         um = UrlMaker()
