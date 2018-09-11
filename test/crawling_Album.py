@@ -4,7 +4,7 @@ from time import sleep
 from bs4 import BeautifulSoup, NavigableString
 
 from db_accessing import db_session
-from db_accessing.VO import Album_VO
+from db_accessing.VO import Album_VO, Artist_VO
 from modules.collection import crawler as cw
 from modules.collection.urlMaker import UrlMaker, URL_Node
 
@@ -35,21 +35,27 @@ def crawling_album(um = UrlMaker()):
             right_span = tag.find('span', attrs={'class', 'right'})
 
             if left_span == '아티스트':
-                left_span_a_tag = right_span.find('a')
-                if left_span_a_tag is not None:
-                    albumVO.Singer_ID = int(left_span_a_tag['href'].strip().rsplit('/', 1)[1])
+                right_span_a_tag = right_span.find('a')
+                if right_span_a_tag is not None:
+                    albumVO.Singer_ID = int(right_span_a_tag['href'].strip().rsplit('/', 1)[1])
+                else:
+                    albumVO.Singer_ID = Artist_VO.query.filter_by(Artist_Name='Various Artists').first().Artist_ID
+                    # albumVO.Singer_ID = 10000000
             if left_span == '발매일':
-                text = right_span.get_text()
-                comparer = text.split('.')
-                try:
-                    if len(comparer) == 3:
-                        albumVO.Release_Date = datetime.strptime(text, '%Y.%m.%d')
-                    elif len(comparer) == 1:
-                        albumVO.Release_Date = datetime.strptime(text, '%Y')
-                except ValueError:
-                    date = right_span.get_text().rsplit('.', 1)[0]
-                    albumVO.Release_Date = datetime.strptime(date, '%Y.%m')
-            if left_span == '기획사':
+                ymd = right_span.get_text().split('.')
+                for i in range(len(ymd)):
+                    if ymd[i] == '00':
+                        ymd[i] = '01'
+                text = '.'.join(ymd)
+
+                if len(ymd) == 3:
+                    albumVO.Release_Date = datetime.strptime(text, '%Y.%m.%d')
+                elif len(ymd) == 2:
+                    albumVO.Release_Date = datetime.strptime(text, '%Y.%m')
+                elif len(ymd) == 1:
+                    albumVO.Release_Date = datetime.strptime(text, '%Y')
+
+            if left_span == '기획사' or left_span == '레이블':
                 albumVO.Agency = right_span.get_text().strip()
             if left_span == '유통사':
                 albumVO.Distributor = right_span.get_text().strip()
@@ -72,7 +78,7 @@ def collecting_album():
     # albums = [3188608, 1]
     um = UrlMaker()
     album_list = []
-    for id in range(200, 10000000):
+    for id in range(400, 10000000):
         um.set_param(node=URL_Node.ALBUM, end_point=id)
         # crawling_album(um)
         # print(um)

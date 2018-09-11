@@ -22,7 +22,7 @@ class Artist_VO(Base):
     Artist_Node = Column(String(50))
 
     # Relations
-    Albums = relationship("Album_VO", back_populates='Singer')
+    # Albums = relationship("Album_VO", back_populates='Singer')
     Compose = relationship("Music_VO", back_populates='Composers')
     # Write = relationship("Music_VO", back_populates='Lyricists')
 
@@ -44,9 +44,9 @@ class Album_VO(Base):
     Album_ID = Column(Integer, primary_key=True, unique=True)
     Album_Title = Column(String(100))
 
-    Agency = Column(String(100))
-    Distributor = Column(String(100))
-    Description = Column(String(10000))
+    Agency = Column(String(500))
+    Distributor = Column(String(500))
+    Description = Column(String(20000))
     Release_Date = Column(DateTime)
 
     # 해당 앨범의 링크 문자열 (node) - urlMaker의 direct_node_connect() 의 인자로 활용가능
@@ -54,10 +54,11 @@ class Album_VO(Base):
 
     # FK
     # Singer_ID = Column(Integer, ForeignKey('Artist_table.Artist_ID', ondelete='CASCADE', name='Singer_FK'))
-    Singer_ID = Column(Integer, ForeignKey('Artist_table.Artist_ID', name='Singer_FK'))
+    # Singer_ID = Column(Integer, ForeignKey('Artist_table.Artist_ID', name='Singer_FK'))
+    Singer_ID = Column(Integer)
 
     # Relations
-    Singer = relationship("Artist_VO", back_populates='Albums')
+    # Singer = relationship("Artist_VO", back_populates='Albums')
     Musics = relationship("Music_VO", back_populates='Album')
 
     def __init__(self):
