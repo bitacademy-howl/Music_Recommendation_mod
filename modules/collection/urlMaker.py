@@ -1,26 +1,42 @@
 import datetime
 
-class URL_mid_Node:
+class URL_Node:
     TOP100_CHART = "/chart/TOP100/"
-    TRACK = "/track/"
-    ARTIST = "/artist/"
+    TRACK = "track"
+    ARTIST = "artist"
+    ALBUM = "album"
 
 class UrlMaker:
 
     BASE_URL = "http://www.mnet.com"
-
-    def url_maker_DATE_based(self):
-        index_date = self.DATE.strftime("%Y%m")
-        self.url = "".join([self.BASE_URL, self.NODE, index_date])
-        return self.url
+    NODE = ''
+    END_POINT = ''
 
     def direct_node_connect(self, node):
         # 페이지를 링크로 이동하기 위해서 사용
-        return "".join([self.BASE_URL, node])
+        return "/".join([self.BASE_URL, node])
 
-    def __init__(self, node=URL_mid_Node.TOP100_CHART):
-        self.NODE = node
+    def make_url(self, node, end_point):
+        # 외부에서 그냥 호출 가능한 함수...
+        return "/".join([self.BASE_URL, str(node), str(end_point)])
+
+    def __init__(self, node = '', end_point = ''):
+        self.set_param(node=node, end_point=end_point)
+        self.URL = self.make_url(node=node, end_point=end_point)
         self.setDate()
+
+    def set_param(self, node=NODE, end_point=END_POINT):
+        self.NODE = node
+        self.END_POINT = end_point
+        self.URL = self.make_url(self.NODE, self.END_POINT)
 
     def setDate(self, DATE = datetime.datetime.now()):
         self.DATE = DATE
+
+    # def url_maker_DATE_based(self):
+    #     index_date = self.DATE.strftime("%Y%m")
+    #     self.url = "/".join([self.BASE_URL, self.NODE, index_date])
+    #     return self.url
+
+    def __repr__(self):
+        return "<{0}>\nBASE_URL : {1}\nNODE : {2}\nEND_POINT : {3}\nURL : {4}".format(type(self), self.BASE_URL, self.NODE, self.END_POINT, self.URL)

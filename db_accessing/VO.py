@@ -46,13 +46,15 @@ class Album_VO(Base):
 
     Agency = Column(String(100))
     Distributor = Column(String(100))
+    Description = Column(String(10000))
     Release_Date = Column(DateTime)
 
     # 해당 앨범의 링크 문자열 (node) - urlMaker의 direct_node_connect() 의 인자로 활용가능
     Album_Node = Column(String(50))
 
     # FK
-    Singer_ID = Column(Integer, ForeignKey('Artist_table.Artist_ID', ondelete='CASCADE', name='Singer_FK'))
+    # Singer_ID = Column(Integer, ForeignKey('Artist_table.Artist_ID', ondelete='CASCADE', name='Singer_FK'))
+    Singer_ID = Column(Integer, ForeignKey('Artist_table.Artist_ID', name='Singer_FK'))
 
     # Relations
     Singer = relationship("Artist_VO", back_populates='Albums')

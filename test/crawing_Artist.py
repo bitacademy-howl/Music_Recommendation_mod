@@ -6,7 +6,7 @@ from db_accessing.VO import Album_VO, Music_VO, Artist_VO
 from modules.collection import crawler
 
 # for id in range(1, 3000000, 1):
-for id in range(18513, 3000000, 1):
+for id in range(95966, 10000000, 1):
 # for id in range(1, 30, 1):
 
     artistVO = Artist_VO()

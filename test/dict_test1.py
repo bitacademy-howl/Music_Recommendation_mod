@@ -7,3 +7,6 @@ if __name__ == "__main__":
     ml["title"].append("heewoong")
 
     print(ml)
+
+    print(ml.get('name'))
+
