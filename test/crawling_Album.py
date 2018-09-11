@@ -42,18 +42,16 @@ def crawling_album(um = UrlMaker()):
                     albumVO.Singer_ID = Artist_VO.query.filter_by(Artist_Name='Various Artists').first().Artist_ID
                     # albumVO.Singer_ID = 10000000
             if left_span == '발매일':
-                ymd = right_span.get_text().split('.')
-                for i in range(len(ymd)):
-                    if ymd[i] == '00':
-                        ymd[i] = '01'
-                text = '.'.join(ymd)
-
-                if len(ymd) == 3:
-                    albumVO.Release_Date = datetime.strptime(text, '%Y.%m.%d')
-                elif len(ymd) == 2:
-                    albumVO.Release_Date = datetime.strptime(text, '%Y.%m')
-                elif len(ymd) == 1:
-                    albumVO.Release_Date = datetime.strptime(text, '%Y')
+                ymd = [1,1,1]
+                ymd_data = list(map(lambda x: int(x), right_span.get_text().split('.')))
+                for i in range(len(ymd_data)):
+                    if i == 0 and 0 < ymd_data[i]:
+                        ymd[i] = ymd_data[i]
+                    elif i == 1 and 0 < ymd_data[i] < 13:
+                        ymd[i] = ymd_data[i]
+                    elif i == 2 and 0 < ymd_data[i] < 32:
+                        ymd[i] = ymd_data[i]
+                albumVO.Release_Date = datetime(ymd[0], ymd[1], ymd[2])
 
             if left_span == '기획사' or left_span == '레이블':
                 albumVO.Agency = right_span.get_text().strip()
@@ -78,14 +76,14 @@ def collecting_album():
     # albums = [3188608, 1]
     um = UrlMaker()
     album_list = []
-    for id in range(400, 10000000):
+    for id in range(1, 10000000):
         um.set_param(node=URL_Node.ALBUM, end_point=id)
         # crawling_album(um)
         # print(um)
         crawling_album(um)
         sleep(0.5)
 
-        if id%100 == 0:
+        if id%5 == 0:
             db_session.commit()
 
 collecting_album()
