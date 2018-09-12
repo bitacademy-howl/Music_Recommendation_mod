@@ -1,12 +1,10 @@
 from datetime import datetime
-from time import sleep
-
-from bs4 import BeautifulSoup, NavigableString
-
+from bs4 import BeautifulSoup
 from db_accessing import db_session
 from db_accessing.VO import Album_VO, Artist_VO
 from modules.collection import crawler as cw
 from modules.collection.urlMaker import UrlMaker, URL_Node
+from time import sleep
 
 def crawling_album(um = UrlMaker()):
     # UrlMaker 객체를 매개변수로 넘겨받아서 1페이지를 크롤링
@@ -72,18 +70,26 @@ def crawling_album(um = UrlMaker()):
 
         db_session.merge(albumVO)
 
-def collecting_album():
+
+# 26870 break point
+
+def collecting_album(start_index = 1):
     # albums = [3188608, 1]
     um = UrlMaker()
     album_list = []
-    for id in range(1, 10000000):
+    # for id in range(1, 10000000):
+
+    for id in range(start_index, 10000000):
         um.set_param(node=URL_Node.ALBUM, end_point=id)
-        # crawling_album(um)
-        # print(um)
-        crawling_album(um)
-        sleep(0.5)
+        try:
+            crawling_album(um)
+        except Exception as e:
+            print('exception [{0}] \nID : {1}'.format(datetime.now(), id))
+            sleep(60 * 5)
+            print('sleep 해제')
+            return collecting_album(id)
 
         if id%5 == 0:
             db_session.commit()
 
-collecting_album()
+collecting_album(26870)

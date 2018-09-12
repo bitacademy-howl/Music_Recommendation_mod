@@ -42,7 +42,7 @@ class Album_VO(Base):
     __table_args__ = {'mysql_collate': 'utf8_general_ci'}
 
     Album_ID = Column(Integer, primary_key=True, unique=True)
-    Album_Title = Column(String(100))
+    Album_Title = Column(String(500))
 
     Agency = Column(String(500))
     Distributor = Column(String(500))
@@ -119,6 +119,9 @@ class Music_VO(Base):
 
     def as_dict(self):
         return {x.name: getattr(self, x.name) for x in self.__table__.columns}
+
+
+
 
 ########################################################################################################################
 # VO_Examples 1:
