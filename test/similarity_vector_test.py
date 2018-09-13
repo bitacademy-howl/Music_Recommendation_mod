@@ -68,16 +68,11 @@ sim = cosine_similarity(interestV_1, interestV_2)
 
 print(sim)
 
-
 l1 = [1,1]
 l2 = [0,1]
 l1 = [1,1,1,0,0,1,1,1,1]
 l2 = [0,1,1,1,1,1,1,1,1]
 
-
-
 print(dot(l1,l1))
 # print(dot(l1,l2))
-#
-#
 # print(cosine_similarity(l1, l2))

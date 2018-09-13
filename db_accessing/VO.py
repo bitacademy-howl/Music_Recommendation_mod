@@ -23,7 +23,7 @@ class Artist_VO(Base):
 
     # Relations
     # Albums = relationship("Album_VO", back_populates='Singer')
-    Compose = relationship("Music_VO", back_populates='Composers')
+    # Participation = relationship("Music_VO", back_populates='Staff')
     # Write = relationship("Music_VO", back_populates='Lyricists')
 
     def __repr__(self):
@@ -101,7 +101,7 @@ class Music_VO(Base):
 
     # Relations
     Album = relationship("Album_VO", back_populates='Musics')
-    Composers = relationship("Artist_VO", back_populates="Compose", foreign_keys=[Composer_ID])
+    # Staff = relationship("Artist_VO", back_populates="Participation", foreign_keys=[Composer_ID, Lyricist_ID])
     # Lyricists = relationship("Artist_VO", back_populates="Write", foreign_keys=[Lyricist_ID])
 
     def __init__(self):
@@ -136,16 +136,17 @@ class Music_VO(Base):
 #     parent_id = Column(Integer, ForeignKey('parent.id', ondelete='CASCADE'))
 ########################################################################################################################
 
-########################################################################################################################
-# # VO_Examples 2:
-# class Parent(Base):
-#     __tablename__ = 'parent'
-#     id = Column(Integer, primary_key=True, unique=True)
-#     children = relationship("Child", back_populates="parent")
-#
-# class Child(Base):
-#     __tablename__ = 'child'
-#     id = Column(Integer, primary_key=True, unique=True)
-#     parent_id = Column(Integer, ForeignKey('parent.id', ondelete='CASCADE'))
-#     parent = relationship("Parent", back_populates="children")
-########################################################################################################################
+#######################################################################################################################
+# VO_Examples 2:
+class Parent(Base):
+    __tablename__ = 'parent'
+    id = Column(Integer, primary_key=True, unique=True)
+    children = relationship("Child", back_populates="parent")
+
+class Child(Base):
+    __tablename__ = 'child'
+    id = Column(Integer, primary_key=True, unique=True)
+    # parent_id = Column(Integer)
+    parent_id = Column(Integer, ForeignKey('parent.id', ondelete='CASCADE'))
+    parent = relationship("Parent", back_populates="children")
+#######################################################################################################################

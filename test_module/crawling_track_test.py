@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 from db_accessing import db_session
 from db_accessing.VO import Music_VO, Album_VO, Artist_VO
 from modules.collection import crawler as cw
+from modules.collection.urlMaker import UrlMaker
+
 
 def crawling_album(um = UrlMaker()):
     # UrlMaker 객체를 매개변수로 넘겨받아서 1페이지를 크롤링

@@ -71,18 +71,16 @@ def crawling_album(um = UrlMaker()):
         db_session.merge(albumVO)
 
 
-# 26870 break point
+# 56430 break point
 
 def collecting_album(start_index = 1):
-    # albums = [3188608, 1]
     um = UrlMaker()
-    album_list = []
-    # for id in range(1, 10000000):
 
     for id in range(start_index, 10000000):
         um.set_param(node=URL_Node.ALBUM, end_point=id)
         try:
             crawling_album(um)
+            sleep(0.3)
         except Exception as e:
             print('exception [{0}] \nID : {1}'.format(datetime.now(), id))
             sleep(60 * 5)
@@ -92,4 +90,4 @@ def collecting_album(start_index = 1):
         if id%5 == 0:
             db_session.commit()
 
-collecting_album(26870)
+collecting_album(56425)
