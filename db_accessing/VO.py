@@ -59,7 +59,7 @@ class Album_VO(Base):
 
     # Relations
     # Singer = relationship("Artist_VO", back_populates='Albums')
-    Musics = relationship("Music_VO", back_populates='Album')
+    # Musics = relationship("Music_VO", back_populates='Album')
 
     def __init__(self):
         pass
@@ -95,12 +95,15 @@ class Music_VO(Base):
 
     # FK
     # 음원이 속한 앨범 - 앨범 테이블에는 Artist(singer), 소속사, 유통사 정보 포함
-    Album_ID = Column(Integer, ForeignKey('Album_table.Album_ID', ondelete='CASCADE', name='Album_FK'))
-    Composer_ID = Column(Integer, ForeignKey("Artist_table.Artist_ID", name='Composer_ID_FK')) # 작곡가
+    # Album_ID = Column(Integer, ForeignKey('Album_table.Album_ID', ondelete='CASCADE', name='Album_FK'))
+    # Composer_ID = Column(Integer, ForeignKey("Artist_table.Artist_ID", name='Composer_ID_FK')) # 작곡가
     # Lyricist_ID = Column(Integer, ForeignKey("Artist_table.Artist_ID", name='Lyricist_ID_FK')) # 작사가
+    Album_ID = Column(Integer)
+    Composer_ID = Column(Integer) # 작곡가
+    Lyricist_ID = Column(Integer) # 작사가
 
     # Relations
-    Album = relationship("Album_VO", back_populates='Musics')
+    # Album = relationship("Album_VO", back_populates='Musics')
     # Staff = relationship("Artist_VO", back_populates="Participation", foreign_keys=[Composer_ID, Lyricist_ID])
     # Lyricists = relationship("Artist_VO", back_populates="Write", foreign_keys=[Lyricist_ID])
 

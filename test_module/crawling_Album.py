@@ -43,13 +43,19 @@ def crawling_album(um = UrlMaker()):
                 ymd = [1,1,1]
                 ymd_data = list(map(lambda x: int(x), right_span.get_text().split('.')))
                 for i in range(len(ymd_data)):
+                    # 웹에 기록된 length 만큼 돌면서 수행
                     if i == 0 and 0 < ymd_data[i]:
                         ymd[i] = ymd_data[i]
                     elif i == 1 and 0 < ymd_data[i] < 13:
                         ymd[i] = ymd_data[i]
                     elif i == 2 and 0 < ymd_data[i] < 32:
-                        ymd[i] = ymd_data[i]
+                        try:
+                            ymd[i] = ymd_data[i]
+                        except:
+                            ymd[i] = 1
+
                 albumVO.Release_Date = datetime(ymd[0], ymd[1], ymd[2])
+
 
             if left_span == '기획사' or left_span == '레이블':
                 albumVO.Agency = right_span.get_text().strip()
@@ -80,12 +86,13 @@ def collecting_album(start_index = 1):
         um.set_param(node=URL_Node.ALBUM, end_point=id)
         try:
             crawling_album(um)
-            sleep(0.3)
         except Exception as e:
             print('exception [{0}] \nID : {1}'.format(datetime.now(), id))
-            sleep(60 * 5)
+            sleep(300)
             print('sleep 해제')
             return collecting_album(id)
+
+        sleep(0.5)
 
         if id%5 == 0:
             db_session.commit()
