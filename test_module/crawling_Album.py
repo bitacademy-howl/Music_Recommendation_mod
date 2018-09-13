@@ -76,9 +76,6 @@ def crawling_album(um = UrlMaker()):
 
         db_session.merge(albumVO)
 
-
-# 56430 break point
-
 def collecting_album(start_index = 1):
     um = UrlMaker()
 
@@ -97,4 +94,4 @@ def collecting_album(start_index = 1):
         if id%5 == 0:
             db_session.commit()
 
-collecting_album(56425)
+collecting_album(64250)

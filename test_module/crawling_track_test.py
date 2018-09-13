@@ -71,7 +71,7 @@ def crawling_album(um = UrlMaker()):
 
         db_session.merge(albumVO)
 
-def collecting_album():
+def collecting_music():
     # albums = [3188608, 1]
     um = UrlMaker()
     album_list = []

@@ -35,8 +35,7 @@ class UrlMaker:
 
     def url_maker_DATE_based(self):
         index_date = self.DATE.strftime("%Y%m")
-        self.url = "/".join([self.BASE_URL, self.NODE, index_date])
-        return self.url
+        self.URL = "/".join([self.BASE_URL, self.NODE, index_date])
 
     def __repr__(self):
         return "<{0}>\nBASE_URL : {1}\nNODE : {2}\nEND_POINT : {3}\nURL : {4}".format(type(self), self.BASE_URL, self.NODE, self.END_POINT, self.URL)

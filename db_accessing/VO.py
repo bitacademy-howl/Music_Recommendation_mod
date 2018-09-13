@@ -83,12 +83,12 @@ class Music_VO(Base):
     __table_args__ = {'mysql_collate': 'utf8_general_ci'}
 
     Music_ID = Column(Integer, primary_key=True, unique=True)       # PK
-    Music_Title = Column(String(100))                                # 제목
-    Genre = Column(String(50))                                       # 장르
+    Music_Title = Column(String(500))                                # 제목
+    Genre = Column(String(500))                                       # 장르
 
     # 기타 속성들...
     Hash_Tags = Column(String(500), nullable=True)                  # 앨범 설명으로 추출
-    Lyrics = Column(String(2000), nullable=True)                    # 태그 내 가사 쑤셔넣을 것!
+    Lyrics = Column(String(20000), nullable=True)                    # 태그 내 가사 쑤셔넣을 것!
 
     # 해당 음원의 링크 문자열 (node) - urlMaker의 direct_node_connect() 의 인자로 활용가능
     Music_Node = Column(String(50))
@@ -99,8 +99,8 @@ class Music_VO(Base):
     # Composer_ID = Column(Integer, ForeignKey("Artist_table.Artist_ID", name='Composer_ID_FK')) # 작곡가
     # Lyricist_ID = Column(Integer, ForeignKey("Artist_table.Artist_ID", name='Lyricist_ID_FK')) # 작사가
     Album_ID = Column(Integer)
-    Composer_ID = Column(Integer) # 작곡가
-    Lyricist_ID = Column(Integer) # 작사가
+    Composer_ID = Column(String(100)) # 작곡가
+    Lyricist_ID = Column(String(100)) # 작사가
 
     # Relations
     # Album = relationship("Album_VO", back_populates='Musics')
@@ -117,13 +117,12 @@ class Music_VO(Base):
                "Music_Node : {4}, \n" \
                "Album : {5}, \n" \
                "Composers : {6}, \n" \
-               ")>".format(self.__tablename__, self.Music_ID, self.Music_Title, self.Genre, self.Music_Node, self.Album, self.Composers)
-               # "Lyricist : {7})>".format(self.__tablename__, self.Music_ID, self.Music_Title, self.Genre, self.Music_Node, self.Album, self.Composers, self.Lyricist)
+               "Lyricist : {7})>".format(self.__tablename__, self.Music_ID, self.Music_Title, self.Genre,
+                                         self.Music_Node, self.Album_ID, self.Composer_ID, self.Lyricist_ID)
+               # ")>".format(self.__tablename__, self.Music_ID, self.Music_Title, self.Genre, self.Music_Node, self.Album, self.Composers)
 
     def as_dict(self):
         return {x.name: getattr(self, x.name) for x in self.__table__.columns}
-
-
 
 
 ########################################################################################################################
