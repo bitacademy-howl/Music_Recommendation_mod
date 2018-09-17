@@ -1,6 +1,8 @@
 # 값을 입력할 VO 객체 생성
 from datetime import datetime
 from time import sleep
+
+import sys
 from bs4 import BeautifulSoup
 from db_accessing import db_session
 from modules.collection import crawler as cw
@@ -54,15 +56,20 @@ def crawling_track(um):
             for staff in staffs:
                 lyricists = ''
                 if staff.find('li', attrs={'class': 'title'}).get_text().strip() == '작사':
-                    for lyricist in staff.findAll('a'):
-                        lyricists = ','.join([lyricists, lyricist['href'].strip().rsplit('/', 1)[1]])
-                    musicVO.Lyricist_ID = lyricists.split(',', 1)[1]
+                    lyricists = staff.findAll('a')
+                    if len(lyricists) != 0:
+                        res = ''
+                        for lyricist in lyricists:
+                            res = ','.join([res, lyricist['href'].strip().rsplit('/', 1)[1]])
+                        musicVO.Lyricist_ID = res.split(',', 1)[1]
 
                 if staff.find('li', attrs={'class': 'title'}).get_text().strip() == '작곡':
-                    comporsers = ''
-                    for comporser in staff.findAll('a'):
-                        comporsers = ','.join([comporsers, comporser['href'].strip().rsplit('/', 1)[1]])
-                    musicVO.Composer_ID = comporsers.split(',', 1)[1]
+                    comporsers = staff.findAll('a')
+                    if len(comporsers) != 0:
+                        res = ''
+                        for comporser in comporsers:
+                            res = ','.join([res, comporser['href'].strip().rsplit('/', 1)[1]])
+                        musicVO.Composer_ID = res.split(',', 1)[1]
 
         print(musicVO)
         db_session.merge(musicVO)
@@ -87,4 +94,4 @@ def collecting_track(start_index = 1):
         if id%5 == 0:
             db_session.commit()
 
-collecting_track()
+collecting_track(6285)
