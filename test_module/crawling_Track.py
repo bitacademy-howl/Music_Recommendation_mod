@@ -1,7 +1,6 @@
 # 값을 입력할 VO 객체 생성
-from datetime import datetime
+import datetime
 from time import sleep
-
 import sys
 from bs4 import BeautifulSoup
 from db_accessing import db_session
@@ -17,8 +16,10 @@ def crawling_track(um):
 
     html = cw.crawling(url=um.URL)
     bs = BeautifulSoup(html, 'html.parser')
+
     tag_music_info = bs.find('div', attrs={'class': 'music_info_view'})
 
+    # 곡 정보가 존재하지 않는 페이지(없는 곡입니다) ....가 아닌 경우에만 수행 경우......
     if tag_music_info is not None:
         # 곡 소개 테이블
         summary = tag_music_info.find('div', attrs={'class': 'music_info_cont'})
@@ -33,24 +34,42 @@ def crawling_track(um):
         if musicVO.Music_Title is not None:
             musicVO.Music_Title = musicVO.Music_Title.find('p').get_text().strip()
 
-        left_attrs = summary.find('li', attrs={'class': 'left_con'}).findAll('p', attrs='left')
-        right_attrs = summary.find('li', attrs={'class': 'left_con'}).findAll('p', attrs='right')
+        try:
+            left_attrs = summary.find('li', attrs={'class': 'left_con'}).findAll('p', attrs={'class' : 'left'})
+            right_attrs = summary.find('li', attrs={'class': 'left_con'}).findAll('p', attrs={'class' : 'right'})
 
+        except AttributeError:
+            attrs_list = bs.find('dd', attrs={'class': 'con'})
+            left_attrs = attrs_list.find('li', attrs={'class': 'left_con'}).findAll('p', attrs={'class': 'left'})
+            right_attrs = attrs_list.find('li', attrs={'class': 'left_con'}).findAll('p', attrs={'class': 'right'})
+            
         for i in range(0, len(left_attrs)):
             if left_attrs[i].get_text().strip() == '음악장르':
                 musicVO.Genre = right_attrs[i].get_text().strip()
 
+        line_info = bs.findAll('div', attrs={'class': 'line_info'})
 
-
-        line_info = tag_music_info.findAll('div', attrs={'class': 'line_info'})
         lyric = line_info[0].find('li', attrs={'id': 'lyricsText'})
+
+        if lyric is not None:
+            buffer = lyric.get_text().replace('\n', '').replace('\t', '').replace('<br/>', '\n').strip()
+
+            # 54187 때문에 포함...특문을 아예 제거 해야하는 가???
+            # 특문을 포함하되 몇몇개 사용되는 것들로??
+            if '</li>' in buffer:
+                buffer = buffer.split('</li>', 1)[0]
+            else:
+                pass
+
+            print('버퍼 : ', buffer, len(buffer.encode('utf-8')), file=sys.stderr)
+            if len(buffer.encode('utf-8')) <= Music_VO.Lyrics.type.length:
+                musicVO.Lyrics = buffer
+                print('저장된 가사', musicVO.Lyrics, file=sys.stderr)
+
         if len(line_info) > 1:
             staffs = line_info[1].findAll('ul', attrs={'class': 'con2'})
         else:
             staffs = None
-
-        if lyric is not None:
-            musicVO.Lyrics = lyric.get_text().replace('\n', '').replace('\t', '').replace('<br/>', '\n').strip()
 
         if staffs is not None:
             for staff in staffs:
@@ -71,7 +90,6 @@ def crawling_track(um):
                             res = ','.join([res, comporser['href'].strip().rsplit('/', 1)[1]])
                         musicVO.Composer_ID = res.split(',', 1)[1]
 
-        print(musicVO)
         db_session.merge(musicVO)
 
 def collecting_track(start_index = 1):
@@ -79,19 +97,19 @@ def collecting_track(start_index = 1):
 
     for id in range(start_index, 10000000):
         um.set_param(node=URL_Node.TRACK, end_point=id)
-        crawling_track(um)
-        # try:
-        #     crawling_track(um)
-        # except Exception as e:
-        #     print(e)
-        #     print('exception [{0}] \nID : {1}'.format(datetime.now(), id))
-        #     sleep(300)
-        #     print('sleep 해제')
-        #     return collecting_track(id)
+        # crawling_track(um)
+        try:
+            crawling_track(um)
+        except Exception as e:
+            print('exception [{0}]\n[{1}]\nID : {2}'.format(e.__class__.__name__, datetime.datetime.now(), id))
+            sleep(300)
+            print('sleep 해제')
+            return collecting_track(id)
 
-        sleep(0.5)
+        sleep(0.3)
 
         if id%5 == 0:
             db_session.commit()
 
-collecting_track(6285)
+collecting_track(189300)
+# collecting_track(173620)

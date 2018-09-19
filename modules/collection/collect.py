@@ -72,9 +72,6 @@ class Collector:
         albumVO = Album_VO()
         artistVO = Artist_VO()
 
-        # Music_ID 는 링크로부터 채워서 올것!
-        # Music_VO.Music_ID =
-
         # bs from html response....
         html = cw.crawling(url=url)
         bs = BeautifulSoup(html, 'html.parser')

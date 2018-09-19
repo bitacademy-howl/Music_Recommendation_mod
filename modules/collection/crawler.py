@@ -19,6 +19,7 @@ def crawling(
 
         except UnicodeDecodeError as uE:
             result = receive.decode(encoding, 'replace')
+            # result = receive.decode(encoding, 'ignore')
 
         print('%s : Success for request [%s]' % (datetime.now(), url))
         return result
