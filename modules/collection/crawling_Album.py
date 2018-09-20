@@ -1,10 +1,17 @@
+import os
 from datetime import datetime
+import sys
 from bs4 import BeautifulSoup
+from sqlalchemy.exc import InternalError
 from db_accessing import db_session
 from db_accessing.VO import Album_VO, Artist_VO
 from modules.collection import crawler as cw
 from modules.collection.urlMaker import UrlMaker, URL_Node
 from time import sleep
+
+def preprocessing_string(input_string):
+    return input_string.replace('\n', '').replace('\t', '').replace('<br/>', '\n').replace('</br>', '').replace('<br>', '\n')\
+        .replace('&gt;', '').replace('&lt;', '').replace('&quot;', '').replace('&quot;', '').replace('&amp;', '').strip()
 
 def crawling_album(um = UrlMaker()):
     # UrlMaker 객체를 매개변수로 넘겨받아서 1페이지를 크롤링
@@ -50,7 +57,7 @@ def crawling_album(um = UrlMaker()):
                         ymd[i] = ymd_data[i]
                     elif i == 2 and 0 < ymd_data[i] < 32:
                         try:
-                            ymd[i] = ymd_data[i]
+                            datetime(ymd[0], ymd[1], ymd[2])
                         except:
                             ymd[i] = 1
 
@@ -66,32 +73,59 @@ def crawling_album(um = UrlMaker()):
 
         if descriptions is not None:
             descriptions = descriptions.findAll('p')
-            if len(descriptions) == 2:
-                desc = str(descriptions[1])
-            else:
-                desc = descriptions.get_text().replace('\n', '').replace('\t', '')
+            desc = str(descriptions[len(descriptions)-1].get_text())
 
-            desc = desc.replace('<p class="txt">', '').replace('<br/>', '\n').replace('</p>', '').strip()
-            albumVO.Description = desc
+            albumVO.Description = preprocessing_string(desc)
+            print(albumVO.Description)
 
-        db_session.merge(albumVO)
+        try:
+            db_session.merge(albumVO)
+            db_session.commit()
+            # if albumVO.Album_ID%5 ==0:
+            #     cw_log({albumVO.Album_ID : 'SUCCESS[Completely]'})
+
+        except InternalError:
+            db_session.rollback()
+            try:
+                import re
+                pattern = re.compile(
+                    u'[^ ~`!@#$%^&*()_\-+={\[}\]:<.>/?\'\"\n\ta-zA-Z0-9\u3131-\u3163\uac00-\ud7a3]+')  # 한글 키보드 특문 영어 숫자
+
+                albumVO.Description = re.sub(pattern, ' ', albumVO.Description)
+                db_session.merge(albumVO)
+                db_session.commit()
+                cw_log({albumVO.Album_ID : 'SUCCESS[RE.Compile] - Desc'})
+            except:
+                print(" 완전 rollback", file=sys.stderr)
+                db_session.rollback()
+                albumVO.Description = None
+                db_session.merge(albumVO)
+                db_session.commit()
+                cw_log({albumVO.Album_ID : 'FAILURE - Desc'})
 
 def collecting_album(start_index = 1):
     um = UrlMaker()
-
+    cw_log({'start_id[{0}]'.format(datetime.now().date()): start_index})
     for id in range(start_index, 10000000):
         um.set_param(node=URL_Node.ALBUM, end_point=id)
+        # crawling_album(um)
         try:
+            # raise Exception('hi')
             crawling_album(um)
         except Exception as e:
-            print('exception [{0}] \nID : {1}'.format(datetime.now(), id))
+            cw_log({'Delay 300 Sec By Locking' : '[{0}]'.format(datetime.now()), 'ID' : '{0}'.format(id)})
             sleep(300)
             print('sleep 해제')
             return collecting_album(id)
 
-        sleep(0.5)
+        sleep(0.25)
 
-        if id%5 == 0:
-            db_session.commit()
-
-collecting_album(64250)
+def cw_log(dict_input):
+    import json
+    dir = '__logs__'
+    if not os.path.exists(dir):
+        os.mkdir(dir)
+    fname = '{0}/log{1}.json'.format(dir, datetime.now().date())
+    with open(fname, mode='a', encoding='utf8') as f:
+        json.dump(dict_input,fp=f)
+        f.write('\n')

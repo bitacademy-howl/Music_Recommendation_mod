@@ -6,6 +6,12 @@ import modules.collection.crawler as cw
 from db_accessing import *
 from db_accessing.VO import Music_VO, Artist_VO, Album_VO
 from modules.collection.urlMaker import UrlMaker
+from modules import collection as cl
+
+def start_crawling(start_index_of_artist = 1, start_index_of_album = 1, start_index_of_track = 1):
+    cl.collecting_Artist(start_index_of_artist)
+    cl.collecting_album(start_index_of_album)
+    cl.collecting_track(start_index_of_track)
 
 class Collector:
     def crawling_mnet_month_chart(url):
