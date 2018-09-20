@@ -111,5 +111,5 @@ def collecting_track(start_index = 1):
         if id%5 == 0:
             db_session.commit()
 
-collecting_track(189300)
+collecting_track(340420)
 # collecting_track(173620)
