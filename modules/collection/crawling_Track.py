@@ -1,4 +1,5 @@
 # 값을 입력할 VO 객체 생성
+from builtins import WindowsError
 from datetime import datetime
 from time import sleep
 import sys
@@ -119,7 +120,7 @@ def cw_log(dict_input):
     dir = '__logs__'
     if not os.path.exists(dir):
         os.mkdir(dir)
-    fname = '{0}/log_music{1}.json'.format(dir, datetime.now().date())
+    fname = '{0}/log_{1}[{2}].json'.format(dir, um.NODE, datetime.now().date())
     with open(fname, mode='a', encoding='utf8') as f:
         json.dump(dict_input,fp=f)
         f.write('\n')
@@ -132,6 +133,8 @@ def collecting_track(start_index = 1):
         # crawling_track(um)
         try:
             crawling_track(um)
+        except WindowsError as wE:
+            print('exception [{0}]\n[{1}]\nID : {2}'.format(wE.__class__.__name__, datetime.datetime.now(), id))
         except Exception as e:
             print('exception [{0}]\n[{1}]\nID : {2}'.format(e.__class__.__name__, datetime.datetime.now(), id))
             sleep(300)
@@ -140,4 +143,6 @@ def collecting_track(start_index = 1):
 
         sleep(0.3)
 
+def condition_control(id):
+    pass
 
