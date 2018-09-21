@@ -103,6 +103,16 @@ def crawling_album(um = UrlMaker()):
                 db_session.commit()
                 cw_log({albumVO.Album_ID : 'FAILURE - Desc'})
 
+def cw_log(dict_input):
+    import json
+    dir = '__logs__'
+    if not os.path.exists(dir):
+        os.mkdir(dir)
+    fname = '{0}/log_album{1}.json'.format(dir, datetime.now().date())
+    with open(fname, mode='a', encoding='utf8') as f:
+        json.dump(dict_input,fp=f)
+        f.write('\n')
+
 def collecting_album(start_index = 1):
     um = UrlMaker()
     cw_log({'start_id[{0}]'.format(datetime.now().date()): start_index})
@@ -120,12 +130,3 @@ def collecting_album(start_index = 1):
 
         sleep(0.25)
 
-def cw_log(dict_input):
-    import json
-    dir = '__logs__'
-    if not os.path.exists(dir):
-        os.mkdir(dir)
-    fname = '{0}/log{1}.json'.format(dir, datetime.now().date())
-    with open(fname, mode='a', encoding='utf8') as f:
-        json.dump(dict_input,fp=f)
-        f.write('\n')

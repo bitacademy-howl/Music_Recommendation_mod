@@ -1,12 +1,15 @@
 # 값을 입력할 VO 객체 생성
-import datetime
+from datetime import datetime
 from time import sleep
 import sys
 from bs4 import BeautifulSoup
+from sqlalchemy.exc import InternalError
+
 from db_accessing import db_session
 from modules.collection import crawler as cw
 from db_accessing.VO import Music_VO
 from modules.collection.urlMaker import UrlMaker, URL_Node
+import os
 
 def crawling_track(um):
 
@@ -64,7 +67,6 @@ def crawling_track(um):
             print('버퍼 : ', buffer, len(buffer.encode('utf-8')), file=sys.stderr)
             if len(buffer.encode('utf-8')) <= Music_VO.Lyrics.type.length:
                 musicVO.Lyrics = buffer
-                print('저장된 가사', musicVO.Lyrics, file=sys.stderr)
 
         if len(line_info) > 1:
             staffs = line_info[1].findAll('ul', attrs={'class': 'con2'})
@@ -89,12 +91,42 @@ def crawling_track(um):
                         for comporser in comporsers:
                             res = ','.join([res, comporser['href'].strip().rsplit('/', 1)[1]])
                         musicVO.Composer_ID = res.split(',', 1)[1]
+        try:
+            db_session.merge(musicVO)
+            db_session.commit()
+        except InternalError:
+            db_session.rollback()
+            try:
+                import re
+                pattern = re.compile(
+                    u'[^ ~`!@#$%^&*()_\-+={\[}\]:<.>/?\'\"\n\ta-zA-Z0-9\u3131-\u3163\uac00-\ud7a3]+')  # 한글 키보드 특문 영어 숫자
 
-        db_session.merge(musicVO)
+                musicVO.Lyrics = re.sub(pattern, ' ', musicVO.Lyrics)
+                db_session.merge(musicVO)
+                db_session.commit()
+                cw_log({musicVO.Music_ID : 'SUCCESS[RE.Compile] - Lirics'})
+            except:
+                print(" 완전 rollback", file=sys.stderr)
+                db_session.rollback()
+                musicVO.Description = None
+                db_session.merge(musicVO)
+                db_session.commit()
+                cw_log({musicVO.Music_ID : 'FAILURE - Lirics'})
+        print('저장된 가사 : ', musicVO.Lyrics, file=sys.stderr)
+
+def cw_log(dict_input):
+    import json
+    dir = '__logs__'
+    if not os.path.exists(dir):
+        os.mkdir(dir)
+    fname = '{0}/log_music{1}.json'.format(dir, datetime.now().date())
+    with open(fname, mode='a', encoding='utf8') as f:
+        json.dump(dict_input,fp=f)
+        f.write('\n')
 
 def collecting_track(start_index = 1):
     um = UrlMaker()
-
+    cw_log({'start_id[{0}]'.format(datetime.now().date()): start_index})
     for id in range(start_index, 10000000):
         um.set_param(node=URL_Node.TRACK, end_point=id)
         # crawling_track(um)
@@ -108,6 +140,4 @@ def collecting_track(start_index = 1):
 
         sleep(0.3)
 
-        if id%5 == 0:
-            db_session.commit()
 
