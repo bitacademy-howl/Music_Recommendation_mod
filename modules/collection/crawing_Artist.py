@@ -60,4 +60,4 @@ def collecting_artist(start_index = 1):
             print('sleep 해제')
             return crawling_Artist(id)
 
-        sleep(0.25)
+        sleep(0.5)

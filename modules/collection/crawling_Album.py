@@ -129,4 +129,4 @@ def collecting_album(start_index = 1):
             print('sleep 해제')
             return collecting_album(id)
 
-        sleep(0.25)
+        sleep(0.5)

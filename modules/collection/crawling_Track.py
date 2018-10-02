@@ -134,12 +134,12 @@ def collecting_track(start_index = 1):
         try:
             crawling_track(um)
         except Exception as e:
-            print('exception [{0}]\n[{1}]\nID : {2}'.format(e.__class__.__name__, datetime.datetime.now(), id))
+            print('exception [{0}]\n[{1}]\nID : {2}'.format(e.__class__.__name__, datetime.now(), id))
             sleep(300)
             print('sleep 해제')
             return collecting_track(id)
 
-        sleep(0.3)
+        sleep(0.5)
 
 def condition_control(id):
     pass

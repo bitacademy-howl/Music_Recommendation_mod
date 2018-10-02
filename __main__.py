@@ -9,9 +9,9 @@ if __name__ == '__main__':
 
     from modules.collection import collecting_track, collecting_album, collecting_artist
 
-    t1 = threading.Thread(target=collecting_artist, args=[495375])
-    t2 = threading.Thread(target=collecting_album, args=[510602])
-    t3 = threading.Thread(target=collecting_track, args=[544105])
+    t1 = threading.Thread(target=collecting_artist, args=[523799])
+    t2 = threading.Thread(target=collecting_album, args=[550050])
+    t3 = threading.Thread(target=collecting_track, args=[598741])
 
     t1.start()
     t2.start()
