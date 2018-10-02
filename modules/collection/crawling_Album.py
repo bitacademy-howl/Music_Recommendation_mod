@@ -75,7 +75,8 @@ def crawling_album(um = UrlMaker()):
             descriptions = descriptions.findAll('p')
             desc = str(descriptions[len(descriptions)-1].get_text())
 
-            albumVO.Description = preprocessing_string(desc)
+            if len(desc.encode('utf-8')) <= Album_VO.Description.type.length:
+                Album_VO.Description.Lyrics = preprocessing_string(desc)
             print(albumVO.Description)
 
         try:
@@ -129,4 +130,3 @@ def collecting_album(start_index = 1):
             return collecting_album(id)
 
         sleep(0.25)
-

@@ -143,4 +143,3 @@ def collecting_track(start_index = 1):
 
 def condition_control(id):
     pass
-
