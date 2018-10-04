@@ -41,6 +41,7 @@ def crawling_album(um = UrlMaker()):
 
             if left_span == '아티스트':
                 right_span_a_tag = right_span.find('a')
+                print(right_span_a_tag)
                 if right_span_a_tag is not None:
                     albumVO.Singer_ID = int(right_span_a_tag['href'].strip().rsplit('/', 1)[1])
                 else:
