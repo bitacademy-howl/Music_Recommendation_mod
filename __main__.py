@@ -13,14 +13,33 @@ if __name__ == '__main__':
     t2 = threading.Thread(target=collecting_album, args=[Album_VO.query.order_by(desc("Album_ID")).first().Album_ID])
     t3 = threading.Thread(target=collecting_track, args=[Music_VO.query.order_by(desc("Music_ID")).first().Music_ID])
 
+    t1 = threading.Thread(target=collecting_artist, args=[Artist_VO.query.filter(Artist_VO.Artist_ID < 10000000).order_by(desc("Artist_ID")).first().Artist_ID])
+    t2 = threading.Thread(target=collecting_album, args=[Album_VO.query.order_by(desc("Album_ID")).first().Album_ID])
+    t3 = threading.Thread(target=collecting_track, args=[Music_VO.query.order_by(desc("Music_ID")).first().Music_ID])
+    t1.start()
+    t2.start()
+    t3.start()
     while(True):
-
         if not t1.is_alive():
+            print("if문 1")
+            t1 = threading.Thread(target=collecting_artist, args=[
+                Artist_VO.query.filter(Artist_VO.Artist_ID < 10000000).order_by(desc("Artist_ID")).first().Artist_ID])
             t1.start()
+            
         if not t2.is_alive():
+            print("if문 2")
+            t2 = threading.Thread(target=collecting_album,
+                                  args=[Album_VO.query.order_by(desc("Album_ID")).first().Album_ID])
             t2.start()
         if not t3.is_alive():
+            print("if문 3")
+            t3 = threading.Thread(target=collecting_track,
+                                  args=[Music_VO.query.order_by(desc("Music_ID")).first().Music_ID])
             t3.start()
 
-        sleep(1800)
+        sleep(2)
 
+# 2018-10-11 12:33:21.312067 : Success for request [http://www.mnet.com/track/694713]
+# 저장된 가사 :  None
+# 2018-10-11 12:33:21.608897 : Success for request [http://www.mnet.com/album/592839]
+# 2018-10-11 12:33:21.749461 : Success for request [http://www.mnet.com/artist/575959]

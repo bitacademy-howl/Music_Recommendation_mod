@@ -72,8 +72,8 @@ class Album_VO(Base):
                "Distributor : {4}\n" \
                "Release_Date: {5}\n" \
                "Singer_ID : {6}\n" \
-               "Album_Node : {7}\n" \
-               "Musics : {8})>".format(self.__tablename__, self.Album_ID, self.Album_Title, self.Agency, self.Distributor, str(self.Release_Date), self.Singer_ID, self.Album_Node, self.Musics)
+               "Album_Node : {7})>".format(self.__tablename__, self.Album_ID, self.Album_Title, self.Agency, self.Distributor, str(self.Release_Date), self.Singer_ID, self.Album_Node)
+               # "Album_Node : {7}\n""Musics : {8})>".format(self.__tablename__, self.Album_ID, self.Album_Title, self.Agency, self.Distributor, str(self.Release_Date), self.Singer_ID, self.Album_Node, self.Musics)
 
     def as_dict(self):
         return {x.name: getattr(self, x.name) for x in self.__table__.columns}
@@ -137,6 +137,54 @@ class Music_VO(Base):
 #     id = Column(Integer, primary_key=True, unique=True)
 #     parent_id = Column(Integer, ForeignKey('parent.id', ondelete='CASCADE'))
 ########################################################################################################################
+
+
+
+class Album_recommend_VO(Base):
+    __tablename__ = 'Album_recommend_table'
+    __table_args__ = {'mysql_collate': 'utf8_general_ci'}
+
+    Album_ID = Column(Integer, primary_key=True, unique=True)
+    recommended_list = Column(String(3000))
+
+
+
+
+
+    # 해당 앨범의 링크 문자열 (node) - urlMaker의 direct_node_connect() 의 인자로 활용가능
+
+    # FK
+    # Singer_ID = Column(Integer, ForeignKey('Artist_table.Artist_ID', ondelete='CASCADE', name='Singer_FK'))
+    # Singer_ID = Column(Integer, ForeignKey('Artist_table.Artist_ID', name='Singer_FK'))
+
+    # Relations
+    # Singer = relationship("Artist_VO", back_populates='Albums')
+    # Musics = relationship("Music_VO", back_populates='Album')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #######################################################################################################################
 # VO_Examples 2:

@@ -41,7 +41,7 @@ def crawling_album(um = UrlMaker()):
 
             if left_span == '아티스트':
                 right_span_a_tag = right_span.find('a')
-                print(right_span_a_tag)
+                # print(right_span_a_tag)
                 if right_span_a_tag is not None:
                     albumVO.Singer_ID = int(right_span_a_tag['href'].strip().rsplit('/', 1)[1])
                 else:
@@ -71,16 +71,19 @@ def crawling_album(um = UrlMaker()):
                 albumVO.Distributor = right_span.get_text().strip()
 
         descriptions = album_info.find('div', attrs={'class', 'text_slider'})
-
+        # print(descriptions)
         if descriptions is not None:
             descriptions = descriptions.findAll('p')
             desc = str(descriptions[len(descriptions)-1].get_text())
-
+            # print(desc)
+            # print("앨범 설명 길이 len() : ", len(desc.encode('utf-8')), file=sys.stderr)
+            # print("Desc 길이 : ", Album_VO.Description.type.length, file=sys.stderr)
             if len(desc.encode('utf-8')) <= Album_VO.Description.type.length:
-                Album_VO.Description.Lyrics = preprocessing_string(desc)
-            print(albumVO.Description)
+                albumVO.Description = preprocessing_string(desc)
+            print("앨범 설명 : ", albumVO.Description)
 
         try:
+            # print(albumVO, file=sys.stderr)
             db_session.merge(albumVO)
             db_session.commit()
             # if albumVO.Album_ID%5 ==0:
@@ -94,16 +97,17 @@ def crawling_album(um = UrlMaker()):
                     u'[^ ~`!@#$%^&*()_\-+={\[}\]:<.>/?\'\"\n\ta-zA-Z0-9\u3131-\u3163\uac00-\ud7a3]+')  # 한글 키보드 특문 영어 숫자
 
                 albumVO.Description = re.sub(pattern, ' ', albumVO.Description)
+                print("앨범 설명 : ", albumVO.Description)
                 db_session.merge(albumVO)
                 db_session.commit()
                 cw_log({albumVO.Album_ID : 'SUCCESS[RE.Compile] - Desc'})
             except:
                 print(" 완전 rollback", file=sys.stderr)
+                cw_log({albumVO.Album_ID: 'FAILURE - Desc'})
                 db_session.rollback()
                 albumVO.Description = None
                 db_session.merge(albumVO)
                 db_session.commit()
-                cw_log({albumVO.Album_ID : 'FAILURE - Desc'})
 
 def cw_log(dict_input):
     import json
