@@ -145,11 +145,17 @@ class Album_recommend_VO(Base):
     __table_args__ = {'mysql_collate': 'utf8_general_ci'}
 
     Album_ID = Column(Integer, primary_key=True, unique=True)
-    recommended_list = Column(String(3000))
+    # recommended_list1 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
+    # recommended_list2 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
+    # recommended_list3 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
+    # recommended_list4 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
+    # recommended_list5 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
 
+    recommended_list = Column(Integer)
 
-
-
+    # Relations
+    # Singer = relationship("Artist_VO", back_populates='Albums')
+    # Musics = relationship("Music_VO", back_populates='Album')
 
     # 해당 앨범의 링크 문자열 (node) - urlMaker의 direct_node_connect() 의 인자로 활용가능
 
