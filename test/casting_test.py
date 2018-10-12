@@ -117,5 +117,4 @@ def recommended_list_to_json(rec_list):
 # recommended_list_to_json(dict1)
 #
 
-
 # dict 는 string으로 저장하고 json load 로 메모리에 적재할 것!
