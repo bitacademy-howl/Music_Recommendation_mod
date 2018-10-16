@@ -92,27 +92,37 @@ dict1 = {
 
 
 list1 = [1,2,3]
+
+print("#############################################################################################################################")
+print("str() 및 dict.__str__ 출력 결과")
 print(str(dict1), "\n",dict1.__str__())
-print(dict1.__repr__())
+print("#############################################################################################################################")
+print("#############################################################################################################################")
+print("dict.__repr__() 출력결과")
+print(dict1.__repr__(), type(dict1.__repr__()))
+
+print("#############################################################################################################################")
+print("eval(dict1.__repr__) 출력결과")
 dict3 = eval(dict1.__repr__())
 print(dict3, type(dict3))
 
 dict1_str = dict1.__repr__()
 
 
-
-
-
-
-
 # # 데이터 로드 모듈
 def recommended_list_to_json(rec_list):
-    fname = '{0}/result_{1}.json'.format(dir, dict1.get("id"))
+    fname = '{0}/result_{1}.json'.format(dir, rec_list.get("id"))
     with open(fname, mode='w', encoding='utf8') as f:
         try:
-            json.dump(rec_list.__repr__(),fp=f, skipkeys=True, ensure_ascii=False)
+            json.dump(rec_list,fp=f, skipkeys=True, ensure_ascii=False)
         except Exception as e:
             print(e)
+
+recommended_list_to_json(dict1)
+
+
+
+
 #
 # recommended_list_to_json(dict1)
 #

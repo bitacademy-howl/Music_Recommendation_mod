@@ -10,7 +10,9 @@ if __name__ == '__main__':
 
     from modules.collection import collecting_track, collecting_album, collecting_artist
     t1 = threading.Thread(target=collecting_artist, args=[Artist_VO.query.filter(Artist_VO.Artist_ID<10000000).order_by(desc("Artist_ID")).first().Artist_ID])
+    print(Album_VO.query.order_by(desc("Album_ID")).first().Album_ID, type(Album_VO.query.order_by(desc("Album_ID")).first().Album_ID))
     t2 = threading.Thread(target=collecting_album, args=[Album_VO.query.order_by(desc("Album_ID")).first().Album_ID])
+    print(Music_VO.query.order_by(desc("Music_ID")).first().Music_ID)
     t3 = threading.Thread(target=collecting_track, args=[Music_VO.query.order_by(desc("Music_ID")).first().Music_ID])
 
     t1 = threading.Thread(target=collecting_artist, args=[Artist_VO.query.filter(Artist_VO.Artist_ID < 10000000).order_by(desc("Artist_ID")).first().Artist_ID])

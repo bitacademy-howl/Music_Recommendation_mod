@@ -108,6 +108,8 @@ def crawling_album(um = UrlMaker()):
                 albumVO.Description = None
                 db_session.merge(albumVO)
                 db_session.commit()
+        finally:
+            print(albumVO)
 
 def cw_log(dict_input):
     import json
