@@ -1,4 +1,8 @@
+from builtins import list
+from locale import str
+
 from sqlalchemy import Column, ForeignKey, Integer, String, Boolean, DateTime, Table
+from sqlalchemy.dialects.mysql import DOUBLE
 from sqlalchemy.orm import relationship, backref
 
 from db_accessing import Base
@@ -60,6 +64,7 @@ class Album_VO(Base):
     # Relations
     # Singer = relationship("Artist_VO", back_populates='Albums')
     # Musics = relationship("Music_VO", back_populates='Album')
+    # Musics = relationship("Music_VO", back_populates='Album')
 
     def __init__(self):
         pass
@@ -72,7 +77,7 @@ class Album_VO(Base):
                "Distributor : {4}\n" \
                "Release_Date: {5}\n" \
                "Singer_ID : {6}\n" \
-               "Album_Node : {7})>".format(self.__tablename__, self.Album_ID, self.Album_Title, self.Agency, self.Distributor, str(self.Release_Date), self.Singer_ID, self.Album_Node)
+               "Album_Node : {7})>".format(self.__tablename__, self.Album_ID, self.Album_Title, self.Agency, self.Distributor, self.Release_Date, self.Singer_ID, self.Album_Node)
                # "Album_Node : {7}\n""Musics : {8})>".format(self.__tablename__, self.Album_ID, self.Album_Title, self.Agency, self.Distributor, str(self.Release_Date), self.Singer_ID, self.Album_Node, self.Musics)
 
     def as_dict(self):
@@ -144,53 +149,90 @@ class Album_recommend_VO(Base):
     __tablename__ = 'Album_recommend_table'
     __table_args__ = {'mysql_collate': 'utf8_general_ci'}
 
-    Album_ID = Column(Integer, primary_key=True, unique=True)
-    # recommended_list1 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
-    # recommended_list2 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
-    # recommended_list3 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
-    # recommended_list4 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
-    # recommended_list5 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
 
-    recommended_list = Column(Integer)
-
-    # Relations
-    # Singer = relationship("Artist_VO", back_populates='Albums')
-    # Musics = relationship("Music_VO", back_populates='Album')
-
-    # 해당 앨범의 링크 문자열 (node) - urlMaker의 direct_node_connect() 의 인자로 활용가능
-
-    # FK
-    # Singer_ID = Column(Integer, ForeignKey('Artist_table.Artist_ID', ondelete='CASCADE', name='Singer_FK'))
-    # Singer_ID = Column(Integer, ForeignKey('Artist_table.Artist_ID', name='Singer_FK'))
-
-    # Relations
-    # Singer = relationship("Artist_VO", back_populates='Albums')
-    # Musics = relationship("Music_VO", back_populates='Album')
+    # Album_ID = Column(Integer, ForeignKey("Album_Table.Album_ID"), primary_key=True, unique=True)
+    # rl1 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
+    # rl1_sim = Column(Integer)
+    # rl2 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
+    # rl2_sim = Column(Integer)
+    # rl3 = Column(Integer, ForeignKey("Album_Table.Album_ID"))
+    # rl3_sim = Column(Integer)
+    Album_ID = Column(Integer, ForeignKey('Album_table.Album_ID'), primary_key = True, unique = True)
+    rl1 = Column(Integer)
+    rl1_sim = Column(DOUBLE)
+    rl2 = Column(Integer)
+    rl2_sim = Column(DOUBLE)
+    rl3 = Column(Integer)
+    rl3_sim = Column(DOUBLE)
 
 
+    def __repr__(self):
+        return "< {0} (Album_ID : {1}, \n" \
+               "rl1 : {2}, \n" \
+               "rl1_sim : {3}, \n" \
+               "rl2 : {4}, \n" \
+               "rl2_sim : {5}, \n" \
+               "rl3 : {6}, \n" \
+               "rl3_sim : {7})>".format(self.Album_ID, self.rl1, self.rl1_sim, self.rl2, self.rl2_sim, self.rl3, self.rl3_sim)
+
+    def set_values(self, values):
+        if isinstance(values, list):
+            if len(values) >= 3:
+                self.rl3 = values[len(values)+1]
+                self.rl2 = values[len(values)]
+                self.rl1 = values[len(values)-1]
+            elif len(values) == 2:
+                self.rl2 = values[len(values) + 1]
+                self.rl1 = values[len(values)]
+            elif len(values):
+                self.rl1 = values[len(values) + 1]
 
 
+    def set_keys(self, keys):
+        if isinstance(keys, list):
+            if len(keys) >= 3:
+                self.rl3_sim = keys[len(keys)+1]
+                self.rl2_sim = keys[len(keys)]
+                self.rl1_sim = keys[len(keys)-1]
+            elif len(keys) == 2:
+                self.rl2_sim = keys[len(keys) + 1]
+                self.rl1_sim = keys[len(keys)]
+            elif len(keys):
+                self.rl1_sim = keys[len(keys) + 1]
 
+    def set_dict(self, map):
+        if isinstance(map, dict):
+            self.set_keys(map.keys())
+            self.set_values(map.values())
 
+########################################################################################################################
+    # 이 부분이랑 위 set keys, values 는 개선 가능할 듯...ㅠ
+    def as_dict(self):
+        keys = self.as_keys()
+        values = self.as_values()
 
+        res_dict = dict()
+        res_list = list()
 
+        for i in range(len(keys)):
+            if keys[i] is not None:
+                res_list.append((keys[i], values[i]))
 
+        return res_dict.update(res_list)
+########################################################################################################################
+        # return {x.name: getattr(self, x.name) for x in self.__table__.columns}
+        #
 
+        # result_dict = dict()
+        # for key in keys:
 
+        # return dict([(self.rl1, self.rl1_sim), (self.rl2, self.rl2_sim), (self.rl3, self.rl3_sim)])
 
+    def as_keys(self):
+        return [self.rl1, self.rl2, self.rl3]
 
-
-
-
-
-
-
-
-
-
-
-
-
+    def as_values(self):
+        return [self.rl1_sim, self.rl2_sim, self.rl3_sim]
 
 #######################################################################################################################
 # VO_Examples 2:

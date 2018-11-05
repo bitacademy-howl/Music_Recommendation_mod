@@ -34,6 +34,7 @@ z = datetime.date(2018, 9, 30)
 print(y, z)
 
 
+
 from datetime import datetime as dt
 
 print(dt.now().year, type(dt.now().year))
@@ -41,3 +42,5 @@ print(dt.now().year, type(dt.now().year))
 dt = dt(2016, 8, 1)
 
 print(dt)
+
+print(str(dt), type(str(dt)))

@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-engine = create_engine('mysql+pymysql://root:stark1234@localhost/webdb?charset=utf8', convert_unicode=True)
+engine = create_engine('mysql+pymysql://root:stark1234!@localhost/webdb?charset=utf8', convert_unicode=True)
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
                                          bind=engine))
@@ -17,17 +17,6 @@ def init_db():
     Base.metadata.create_all(bind=engine)
 
 init_db()
-
-
-
-
-
-
-
-
-
-
-
 
 # from flask import Flask
 # from flask_sqlalchemy import SQLAlchemy
